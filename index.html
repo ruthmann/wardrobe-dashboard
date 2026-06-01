@@ -313,6 +313,8 @@ function DetailPanel({item,onClose}){
           <span style={{color:"var(--color-text-secondary)"}}>Subcategory</span><span>{item.subcategory}</span>
           <span style={{color:"var(--color-text-secondary)"}}>Color lane</span><span>{getColorLane(item)}</span>
           <span style={{color:"var(--color-text-secondary)"}}>Season</span><span>{(item.season||[]).join(", ")}</span>
+          {item.purchasePrice!=null && <><span style={{color:"var(--color-text-secondary)"}}>Price</span><span>{item.purchasePrice.toLocaleString()}{item.currency?" "+item.currency:""}</span></>}
+          {item.acquiredFrom && <><span style={{color:"var(--color-text-secondary)"}}>Acquired from</span><span>{item.acquiredFrom}</span></>}
           {item.notes && <><span style={{color:"var(--color-text-secondary)"}}>Notes</span><span style={{lineHeight:1.5}}>{item.notes}</span></>}
           {item.tags && item.tags.length>0 && <><span style={{color:"var(--color-text-secondary)"}}>Tags</span><span>{item.tags.join(", ")}</span></>}
         </div>
