@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Wardrobe Dashboard — Stephen Alexander Ruthmann</title>
+<style>
+  :root{
+    --color-background-primary:#ffffff;
+    --color-background-secondary:#f5f4f2;
+    --color-text-primary:#1a1a1a;
+    --color-text-secondary:#6b6b6b;
+    --color-border-primary:#1a1a1a;
+    --color-border-secondary:#bdbdbd;
+    --color-border-tertiary:#e3e1dd;
+    --border-radius-md:6px;
+    --border-radius-lg:10px;
+    --font-sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{background:var(--color-background-secondary);color:var(--color-text-primary);font-family:var(--font-sans);-webkit-font-smoothing:antialiased;}
+  #root{max-width:1200px;margin:0 auto;padding:0 16px 60px;}
+  input,select,textarea{font-family:inherit;font-size:13px;padding:6px 10px;border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);background:var(--color-background-primary);color:var(--color-text-primary);}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--color-border-secondary);}
+  button{font-family:inherit;}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;}
+  table{font-family:inherit;}
+  img{max-width:100%;}
+</style>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel" data-presets="react">
+const {useState,useMemo,useEffect,useRef}=React;
+
+const STORAGE_KEY = "wardrobe_state";
+const STORAGE_META_KEY = "wardrobe_meta";
+const STORAGE_VERSION_KEY = "wardrobe_dataversion";
+
+const meta = {
+  owner: "Stephen Alexander Ruthmann",
+  bodyProfile: "180cm · 96kg · Jacket 48R / Zegna 58R · Trousers W38×L31 · Shirts 2XL · Belt 38in (working)",
+  wardrobeRules: [
+    "Only suggest items listed in the master wardrobe unless explicitly requested otherwise.",
+    "Jeans in Shanghai until mid-November unless attending a formal event.",
+    "Herno zip-up hoodie is a Nov–Feb primary rotation piece only.",
+    "Winter rotation — above 0°C dressy/refined: RLPL Olive Quilted Coat (not wool, not weatherproof).",
+    "Winter rotation — above 0°C black/casual-smart: PWVC Park Jacket (flannel-lined, worn without hood).",
+    "Winter rotation — below 0°C bad weather layering: PWVC Manchester Marine Parka (size 6).",
+    "White linen shorts have no belt loops — no belt.",
+    "PWVC default size: 5 across all items except Marine Parka (size 6).",
+    "No tassel loafers — not in collection, not to be suggested.",
+    "Montblanc brown belt is not a tonal match for Color 8 shell cordovan shoes.",
+  ],
+};
+
+// Maps an item id to its photo filename in assets/shoes/.
+const IMAGE_MAP = {
+  s_2:"Alden1031.jpeg", s_3:"Alden1340.jpeg", s_4:"Alden1473.jpeg", s_5:"Alden17831.jpeg",
+  s_8:"Alden2210.jpeg", s_10:"Alden2451.jpeg", s_12:"Alden29364F.jpeg", s_13:"AldenJC40510H.jpeg",
+  s_14:"Alden4060.jpeg", s_15:"Alden4074.jpeg", s_16:"Alden5165.jpeg", s_17:"Alden67540.jpeg",
+  s_18:"Alden704L.jpeg", s_19:"Alden73921.jpeg", s_21:"Alden9431S.jpeg", s_22:"Alden9662F.jpeg",
+  s_23:"Alden9750.jpeg", s_24:"Alden96817.jpeg", s_25:"AldenA0908H.jpeg", s_28:"AldenD2875HC.jpeg",
+  s_29:"AldenD2941C.jpeg", s_new_d6627c:"AldenD6627C.jpeg", s_34:"BemerSidelace.jpeg",
+  s_35:"BemerWholecut.jpeg", s_40:"CJKensingtonAlbert.jpeg", s_39:"CLPatentDerby.jpeg",
+  s_42:"EGCranleigh.jpeg", s_43:"EGDoverAntiqueCalf.jpeg", s_45:"EGDoverLondonGrain.jpeg",
+  s_44:"EGHalifax.jpeg", s_101:"FukudaDoubleMonk.jpeg", s_47:"GucciNavyLoafer.jpeg",
+  s_48:"HackettCarminaLoafer.jpeg", s_49:"HanoverLongwing.jpeg", s_51:"HermesEspadrille.jpeg",
+  s_new_lemargo:"LemargoEbanoBoot.jpeg", s_55:"LobbCityIIBrownMuseumCalf.jpeg",
+  s_56:"LobbGarnierII.jpeg", s_57:"LobbLopez.jpeg", s_58:"LobbPace.jpeg",
+  s_64:"MargielaGAT.jpeg", s_73:"PCDeerskinSandal.jpeg", s_68:"ParabootSand.jpeg",
+  s_72:"PealBBCJBurgundyBoot.jpeg", s_74:"RLAELongwing.jpeg", s_75:"RLCJCaptoe.jpeg",
+  s_79:"RLDrivingLoafer.jpeg", s_77:"RLSantoniSuedeCaptoe.jpeg", s_76:"RRLCJLivingstoneIIBoots.jpeg",
+  s_80:"RancourtRangerMocc.jpeg", s_109:"RuttRidley.jpeg", s_89:"SHMTOBlackChelsea.jpeg",
+  s_new_ssdm:"SSDoubleMonk.jpeg", s_87:"SantoniHandmadeSplittoe.jpeg",
+  s_88:"ScaforaSemiBrogueCaptoe.jpeg", s_90:"ShotoChelsea.jpeg",
+  s_93:"TLB114.jpeg", s_94:"TLB121.jpeg", s_92:"TimberlandDOE.jpeg", s_95:"VansHorween.jpeg",
+  s_100:"Viberg2030BlackCXLBoot.jpeg", s_98:"Viberg2030ChamoisRoughoutBoot.jpeg",
+  s_99:"Viberg2030MaryamBoot.jpeg", s_104:"ZhouLvWholecut.jpeg",
+  r_0:"AEBurgundyCalfLoafer.jpeg", r_5:"GrensonCaptoe.jpeg", r_6:"CheaneyWarwickCaptoe.jpeg",
+  r_11:"TrickersSemiBrogueCaptoe.jpeg", r_16:"LobbShoreLoafer.jpeg",
+  r_retired_s_78:"RRLTravelLoafer9D.jpeg",
+};
+function imgFor(item){ return item && IMAGE_MAP[item.id] ? "assets/shoes/"+IMAGE_MAP[item.id] : null; }
+
+const TABS = ["Active Collection","Retired / To-Sell"];
+const CATS = ["All","Footwear","Clothing","Belt","Watch"];
+const STATUSES = ["All","Active","En Route","Repair","Wishlist"];
+const SEASONS = ["All","Year-round","Spring","Summer","Fall","Winter"];
+const ALL_SEASONS = ["Year-round","Spring","Summer","Fall","Winter"];
+const ALL_CATEGORIES = ["Footwear","Clothing","Belt","Watch"];
+const EDIT_STATUSES = ["Active","En Route","Repair","Wishlist"];
+
+const SC = {
+  Active:{bg:"#eafaf1",text:"#1a7a45",border:"#9adec8"},
+  "En Route":{bg:"#fef9e7",text:"#9a6c00",border:"#f0c050"},
+  Repair:{bg:"#fef0f0",text:"#9a1a1a",border:"#f0a0a0"},
+  Wishlist:{bg:"#eef0fe",text:"#3a3a9a",border:"#a0a8f0"},
+};
+
+function fmt(n){return n?`¥${n.toLocaleString()}`:"—";}
+function fmtUSD(n){return n?`$${n}`:"—";}
+function uid() { return `x_${Date.now()}_${Math.random().toString(36).slice(2,8)}`; }
+
+const EMPTY_ACTIVE = {
+  id: "", name: "", category: "Clothing", subcategory: "", brand: "",
+  color: "", material: "", season: ["Year-round"], formality: "", status: "Active",
+  notes: "", tags: []
+};
+const EMPTY_RETIRED = {
+  id: "", name: "", brand: "", type: "", color: "", material: "", size: "",
+  country: "", condition: "", pricePaid: 0, xianyuList: 0, xianyuExp: 0,
+  ebayList: 0, ebayExp: 0, currency: "RMB", notes: ""
+};
+
+const EMPTY_STATE = { active: [], retired: [] };
+
+function WardrobeDashboard() {
+  const [state, setState] = useState(EMPTY_STATE);
+  const [loaded, setLoaded] = useState(false);
+  const [savedAt, setSavedAt] = useState(null);
+  const [dataVersion, setDataVersion] = useState("");
+  const [loadError, setLoadError] = useState("");
+  const fileInputRef = useRef(null);
+  const seedRef = useRef(EMPTY_STATE); // canonical data from data.json
+
+  // Load canonical data.json, then reconcile with any browser-local edits.
+  useEffect(() => {
+    (async () => {
+      try {
+        const res = await fetch("data.json?v=" + Date.now(), { cache: "no-store" });
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        const seed = await res.json();
+        const canonical = { active: seed.active || [], retired: seed.retired || [] };
+        seedRef.current = canonical;
+        setDataVersion(seed.version || "");
+
+        let useState_ = canonical;
+        try {
+          const savedVersion = localStorage.getItem(STORAGE_VERSION_KEY);
+          const raw = localStorage.getItem(STORAGE_KEY);
+          if (raw && savedVersion === (seed.version || "")) {
+            const parsed = JSON.parse(raw);
+            if (parsed && Array.isArray(parsed.active) && Array.isArray(parsed.retired)) {
+              useState_ = parsed;
+              const metaRaw = localStorage.getItem(STORAGE_META_KEY);
+              if (metaRaw) setSavedAt(JSON.parse(metaRaw).savedAt);
+            }
+          } else {
+            // New canonical data published — adopt it and clear stale local edits.
+            localStorage.setItem(STORAGE_VERSION_KEY, seed.version || "");
+            localStorage.removeItem(STORAGE_KEY);
+            localStorage.removeItem(STORAGE_META_KEY);
+            setSavedAt(null);
+          }
+        } catch (e) { /* localStorage unavailable */ }
+        setState(useState_);
+      } catch (e) {
+        // Fetch failed (e.g. opened via file://). Fall back to local edits if present.
+        try {
+          const raw = localStorage.getItem(STORAGE_KEY);
+          if (raw) {
+            const parsed = JSON.parse(raw);
+            if (parsed && Array.isArray(parsed.active) && Array.isArray(parsed.retired)) {
+              setState(parsed);
+              seedRef.current = parsed;
+            } else throw new Error("bad local");
+          } else throw new Error("no local");
+        } catch (e2) {
+          setLoadError("Could not load data.json. If you opened this file directly, serve it over http (e.g. a local server or GitHub Pages).");
+        }
+      } finally {
+        setLoaded(true);
+      }
+    })();
+  }, []);
+
+  // Persist edits to the browser after initial load.
+  useEffect(() => {
+    if (!loaded) return;
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      const now = new Date().toISOString();
+      localStorage.setItem(STORAGE_META_KEY, JSON.stringify({ savedAt: now }));
+      if (dataVersion) localStorage.setItem(STORAGE_VERSION_KEY, dataVersion);
+      setSavedAt(now);
+    } catch (e) { /* ignore quota / private mode */ }
+  }, [state, loaded, dataVersion]);
+
+  const [tab, setTab] = useState(0);
+  const [editMode, setEditMode] = useState(false);
+  const [query, setQuery] = useState("");
+  const [cat, setCat] = useState("All");
+  const [subcat, setSubcat] = useState("All");
+  const [status, setStatus] = useState("All");
+  const [season, setSeason] = useState("All");
+  const [formality, setFormality] = useState("All");
+  const [expanded, setExpanded] = useState(null);
+  const [retiredQuery, setRetiredQuery] = useState("");
+  const [retiredSort, setRetiredSort] = useState("name");
+  const [editing, setEditing] = useState(null);
+  const [confirmDelete, setConfirmDelete] = useState(null);
+  const [confirmReset, setConfirmReset] = useState(false);
+  const [importError, setImportError] = useState("");
+  const [lightbox, setLightbox] = useState(null);
+
+  const activeItems = state.active;
+  const retiredData = state.retired;
+
+  const formalityOptions = useMemo(()=>{
+    const s=new Set(["All"]);
+    activeItems.forEach(i=>i.formality && s.add(i.formality));
+    return Array.from(s).sort();
+  },[activeItems]);
+
+  const subcatOptions = useMemo(()=>{
+    const s=new Set();
+    activeItems.forEach(i=>{
+      if(cat!=="All" && i.category!==cat) return;
+      if(i.subcategory) s.add(i.subcategory);
+    });
+    return ["All", ...Array.from(s).sort()];
+  },[activeItems,cat]);
+
+  const filtered = useMemo(()=>{
+    const q=query.trim().toLowerCase();
+    return activeItems.filter(item=>{
+      if(cat!=="All"&&item.category!==cat)return false;
+      if(subcat!=="All"&&item.subcategory!==subcat)return false;
+      if(status!=="All"&&item.status!==status)return false;
+      if(season!=="All"&&!(item.season||[]).includes(season))return false;
+      if(formality!=="All"&&item.formality!==formality)return false;
+      if(q){
+        const text=[item.name,item.brand,item.color,item.material,item.subcategory,item.notes,...(item.tags||[])].join(" ").toLowerCase();
+        if(!text.includes(q))return false;
+      }
+      return true;
+    });
+  },[query,cat,subcat,status,season,formality,activeItems]);
+
+  const filteredRetired = useMemo(()=>{
+    const q=retiredQuery.trim().toLowerCase();
+    let list=retiredData.filter(item=>{
+      if(!q)return true;
+      return [item.name,item.brand,item.color,item.material,item.notes,item.condition].join(" ").toLowerCase().includes(q);
+    });
+    if(retiredSort==="xianyuList")list=[...list].sort((a,b)=>b.xianyuList-a.xianyuList);
+    else if(retiredSort==="ebayList")list=[...list].sort((a,b)=>b.ebayList-a.ebayList);
+    else if(retiredSort==="pricePaid")list=[...list].sort((a,b)=>b.pricePaid-a.pricePaid);
+    else list=[...list].sort((a,b)=>a.name.localeCompare(b.name));
+    return list;
+  },[retiredQuery,retiredSort,retiredData]);
+
+  const totalXianYuList = retiredData.reduce((s,i)=>s+(i.xianyuList||0),0);
+  const totalXianYuExp = retiredData.reduce((s,i)=>s+(i.xianyuExp||0),0);
+  const totalEbayList = retiredData.reduce((s,i)=>s+(i.ebayList||0),0);
+  const shellRetired = retiredData.filter(i=>i.material&&i.material.includes("Shell")).length;
+  const shellCount=activeItems.filter(i=>i.material&&i.material.toLowerCase().includes("shell")).length;
+  const activeCount=activeItems.filter(i=>i.status==="Active").length;
+  const shoeCount=activeItems.filter(i=>i.category==="Footwear").length;
+  const enRoute=activeItems.filter(i=>i.status==="En Route").length;
+
+  // ============ CRUD ACTIONS ============
+  function saveItem(kind, updated, isNew) {
+    setState(prev => {
+      const key = kind === "active" ? "active" : "retired";
+      if (isNew) {
+        return { ...prev, [key]: [...prev[key], { ...updated, id: updated.id || uid() }] };
+      }
+      return { ...prev, [key]: prev[key].map(i => i.id === updated.id ? updated : i) };
+    });
+    setEditing(null);
+  }
+
+  function deleteItem(kind, id) {
+    setState(prev => {
+      const key = kind === "active" ? "active" : "retired";
+      return { ...prev, [key]: prev[key].filter(i => i.id !== id) };
+    });
+    setConfirmDelete(null);
+  }
+
+  function duplicateItem(kind, item) {
+    const copy = { ...item, id: uid(), name: `${item.name} (copy)` };
+    setState(prev => {
+      const key = kind === "active" ? "active" : "retired";
+      return { ...prev, [key]: [...prev[key], copy] };
+    });
+  }
+
+  function moveToRetired(item) {
+    const retired = {
+      id: uid(), name: item.name, brand: item.brand || "", type: item.subcategory || "",
+      color: item.color || "", material: item.material || "", size: "", country: "",
+      condition: "", pricePaid: 0, xianyuList: 0, xianyuExp: 0, ebayList: 0, ebayExp: 0,
+      currency: "RMB", notes: item.notes || ""
+    };
+    setState(prev => ({
+      active: prev.active.filter(i => i.id !== item.id),
+      retired: [...prev.retired, retired]
+    }));
+  }
+
+  function resetToSeed() {
+    setState(seedRef.current);
+    setConfirmReset(false);
+  }
+
+  // ============ IMPORT / EXPORT ============
+  function exportJson() {
+    const payload = { version: dataVersion || "local", exportedAt: new Date().toISOString(), ...state };
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `wardrobe_backup_${new Date().toISOString().slice(0,10)}.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
+
+  function triggerImport() { setImportError(""); fileInputRef.current?.click(); }
+
+  function handleImport(e) {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (ev) => {
+      try {
+        const parsed = JSON.parse(ev.target.result);
+        if (!parsed || !Array.isArray(parsed.active) || !Array.isArray(parsed.retired)) {
+          setImportError("Invalid file: missing active/retired arrays");
+          return;
+        }
+        const active = parsed.active.map(i => ({ ...i, id: i.id || uid() }));
+        const retired = parsed.retired.map(i => ({ ...i, id: i.id || uid() }));
+        setState({ active, retired });
+        setImportError("");
+      } catch (err) {
+        setImportError("Could not parse file");
+      }
+    };
+    reader.readAsText(file);
+    e.target.value = "";
+  }
+
+  function pill(val,current,setter,small){
+    const active=val===current;
+    return(
+      <button key={val} onClick={()=>setter(val)}
+        style={{padding:small?"3px 10px":"4px 12px",borderRadius:20,border:`0.5px solid ${active?"var(--color-border-primary)":"var(--color-border-tertiary)"}`,background:active?"var(--color-text-primary)":"transparent",color:active?"var(--color-background-primary)":"var(--color-text-secondary)",fontSize:12,cursor:"pointer",whiteSpace:"nowrap"}}>
+        {val}
+      </button>
+    );
+  }
+
+  function statCard(label,value,sub){
+    return(
+      <div style={{background:"var(--color-background-secondary)",borderRadius:"var(--border-radius-md)",padding:"12px 16px",minWidth:0}}>
+        <div style={{fontSize:22,fontWeight:500,color:"var(--color-text-primary)"}}>{value}</div>
+        <div style={{fontSize:11,color:"var(--color-text-secondary)",marginTop:2,textTransform:"uppercase",letterSpacing:"0.06em"}}>{label}</div>
+        {sub&&<div style={{fontSize:11,color:"var(--color-text-secondary)",marginTop:1}}>{sub}</div>}
+      </div>
+    );
+  }
+
+  function iconBtn(label, onClick, opts={}) {
+    return (
+      <button onClick={(e)=>{e.stopPropagation();onClick();}}
+        style={{
+          fontSize:11, padding:"3px 9px", borderRadius:"var(--border-radius-md)",
+          border:"0.5px solid var(--color-border-tertiary)",
+          background: opts.danger ? "#fef0f0" : "var(--color-background-primary)",
+          color: opts.danger ? "#9a1a1a" : "var(--color-text-secondary)",
+          cursor:"pointer", whiteSpace:"nowrap"
+        }}>
+        {label}
+      </button>
+    );
+  }
+
+  if (!loaded) {
+    return (
+      <div style={{padding:"3rem 0",textAlign:"center",color:"var(--color-text-secondary)",fontSize:13}}>
+        Loading wardrobe…
+      </div>
+    );
+  }
+
+  return(
+    <div style={{padding:"1rem 0",fontFamily:"var(--font-sans)"}}>
+      <h2 className="sr-only">Master wardrobe dashboard for Stephen Alexander Ruthmann</h2>
+
+      {/* HEADER */}
+      <div style={{marginBottom:"1rem",display:"flex",justifyContent:"space-between",alignItems:"flex-start",gap:12,flexWrap:"wrap"}}>
+        <div>
+          <div style={{fontSize:11,letterSpacing:"0.1em",textTransform:"uppercase",color:"var(--color-text-secondary)",marginBottom:4}}>Master Wardrobe Dashboard{dataVersion?` · v${dataVersion}`:""}</div>
+          <div style={{fontSize:18,fontWeight:500,color:"var(--color-text-primary)"}}>{meta.owner}</div>
+          <div style={{fontSize:12,color:"var(--color-text-secondary)",marginTop:2}}>{meta.bodyProfile}</div>
+        </div>
+        <div style={{display:"flex",gap:6,alignItems:"center",flexWrap:"wrap"}}>
+          <button onClick={()=>setEditMode(!editMode)}
+            style={{
+              padding:"6px 12px",fontSize:12,borderRadius:"var(--border-radius-md)",
+              border:"0.5px solid var(--color-border-tertiary)",
+              background:editMode?"var(--color-text-primary)":"transparent",
+              color:editMode?"var(--color-background-primary)":"var(--color-text-primary)",
+              cursor:"pointer",fontWeight:500
+            }}>
+            {editMode ? "✓ Edit mode" : "Edit"}
+          </button>
+          <button onClick={exportJson} style={{padding:"6px 12px",fontSize:12,borderRadius:"var(--border-radius-md)",border:"0.5px solid var(--color-border-tertiary)",background:"transparent",color:"var(--color-text-secondary)",cursor:"pointer"}}>
+            Export
+          </button>
+          <button onClick={triggerImport} style={{padding:"6px 12px",fontSize:12,borderRadius:"var(--border-radius-md)",border:"0.5px solid var(--color-border-tertiary)",background:"transparent",color:"var(--color-text-secondary)",cursor:"pointer"}}>
+            Import
+          </button>
+          <input ref={fileInputRef} type="file" accept="application/json" onChange={handleImport} style={{display:"none"}}/>
+          {editMode && (
+            <button onClick={()=>setConfirmReset(true)}
+              style={{padding:"6px 12px",fontSize:12,borderRadius:"var(--border-radius-md)",border:"0.5px solid #f0a0a0",background:"transparent",color:"#9a1a1a",cursor:"pointer"}}>
+              Reset to published
+            </button>
+          )}
+        </div>
+      </div>
+
+      {loadError && (
+        <div style={{padding:"8px 12px",background:"#fef0f0",border:"0.5px solid #f0a0a0",borderRadius:"var(--border-radius-md)",fontSize:12,color:"#9a1a1a",marginBottom:"1rem"}}>
+          {loadError}
+        </div>
+      )}
+
+      {savedAt && (
+        <div style={{fontSize:10,color:"var(--color-text-secondary)",marginBottom:"1rem",letterSpacing:"0.04em"}}>
+          Local edits auto-saved · {new Date(savedAt).toLocaleString()} · Stored in this browser only
+        </div>
+      )}
+
+      {importError && (
+        <div style={{padding:"8px 12px",background:"#fef0f0",border:"0.5px solid #f0a0a0",borderRadius:"var(--border-radius-md)",fontSize:12,color:"#9a1a1a",marginBottom:"1rem"}}>
+          Import error: {importError}
+        </div>
+      )}
+
+      {/* TABS */}
+      <div style={{display:"flex",gap:8,marginBottom:"1.25rem",borderBottom:"0.5px solid var(--color-border-tertiary)",paddingBottom:0}}>
+        {TABS.map((t,i)=>(
+          <button key={t} onClick={()=>{setTab(i);setExpanded(null);}}
+            style={{padding:"8px 16px",fontSize:13,fontWeight:500,border:"none",background:"transparent",cursor:"pointer",borderBottom:tab===i?"2px solid var(--color-text-primary)":"2px solid transparent",color:tab===i?"var(--color-text-primary)":"var(--color-text-secondary)",marginBottom:-1}}>
+            {t}
+            <span style={{marginLeft:6,fontSize:11,padding:"1px 6px",borderRadius:10,background:"var(--color-background-secondary)",color:"var(--color-text-secondary)"}}>
+              {i===0?activeItems.length:retiredData.length}
+            </span>
+          </button>
+        ))}
+      </div>
+
+      {/* ACTIVE TAB */}
+      {tab===0&&(
+        <>
+          <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:10,marginBottom:"1rem"}}>
+            {statCard("Total items",activeItems.length)}
+            {statCard("Active",activeCount)}
+            {statCard("Footwear",shoeCount,`${shellCount} shell cordovan`)}
+            {statCard("En route",enRoute,"incoming")}
+          </div>
+
+          <div style={{background:"var(--color-background-secondary)",borderRadius:"var(--border-radius-md)",padding:"10px 14px",marginBottom:"1rem",fontSize:12,color:"var(--color-text-secondary)"}}>
+            <div style={{fontWeight:500,color:"var(--color-text-primary)",marginBottom:5,fontSize:13}}>Wardrobe rules</div>
+            {meta.wardrobeRules.map((r,i)=><div key={i} style={{marginBottom:2}}>· {r}</div>)}
+          </div>
+
+          <div style={{marginBottom:"1rem",display:"flex",flexDirection:"column",gap:7}}>
+            <input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Search brand, model, color, material, tag..." style={{width:"100%",boxSizing:"border-box"}}/>
+            <div style={{display:"flex",flexWrap:"wrap",gap:5,alignItems:"center"}}>
+              <span style={{fontSize:11,color:"var(--color-text-secondary)",textTransform:"uppercase",letterSpacing:"0.07em",minWidth:60}}>Category</span>
+              {CATS.map(v=>pill(v,cat,(val)=>{setCat(val);setSubcat("All");}))}
+            </div>
+            {subcatOptions.length > 1 && (
+              <div style={{display:"flex",flexWrap:"wrap",gap:5,alignItems:"center"}}>
+                <span style={{fontSize:11,color:"var(--color-text-secondary)",textTransform:"uppercase",letterSpacing:"0.07em",minWidth:60}}>Type</span>
+                {subcatOptions.map(v=>pill(v,subcat,setSubcat,true))}
+              </div>
+            )}
+            <div style={{display:"flex",flexWrap:"wrap",gap:5,alignItems:"center"}}>
+              <span style={{fontSize:11,color:"var(--color-text-secondary)",textTransform:"uppercase",letterSpacing:"0.07em",minWidth:60}}>Status</span>
+              {STATUSES.map(v=>pill(v,status,setStatus))}
+            </div>
+            <div style={{display:"flex",flexWrap:"wrap",gap:5,alignItems:"center"}}>
+              <span style={{fontSize:11,color:"var(--color-text-secondary)",textTransform:"uppercase",letterSpacing:"0.07em",minWidth:60}}>Season</span>
+              {SEASONS.map(v=>pill(v,season,setSeason))}
+            </div>
+            <div style={{display:"flex",flexWrap:"wrap",gap:5,alignItems:"center"}}>
+              <span style={{fontSize:11,color:"var(--color-text-secondary)",textTransform:"uppercase",letterSpacing:"0.07em",minWidth:60}}>Formality</span>
+              {formalityOptions.slice(0,12).map(v=>pill(v,formality,setFormality,true))}
+            </div>
+          </div>
+
+          <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:10,gap:8,flexWrap:"wrap"}}>
+            <div style={{fontSize:13,color:"var(--color-text-secondary)"}}>{filtered.length} item{filtered.length!==1?"s":""}</div>
+            <div style={{display:"flex",gap:6}}>
+              {editMode && (
+                <button onClick={()=>setEditing({kind:"active",item:{...EMPTY_ACTIVE,id:uid()},isNew:true})}
+                  style={{fontSize:12,padding:"4px 12px",borderRadius:"var(--border-radius-md)",border:"0.5px solid var(--color-border-primary)",background:"var(--color-text-primary)",color:"var(--color-background-primary)",cursor:"pointer",fontWeight:500}}>
+                  + Add item
+                </button>
+              )}
+              <button onClick={()=>{setQuery("");setCat("All");setSubcat("All");setStatus("All");setSeason("All");setFormality("All");}}
+                style={{fontSize:12,padding:"4px 12px",borderRadius:"var(--border-radius-md)",border:"0.5px solid var(--color-border-tertiary)",background:"transparent",cursor:"pointer",color:"var(--color-text-secondary)"}}>
+                Reset filters
+              </button>
+            </div>
+          </div>
+
+          <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(270px,1fr))",gap:10}}>
+            {filtered.map((item)=>{
+              const sc=SC[item.status]||SC.Active;
+              const isOpen=expanded===item.id;
+              const photo=imgFor(item);
+              return(
+                <div key={item.id} onClick={()=>setExpanded(isOpen?null:item.id)}
+                  style={{background:"var(--color-background-primary)",border:"0.5px solid var(--color-border-tertiary)",borderRadius:"var(--border-radius-lg)",padding:"12px 14px",cursor:"pointer",overflow:"hidden"}}>
+                  {photo && (
+                    <div style={{margin:"-12px -14px 10px",background:"var(--color-background-secondary)",borderBottom:"0.5px solid var(--color-border-tertiary)"}}>
+                      <img src={photo} alt={item.name} loading="lazy"
+                        onClick={(e)=>{e.stopPropagation();setLightbox(photo);}}
+                        style={{width:"100%",height:isOpen?"auto":170,objectFit:"contain",display:"block"}}/>
+                    </div>
+                  )}
+                  <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",gap:8}}>
+                    <div style={{minWidth:0}}>
+                      <div style={{fontSize:11,color:"var(--color-text-secondary)",textTransform:"uppercase",letterSpacing:"0.07em",marginBottom:3}}>{item.category} · {item.subcategory}</div>
+                      <div style={{fontSize:13,fontWeight:500,color:"var(--color-text-primary)",lineHeight:1.3}}>{item.name}</div>
+                      <div style={{fontSize:12,color:"var(--color-text-secondary)",marginTop:2}}>{item.brand}</div>
+                    </div>
+                    <span style={{fontSize:10,padding:"2px 8px",borderRadius:10,background:sc.bg,color:sc.text,border:`0.5px solid ${sc.border}`,whiteSpace:"nowrap",flexShrink:0}}>{item.status}</span>
+                  </div>
+                  <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:8,marginTop:10,fontSize:12}}>
+                    <div><div style={{color:"var(--color-text-secondary)",fontSize:11}}>Color</div><div style={{color:"var(--color-text-primary)",fontWeight:500,fontSize:12}}>{item.color}</div></div>
+                    <div><div style={{color:"var(--color-text-secondary)",fontSize:11}}>Material</div><div style={{color:"var(--color-text-primary)",fontWeight:500,fontSize:12}}>{item.material||"—"}</div></div>
+                    <div><div style={{color:"var(--color-text-secondary)",fontSize:11}}>Formality</div><div style={{color:"var(--color-text-primary)",fontWeight:500,fontSize:12}}>{item.formality}</div></div>
+                  </div>
+                  {isOpen&&(
+                    <div style={{marginTop:10,paddingTop:10,borderTop:"0.5px solid var(--color-border-tertiary)"}}>
+                      <div style={{display:"flex",flexWrap:"wrap",gap:4,marginBottom:6}}>
+                        {(item.season||[]).map(s=>(<span key={s} style={{fontSize:11,padding:"2px 8px",borderRadius:10,background:"var(--color-background-secondary)",color:"var(--color-text-secondary)",border:"0.5px solid var(--color-border-tertiary)"}}>{s}</span>))}
+                      </div>
+                      {item.notes&&<div style={{fontSize:12,color:"var(--color-text-secondary)",lineHeight:1.6}}>{item.notes}</div>}
+                      {item.tags&&item.tags.length>0&&(
+                        <div style={{display:"flex",flexWrap:"wrap",gap:4,marginTop:6}}>
+                          {item.tags.map(t=>(<span key={t} style={{fontSize:10,padding:"1px 7px",borderRadius:10,border:"0.5px solid var(--color-border-tertiary)",color:"var(--color-text-secondary)"}}>#{t}</span>))}
+                        </div>
+                      )}
+                      {editMode && (
+                        <div style={{display:"flex",gap:5,marginTop:10,flexWrap:"wrap"}}>
+                          {iconBtn("Edit", ()=>setEditing({kind:"active",item,isNew:false}))}
+                          {iconBtn("Duplicate", ()=>duplicateItem("active",item))}
+                          {item.category==="Footwear" && iconBtn("Move to retired", ()=>moveToRetired(item))}
+                          {iconBtn("Delete", ()=>setConfirmDelete({kind:"active",id:item.id,name:item.name}), {danger:true})}
+                        </div>
+                      )}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </>
+      )}
+
+      {/* RETIRED TAB */}
+      {tab===1&&(
+        <>
+          <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:10,marginBottom:"1rem"}}>
+            {statCard("Pairs to sell",retiredData.length,`${shellRetired} shell cordovan`)}
+            {statCard("XianYu ask total",fmt(totalXianYuList),"list prices")}
+            {statCard("XianYu expected",fmt(totalXianYuExp),"expected")}
+            {statCard("eBay ask total",fmtUSD(totalEbayList),"list prices")}
+          </div>
+          <div style={{display:"flex",gap:8,marginBottom:"1rem",flexWrap:"wrap",alignItems:"center"}}>
+            <input value={retiredQuery} onChange={e=>setRetiredQuery(e.target.value)} placeholder="Search retired inventory..." style={{flex:1,minWidth:200}}/>
+            <div style={{display:"flex",gap:6,alignItems:"center"}}>
+              <span style={{fontSize:11,color:"var(--color-text-secondary)",textTransform:"uppercase",letterSpacing:"0.06em"}}>Sort</span>
+              {[["name","Name"],["xianyuList","XianYu ↓"],["ebayList","eBay ↓"],["pricePaid","Paid ↓"]].map(([v,l])=>pill(l,retiredSort===v?l:"",(()=>setRetiredSort(v)),true))}
+            </div>
+            {editMode && (
+              <button onClick={()=>setEditing({kind:"retired",item:{...EMPTY_RETIRED,id:uid()},isNew:true})}
+                style={{fontSize:12,padding:"4px 12px",borderRadius:"var(--border-radius-md)",border:"0.5px solid var(--color-border-primary)",background:"var(--color-text-primary)",color:"var(--color-background-primary)",cursor:"pointer",fontWeight:500}}>
+                + Add retired
+              </button>
+            )}
+          </div>
+          <div style={{overflowX:"auto"}}>
+            <table style={{width:"100%",borderCollapse:"collapse",fontSize:12,tableLayout:"fixed"}}>
+              <colgroup>
+                <col style={{width:"4%"}}/>
+                <col style={{width:editMode?"18%":"20%"}}/>
+                <col style={{width:"12%"}}/>
+                <col style={{width:"12%"}}/>
+                <col style={{width:"10%"}}/>
+                <col style={{width:"8%"}}/>
+                <col style={{width:"8%"}}/>
+                <col style={{width:"8%"}}/>
+                <col style={{width:"8%"}}/>
+                <col style={{width:"7%"}}/>
+                {editMode && <col style={{width:"7%"}}/>}
+              </colgroup>
+              <thead>
+                <tr style={{borderBottom:"0.5px solid var(--color-border-tertiary)"}}>
+                  <th/>
+                  {["Name","Brand","Color","Condition","Paid ¥","XY Ask","XY Exp","eBay Ask","eBay Exp"].map(h=>(
+                    <th key={h} style={{textAlign:"left",padding:"6px 8px",fontSize:11,letterSpacing:"0.06em",textTransform:"uppercase",color:"var(--color-text-secondary)",fontWeight:500}}>{h}</th>
+                  ))}
+                  {editMode && <th style={{textAlign:"right",padding:"6px 8px",fontSize:11,letterSpacing:"0.06em",textTransform:"uppercase",color:"var(--color-text-secondary)",fontWeight:500}}>Actions</th>}
+                </tr>
+              </thead>
+              <tbody>
+                {filteredRetired.map((item)=>{
+                  const photo=imgFor(item);
+                  return(
+                  <tr key={item.id} style={{borderBottom:"0.5px solid var(--color-border-tertiary)"}}>
+                    <td style={{padding:"6px 4px"}}>
+                      {photo && <img src={photo} alt={item.name} loading="lazy" onClick={()=>setLightbox(photo)} style={{width:34,height:34,objectFit:"cover",borderRadius:4,cursor:"pointer",display:"block",background:"var(--color-background-secondary)"}}/>}
+                    </td>
+                    <td style={{padding:"9px 8px",color:"var(--color-text-primary)",fontWeight:500,lineHeight:1.3,wordBreak:"break-word"}}>{item.name}</td>
+                    <td style={{padding:"9px 8px",color:"var(--color-text-secondary)"}}>{item.brand}</td>
+                    <td style={{padding:"9px 8px",color:"var(--color-text-secondary)"}}>{item.color}</td>
+                    <td style={{padding:"9px 8px",color:"var(--color-text-secondary)",fontSize:11}}>{item.condition||"—"}</td>
+                    <td style={{padding:"9px 8px",color:"var(--color-text-secondary)",textAlign:"right"}}>{item.pricePaid?`¥${item.pricePaid.toLocaleString()}`:"Gift"}</td>
+                    <td style={{padding:"9px 8px",fontWeight:500,color:"var(--color-text-primary)",textAlign:"right"}}>{fmt(item.xianyuList)}</td>
+                    <td style={{padding:"9px 8px",color:"var(--color-text-secondary)",textAlign:"right"}}>{fmt(item.xianyuExp)}</td>
+                    <td style={{padding:"9px 8px",fontWeight:500,color:"var(--color-text-primary)",textAlign:"right"}}>{item.ebayList?`$${item.ebayList}`:"—"}</td>
+                    <td style={{padding:"9px 8px",color:"var(--color-text-secondary)",textAlign:"right"}}>{item.ebayExp?`$${item.ebayExp}`:"—"}</td>
+                    {editMode && (
+                      <td style={{padding:"9px 8px",textAlign:"right"}}>
+                        <div style={{display:"flex",gap:4,justifyContent:"flex-end"}}>
+                          {iconBtn("Edit", ()=>setEditing({kind:"retired",item,isNew:false}))}
+                          {iconBtn("×", ()=>setConfirmDelete({kind:"retired",id:item.id,name:item.name}), {danger:true})}
+                        </div>
+                      </td>
+                    )}
+                  </tr>
+                  );
+                })}
+              </tbody>
+              <tfoot>
+                <tr style={{borderTop:"1px solid var(--color-border-secondary)"}}>
+                  <td colSpan={6} style={{padding:"8px",fontSize:12,color:"var(--color-text-secondary)",fontWeight:500}}>Totals ({filteredRetired.length} pairs)</td>
+                  <td style={{padding:"8px",fontWeight:500,color:"var(--color-text-primary)",textAlign:"right"}}>{fmt(filteredRetired.reduce((s,i)=>s+(i.xianyuList||0),0))}</td>
+                  <td style={{padding:"8px",color:"var(--color-text-secondary)",textAlign:"right"}}>{fmt(filteredRetired.reduce((s,i)=>s+(i.xianyuExp||0),0))}</td>
+                  <td style={{padding:"8px",fontWeight:500,color:"var(--color-text-primary)",textAlign:"right"}}>${filteredRetired.reduce((s,i)=>s+(i.ebayList||0),0)}</td>
+                  <td style={{padding:"8px",color:"var(--color-text-secondary)",textAlign:"right"}}>${filteredRetired.reduce((s,i)=>s+(i.ebayExp||0),0)}</td>
+                  {editMode && <td/>}
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </>
+      )}
+
+      {/* LIGHTBOX */}
+      {lightbox && (
+        <div onClick={()=>setLightbox(null)}
+          style={{position:"fixed",inset:0,background:"rgba(0,0,0,0.8)",display:"flex",alignItems:"center",justifyContent:"center",zIndex:1100,padding:24,cursor:"zoom-out"}}>
+          <img src={lightbox} alt="" style={{maxWidth:"100%",maxHeight:"100%",objectFit:"contain",borderRadius:"var(--border-radius-md)"}}/>
+        </div>
+      )}
+
+      {/* EDIT MODAL */}
+      {editing && (
+        <EditModal
+          editing={editing}
+          onSave={(updated)=>saveItem(editing.kind, updated, editing.isNew)}
+          onClose={()=>setEditing(null)}
+        />
+      )}
+
+      {/* DELETE CONFIRM */}
+      {confirmDelete && (
+        <Modal onClose={()=>setConfirmDelete(null)}>
+          <div style={{fontSize:14,fontWeight:500,color:"var(--color-text-primary)",marginBottom:8}}>Delete item?</div>
+          <div style={{fontSize:13,color:"var(--color-text-secondary)",marginBottom:16}}>{confirmDelete.name}</div>
+          <div style={{display:"flex",gap:8,justifyContent:"flex-end"}}>
+            <button onClick={()=>setConfirmDelete(null)} style={{padding:"6px 14px",fontSize:12,borderRadius:"var(--border-radius-md)",border:"0.5px solid var(--color-border-tertiary)",background:"transparent",cursor:"pointer"}}>Cancel</button>
+            <button onClick={()=>deleteItem(confirmDelete.kind, confirmDelete.id)} style={{padding:"6px 14px",fontSize:12,borderRadius:"var(--border-radius-md)",border:"0.5px solid #f0a0a0",background:"#fef0f0",color:"#9a1a1a",cursor:"pointer",fontWeight:500}}>Delete</button>
+          </div>
+        </Modal>
+      )}
+
+      {/* RESET CONFIRM */}
+      {confirmReset && (
+        <Modal onClose={()=>setConfirmReset(false)}>
+          <div style={{fontSize:14,fontWeight:500,color:"var(--color-text-primary)",marginBottom:8}}>Reset to published data?</div>
+          <div style={{fontSize:13,color:"var(--color-text-secondary)",marginBottom:16,lineHeight:1.5}}>This will discard all edits made in this browser and restore the data published in data.json. Export a backup first if you want to preserve your changes.</div>
+          <div style={{display:"flex",gap:8,justifyContent:"flex-end"}}>
+            <button onClick={()=>setConfirmReset(false)} style={{padding:"6px 14px",fontSize:12,borderRadius:"var(--border-radius-md)",border:"0.5px solid var(--color-border-tertiary)",background:"transparent",cursor:"pointer"}}>Cancel</button>
+            <button onClick={resetToSeed} style={{padding:"6px 14px",fontSize:12,borderRadius:"var(--border-radius-md)",border:"0.5px solid #f0a0a0",background:"#fef0f0",color:"#9a1a1a",cursor:"pointer",fontWeight:500}}>Reset</button>
+          </div>
+        </Modal>
+      )}
+    </div>
+  );
+}
+
+// ============ MODAL + EDIT FORM ============
+function Modal({ children, onClose }) {
+  return (
+    <div onClick={onClose}
+      style={{position:"fixed",inset:0,background:"rgba(0,0,0,0.3)",display:"flex",alignItems:"center",justifyContent:"center",zIndex:1000,padding:16}}>
+      <div onClick={(e)=>e.stopPropagation()}
+        style={{background:"var(--color-background-primary)",borderRadius:"var(--border-radius-lg)",padding:"20px 22px",maxWidth:560,width:"100%",maxHeight:"85vh",overflowY:"auto",boxShadow:"0 10px 40px rgba(0,0,0,0.15)"}}>
+        {children}
+      </div>
+    </div>
+  );
+}
+
+function EditModal({ editing, onSave, onClose }) {
+  const [form, setForm] = useState(editing.item);
+  function update(field, value) { setForm(f => ({...f, [field]: value})); }
+  function toggleSeason(s) {
+    setForm(f => {
+      const cur = f.season || [];
+      return {...f, season: cur.includes(s) ? cur.filter(x=>x!==s) : [...cur, s]};
+    });
+  }
+  function handleSave() {
+    if (!form.name || !form.name.trim()) { alert("Name is required"); return; }
+    onSave(form);
+  }
+  const isActive = editing.kind === "active";
+  const labelStyle = {fontSize:11,color:"var(--color-text-secondary)",textTransform:"uppercase",letterSpacing:"0.06em",marginBottom:3,display:"block"};
+  const inputStyle = {width:"100%",boxSizing:"border-box",padding:"6px 10px",fontSize:13,border:"0.5px solid var(--color-border-tertiary)",borderRadius:"var(--border-radius-md)",background:"var(--color-background-primary)",color:"var(--color-text-primary)",fontFamily:"inherit"};
+  const row = {display:"grid",gridTemplateColumns:"1fr 1fr",gap:10,marginBottom:10};
+
+  return (
+    <Modal onClose={onClose}>
+      <div style={{fontSize:14,fontWeight:500,color:"var(--color-text-primary)",marginBottom:14}}>
+        {editing.isNew ? "Add new item" : "Edit item"}
+      </div>
+
+      <div style={{marginBottom:10}}>
+        <label style={labelStyle}>Name *</label>
+        <input style={inputStyle} value={form.name||""} onChange={e=>update("name",e.target.value)}/>
+      </div>
+
+      {isActive ? (
+        <>
+          <div style={row}>
+            <div>
+              <label style={labelStyle}>Category</label>
+              <select style={inputStyle} value={form.category||""} onChange={e=>update("category",e.target.value)}>
+                {ALL_CATEGORIES.map(c=><option key={c} value={c}>{c}</option>)}
+              </select>
+            </div>
+            <div>
+              <label style={labelStyle}>Subcategory</label>
+              <input style={inputStyle} value={form.subcategory||""} onChange={e=>update("subcategory",e.target.value)}/>
+            </div>
+          </div>
+          <div style={row}>
+            <div>
+              <label style={labelStyle}>Brand</label>
+              <input style={inputStyle} value={form.brand||""} onChange={e=>update("brand",e.target.value)}/>
+            </div>
+            <div>
+              <label style={labelStyle}>Color</label>
+              <input style={inputStyle} value={form.color||""} onChange={e=>update("color",e.target.value)}/>
+            </div>
+          </div>
+          <div style={row}>
+            <div>
+              <label style={labelStyle}>Material</label>
+              <input style={inputStyle} value={form.material||""} onChange={e=>update("material",e.target.value)}/>
+            </div>
+            <div>
+              <label style={labelStyle}>Formality</label>
+              <input style={inputStyle} value={form.formality||""} onChange={e=>update("formality",e.target.value)}/>
+            </div>
+          </div>
+          <div style={{marginBottom:10}}>
+            <label style={labelStyle}>Status</label>
+            <div style={{display:"flex",gap:5,flexWrap:"wrap"}}>
+              {EDIT_STATUSES.map(s=>(
+                <button key={s} onClick={()=>update("status",s)}
+                  style={{padding:"4px 12px",fontSize:12,borderRadius:20,border:`0.5px solid ${form.status===s?"var(--color-border-primary)":"var(--color-border-tertiary)"}`,background:form.status===s?"var(--color-text-primary)":"transparent",color:form.status===s?"var(--color-background-primary)":"var(--color-text-secondary)",cursor:"pointer"}}>
+                  {s}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div style={{marginBottom:10}}>
+            <label style={labelStyle}>Seasons (multi-select)</label>
+            <div style={{display:"flex",gap:5,flexWrap:"wrap"}}>
+              {ALL_SEASONS.map(s=>{
+                const on = (form.season||[]).includes(s);
+                return (
+                  <button key={s} onClick={()=>toggleSeason(s)}
+                    style={{padding:"4px 12px",fontSize:12,borderRadius:20,border:`0.5px solid ${on?"var(--color-border-primary)":"var(--color-border-tertiary)"}`,background:on?"var(--color-text-primary)":"transparent",color:on?"var(--color-background-primary)":"var(--color-text-secondary)",cursor:"pointer"}}>
+                    {s}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+          <div style={{marginBottom:10}}>
+            <label style={labelStyle}>Tags (comma separated)</label>
+            <input style={inputStyle} value={(form.tags||[]).join(", ")} onChange={e=>update("tags",e.target.value.split(",").map(t=>t.trim()).filter(Boolean))}/>
+          </div>
+          <div style={{marginBottom:14}}>
+            <label style={labelStyle}>Notes</label>
+            <textarea style={{...inputStyle,minHeight:60,resize:"vertical"}} value={form.notes||""} onChange={e=>update("notes",e.target.value)}/>
+          </div>
+        </>
+      ) : (
+        <>
+          <div style={row}>
+            <div>
+              <label style={labelStyle}>Brand</label>
+              <input style={inputStyle} value={form.brand||""} onChange={e=>update("brand",e.target.value)}/>
+            </div>
+            <div>
+              <label style={labelStyle}>Type</label>
+              <input style={inputStyle} value={form.type||""} onChange={e=>update("type",e.target.value)}/>
+            </div>
+          </div>
+          <div style={row}>
+            <div>
+              <label style={labelStyle}>Color</label>
+              <input style={inputStyle} value={form.color||""} onChange={e=>update("color",e.target.value)}/>
+            </div>
+            <div>
+              <label style={labelStyle}>Material</label>
+              <input style={inputStyle} value={form.material||""} onChange={e=>update("material",e.target.value)}/>
+            </div>
+          </div>
+          <div style={row}>
+            <div>
+              <label style={labelStyle}>Size</label>
+              <input style={inputStyle} value={form.size||""} onChange={e=>update("size",e.target.value)}/>
+            </div>
+            <div>
+              <label style={labelStyle}>Country</label>
+              <input style={inputStyle} value={form.country||""} onChange={e=>update("country",e.target.value)}/>
+            </div>
+          </div>
+          <div style={{marginBottom:10}}>
+            <label style={labelStyle}>Condition</label>
+            <input style={inputStyle} value={form.condition||""} onChange={e=>update("condition",e.target.value)}/>
+          </div>
+          <div style={row}>
+            <div>
+              <label style={labelStyle}>Price paid (¥)</label>
+              <input type="number" style={inputStyle} value={form.pricePaid||0} onChange={e=>update("pricePaid",Number(e.target.value)||0)}/>
+            </div>
+            <div>
+              <label style={labelStyle}>Currency</label>
+              <input style={inputStyle} value={form.currency||"RMB"} onChange={e=>update("currency",e.target.value)}/>
+            </div>
+          </div>
+          <div style={row}>
+            <div>
+              <label style={labelStyle}>XianYu list (¥)</label>
+              <input type="number" style={inputStyle} value={form.xianyuList||0} onChange={e=>update("xianyuList",Number(e.target.value)||0)}/>
+            </div>
+            <div>
+              <label style={labelStyle}>XianYu expected (¥)</label>
+              <input type="number" style={inputStyle} value={form.xianyuExp||0} onChange={e=>update("xianyuExp",Number(e.target.value)||0)}/>
+            </div>
+          </div>
+          <div style={row}>
+            <div>
+              <label style={labelStyle}>eBay list ($)</label>
+              <input type="number" style={inputStyle} value={form.ebayList||0} onChange={e=>update("ebayList",Number(e.target.value)||0)}/>
+            </div>
+            <div>
+              <label style={labelStyle}>eBay expected ($)</label>
+              <input type="number" style={inputStyle} value={form.ebayExp||0} onChange={e=>update("ebayExp",Number(e.target.value)||0)}/>
+            </div>
+          </div>
+          <div style={{marginBottom:14}}>
+            <label style={labelStyle}>Notes</label>
+            <textarea style={{...inputStyle,minHeight:60,resize:"vertical"}} value={form.notes||""} onChange={e=>update("notes",e.target.value)}/>
+          </div>
+        </>
+      )}
+
+      <div style={{display:"flex",gap:8,justifyContent:"flex-end",borderTop:"0.5px solid var(--color-border-tertiary)",paddingTop:14}}>
+        <button onClick={onClose} style={{padding:"6px 14px",fontSize:12,borderRadius:"var(--border-radius-md)",border:"0.5px solid var(--color-border-tertiary)",background:"transparent",cursor:"pointer"}}>Cancel</button>
+        <button onClick={handleSave} style={{padding:"6px 14px",fontSize:12,borderRadius:"var(--border-radius-md)",border:"0.5px solid var(--color-border-primary)",background:"var(--color-text-primary)",color:"var(--color-background-primary)",cursor:"pointer",fontWeight:500}}>Save</button>
+      </div>
+    </Modal>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<WardrobeDashboard/>);
+</script>
+</body>
+</html>

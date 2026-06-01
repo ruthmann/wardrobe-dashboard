@@ -1,0 +1,4429 @@
+{
+  "version": "3.992",
+  "exportedAt": "2026-06-01T08:55:46.369275+00:00",
+  "active": [
+    {
+      "name": "Academy of Love Espadrilles (White canvas)",
+      "category": "Footwear",
+      "subcategory": "Espadrille",
+      "brand": "Academy of Love",
+      "color": "White - natural",
+      "material": "Canvas",
+      "season": [
+        "Summer"
+      ],
+      "formality": "Casual",
+      "status": "Active",
+      "notes": "EU 45. No belt with white linen shorts.",
+      "tags": [
+        "canvas",
+        "natural",
+        "sandal",
+        "white"
+      ],
+      "id": "s_0"
+    },
+    {
+      "name": "Adidas x CLOT Qi Flow Espadrille (Black)",
+      "category": "Footwear",
+      "subcategory": "Espadrille",
+      "brand": "Adidas x CLOT",
+      "color": "Black",
+      "material": "Fabric",
+      "season": [
+        "Summer"
+      ],
+      "formality": "Casual",
+      "status": "Active",
+      "notes": "EU 44.",
+      "tags": [
+        "black",
+        "sandal"
+      ],
+      "id": "s_1"
+    },
+    {
+      "name": "Alden 1031 NST Loafer (Cigar Shell)",
+      "category": "Footwear",
+      "subcategory": "Loafer",
+      "brand": "Alden",
+      "color": "Cigar",
+      "material": "Shell Cordovan (Horween)",
+      "season": [
+        "Spring",
+        "Fall"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "Grant · 10 B/D · Leather sole",
+      "tags": [
+        "alden",
+        "brown",
+        "cigar",
+        "loafer",
+        "nst",
+        "shell",
+        "split-toe"
+      ],
+      "id": "s_2"
+    },
+    {
+      "name": "Alden 1340 Chukka PTB (Black Shell)",
+      "category": "Footwear",
+      "subcategory": "Boot",
+      "brand": "Alden",
+      "color": "Black",
+      "material": "Shell Cordovan (Horween)",
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "formality": "Smart Formal",
+      "status": "Active",
+      "notes": "Barrie · 10 B/D · Double leather + storm welt",
+      "tags": [
+        "alden",
+        "black",
+        "boot",
+        "chukka",
+        "dress-register",
+        "plain-toe",
+        "shell"
+      ],
+      "id": "s_3"
+    },
+    {
+      "name": "Alden 1473 Chukka PTB (Whisky Shell)",
+      "category": "Footwear",
+      "subcategory": "Boot",
+      "brand": "Alden",
+      "color": "Whiskey",
+      "material": "Shell Cordovan (Horween)",
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "Leydon · 10 C/E",
+      "tags": [
+        "alden",
+        "boot",
+        "chukka",
+        "plain-toe",
+        "shell",
+        "whisky"
+      ],
+      "id": "s_4"
+    },
+    {
+      "name": "Alden T7831 LHS Penny Loafer (Dark Brown CXL)",
+      "category": "Footwear",
+      "subcategory": "Loafer",
+      "brand": "Alden",
+      "color": "Dark brown",
+      "material": "CXL Calf (Horween)",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "Van · 10 B/D · Unlined",
+      "tags": [
+        "alden",
+        "brown",
+        "cxl",
+        "loafer",
+        "penny",
+        "unlined"
+      ],
+      "id": "s_5"
+    },
+    {
+      "name": "Alden 2160 STB (Color 8 Shell)",
+      "category": "Footwear",
+      "subcategory": "Straight Toe Blucher",
+      "brand": "Alden",
+      "color": "Color 8",
+      "material": "Shell Cordovan (Horween)",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Formal",
+      "status": "Active",
+      "notes": "Aberdeen · 10 B/D",
+      "tags": [
+        "alden",
+        "color 8",
+        "color-8",
+        "dress-register",
+        "shell"
+      ],
+      "id": "s_6"
+    },
+    {
+      "name": "Alden 2161 STB (Black Shell)",
+      "category": "Footwear",
+      "subcategory": "Straight Toe Blucher",
+      "brand": "Alden",
+      "color": "Black",
+      "material": "Shell Cordovan (Horween)",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Formal",
+      "status": "Active",
+      "notes": "Aberdeen · 10.5 B/D",
+      "tags": [
+        "alden",
+        "black",
+        "dress-register",
+        "shell"
+      ],
+      "id": "s_7"
+    },
+    {
+      "name": "Alden 2210 NST Derby (Color 8 Shell)",
+      "category": "Footwear",
+      "subcategory": "Derby",
+      "brand": "Alden",
+      "color": "Color 8",
+      "material": "Shell Cordovan (Horween)",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Formal",
+      "status": "Active",
+      "notes": "Aberdeen · 10.5 B/D",
+      "tags": [
+        "alden",
+        "color 8",
+        "color-8",
+        "dress-register",
+        "nst",
+        "shell",
+        "split-toe"
+      ],
+      "id": "s_8"
+    },
+    {
+      "name": "Alden 2259 STB (Ravello Shell)",
+      "category": "Footwear",
+      "subcategory": "Straight Toe Blucher",
+      "brand": "Alden",
+      "color": "Ravello",
+      "material": "Shell Cordovan (Horween)",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Formal",
+      "status": "Active",
+      "notes": "Aberdeen · 10 B/D",
+      "tags": [
+        "alden",
+        "dress-register",
+        "ravello",
+        "shell"
+      ],
+      "id": "s_9"
+    },
+    {
+      "name": "Alden 2451 Norwegian Blucher (Black Shell)",
+      "category": "Footwear",
+      "subcategory": "Straight Toe Blucher",
+      "brand": "Alden",
+      "color": "Black",
+      "material": "Shell Cordovan (Horween)",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Formal",
+      "status": "Active",
+      "notes": "Barrie · 9.5 C/E",
+      "tags": [
+        "alden",
+        "black",
+        "dress-register",
+        "shell"
+      ],
+      "id": "s_10"
+    },
+    {
+      "name": "Alden 2816 PTB (Burnished Dark Tan)",
+      "category": "Footwear",
+      "subcategory": "Plain Toe Blucher",
+      "brand": "Alden",
+      "color": "Burnished Dark Tan",
+      "material": "Calf (Horween)",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Business Casual",
+      "status": "Active",
+      "notes": "Plaza · 9.5 B/D",
+      "tags": [
+        "alden",
+        "brown",
+        "plain-toe"
+      ],
+      "id": "s_11"
+    },
+    {
+      "name": "Alden 29364F PTB (Brown CXL)",
+      "category": "Footwear",
+      "subcategory": "Plain Toe Blucher",
+      "brand": "Alden",
+      "color": "Brown",
+      "material": "CXL Calf (Horween)",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "Barrie · 10 B/D · 360 storm welt · blind eyelets",
+      "tags": [
+        "alden",
+        "brown",
+        "cxl",
+        "plain-toe"
+      ],
+      "id": "s_12"
+    },
+    {
+      "name": "Alden 40510H Indy Boot (Brown CXL)",
+      "category": "Footwear",
+      "subcategory": "Boot",
+      "brand": "Alden",
+      "color": "Brown/Color 8",
+      "material": "CXL Calf (Horween)",
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "Trubalance · 10.5 B/D",
+      "tags": [
+        "alden",
+        "boot",
+        "brown",
+        "color-8",
+        "cxl",
+        "indy"
+      ],
+      "id": "s_13"
+    },
+    {
+      "name": "Alden 4060 Tanker Boot (Color 8 Shell)",
+      "category": "Footwear",
+      "subcategory": "Boot",
+      "brand": "Alden",
+      "color": "Color 8",
+      "material": "Shell Cordovan (Horween)",
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "formality": "Smart Formal",
+      "status": "Active",
+      "notes": "Grant · 10 C/E",
+      "tags": [
+        "alden",
+        "boot",
+        "brown",
+        "color 8",
+        "color-8",
+        "dress-register",
+        "shell",
+        "tanker"
+      ],
+      "id": "s_14"
+    },
+    {
+      "name": "Alden 4074 Tanker Boot (Cigar Shell)",
+      "category": "Footwear",
+      "subcategory": "Boot",
+      "brand": "Alden",
+      "color": "Cigar",
+      "material": "Shell Cordovan (Horween)",
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "formality": "Smart Formal",
+      "status": "Active",
+      "notes": "Barrie · 10 B/D",
+      "tags": [
+        "alden",
+        "boot",
+        "brown",
+        "cigar",
+        "dress-register",
+        "shell",
+        "tanker"
+      ],
+      "id": "s_15"
+    },
+    {
+      "name": "Alden 5165 Semi-Brogue Balmoral (Black Shell)",
+      "category": "Footwear",
+      "subcategory": "Oxford",
+      "brand": "Alden",
+      "color": "Black",
+      "material": "Shell Cordovan (Horween)",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Formal",
+      "status": "Active",
+      "notes": "Plaza · 10.5 B/D",
+      "tags": [
+        "alden",
+        "balmoral-brogue",
+        "black",
+        "dress-register",
+        "semi-brogue",
+        "shell"
+      ],
+      "id": "s_16"
+    },
+    {
+      "name": "Alden 67540 LHS Penny Loafer (Ravello Shell)",
+      "category": "Footwear",
+      "subcategory": "Loafer",
+      "brand": "Alden",
+      "color": "Ravello",
+      "material": "Shell Cordovan (Horween)",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "Van · 9.5 B/D",
+      "tags": [
+        "alden",
+        "loafer",
+        "penny",
+        "ravello",
+        "shell"
+      ],
+      "id": "s_17"
+    },
+    {
+      "name": "Alden 704L Apron Toe Blucher (Dark Brown Suede)",
+      "category": "Footwear",
+      "subcategory": "Apron Toe Blucher",
+      "brand": "Alden",
+      "color": "Dark Brown",
+      "material": "Suede (Horween)",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "Orleans · 10.5 B/D",
+      "tags": [
+        "alden",
+        "apron-toe",
+        "brown",
+        "suede"
+      ],
+      "id": "s_18"
+    },
+    {
+      "name": "Alden 73921 Ranger Mocc (Color 2 Shell)",
+      "category": "Footwear",
+      "subcategory": "Moccasin",
+      "brand": "Alden",
+      "color": "Color 2",
+      "material": "Shell Cordovan (Horween)",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Refined Casual",
+      "status": "Active",
+      "notes": "Van · 10 B/D · Crepe sole",
+      "tags": [
+        "alden",
+        "color-2",
+        "ranger",
+        "shell"
+      ],
+      "id": "s_19"
+    },
+    {
+      "name": "Alden 913 Medallion Balmoral (Medium Brown)",
+      "category": "Footwear",
+      "subcategory": "Oxford",
+      "brand": "Alden",
+      "color": "Medium Brown",
+      "material": "Calf (Horween)",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Business Casual",
+      "status": "Active",
+      "notes": "Hampton · 10.5 C/E",
+      "tags": [
+        "alden",
+        "balmoral-brogue",
+        "brown",
+        "medallion"
+      ],
+      "id": "s_20"
+    },
+    {
+      "name": "Alden 9431S PTB (Tobacco Nubuck)",
+      "category": "Footwear",
+      "subcategory": "Plain Toe Blucher",
+      "brand": "Alden",
+      "color": "Tobacco Brown",
+      "material": "Oiled Nubuck (Horween)",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Casual",
+      "status": "Active",
+      "notes": "Barrie · 10 B/D",
+      "tags": [
+        "alden",
+        "brown",
+        "plain-toe",
+        "suede"
+      ],
+      "id": "s_21"
+    },
+    {
+      "name": "Alden 9662F Full Brogue Blucher (Snuff Suede)",
+      "category": "Footwear",
+      "subcategory": "Wingtip",
+      "brand": "Alden",
+      "color": "Snuff Brown",
+      "material": "Suede (Horween)",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "Plaza · 11 B/D",
+      "tags": [
+        "alden",
+        "brown",
+        "full-brogue",
+        "suede",
+        "wingtip"
+      ],
+      "id": "s_22"
+    },
+    {
+      "name": "Alden 9750 Longwing Blucher (Ravello Shell)",
+      "category": "Footwear",
+      "subcategory": "Wingtip",
+      "brand": "Alden",
+      "color": "Ravello",
+      "material": "Shell Cordovan (Horween)",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Formal",
+      "status": "Active",
+      "notes": "Barrie · 9.5 B/D · 360 storm welt",
+      "tags": [
+        "alden",
+        "dress-register",
+        "ravello",
+        "shell",
+        "wingtip"
+      ],
+      "id": "s_23"
+    },
+    {
+      "name": "Alden 986 LHS (Color 8 Shell)",
+      "category": "Footwear",
+      "subcategory": "Loafer",
+      "brand": "Alden",
+      "color": "Color 8",
+      "material": "Shell Cordovan (Horween)",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Formal",
+      "status": "Active",
+      "notes": "Van · 10 B/D",
+      "tags": [
+        "alden",
+        "color 8",
+        "color-8",
+        "dress-register",
+        "penny",
+        "shell"
+      ],
+      "id": "s_24"
+    },
+    {
+      "name": "Alden A0908H V-Tip Jumper Boot (Ravello Shell)",
+      "category": "Footwear",
+      "subcategory": "Boot",
+      "brand": "Alden",
+      "color": "Ravello",
+      "material": "Shell Cordovan (Horween)",
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "formality": "Smart Formal",
+      "status": "Active",
+      "notes": "Barrie · 9.5 B/D · 270 welt",
+      "tags": [
+        "alden",
+        "boot",
+        "dress-register",
+        "jumper",
+        "ravello",
+        "shell",
+        "v-tip"
+      ],
+      "id": "s_25"
+    },
+    {
+      "name": "Alden A2505C STB (Brown Chamois)",
+      "category": "Footwear",
+      "subcategory": "Straight Toe Blucher",
+      "brand": "Alden",
+      "color": "Brown",
+      "material": "Chamois Reverse Suede (Horween)",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "Barrie · 10.5 B/D",
+      "tags": [
+        "alden",
+        "brown",
+        "suede"
+      ],
+      "id": "s_26"
+    },
+    {
+      "name": "Alden D1660C V-Tip Algonquin (Cigar Shell)",
+      "category": "Footwear",
+      "subcategory": "Derby",
+      "brand": "Alden",
+      "color": "Cigar",
+      "material": "Shell Cordovan (Horween)",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Formal",
+      "status": "Active",
+      "notes": "Barrie · 10.5 A/C",
+      "tags": [
+        "alden",
+        "brown",
+        "cigar",
+        "dress-register",
+        "shell",
+        "v-tip"
+      ],
+      "id": "s_27"
+    },
+    {
+      "name": "Alden D2875HC Jumper Boot (Color 4 Shell)",
+      "category": "Footwear",
+      "subcategory": "Boot",
+      "brand": "Alden",
+      "color": "Color 4",
+      "material": "Shell Cordovan (Horween)",
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "Barrie · 10 B/D",
+      "tags": [
+        "alden",
+        "boot",
+        "color-4",
+        "jumper",
+        "shell"
+      ],
+      "id": "s_28"
+    },
+    {
+      "name": "Alden D2914C Algonquin Chukka (Color 8 Shell)",
+      "category": "Footwear",
+      "subcategory": "Boot",
+      "brand": "Alden",
+      "color": "Color 8",
+      "material": "Shell Cordovan (Horween)",
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "formality": "Smart Formal",
+      "status": "Active",
+      "notes": "Barrie · 10.5 B/D",
+      "tags": [
+        "alden",
+        "boot",
+        "chukka",
+        "color 8",
+        "color-8",
+        "dress-register",
+        "shell"
+      ],
+      "id": "s_29"
+    },
+    {
+      "name": "Alden D32027 LHS Full Strap Loafer (Navy Suede)",
+      "category": "Footwear",
+      "subcategory": "Loafer",
+      "brand": "Alden",
+      "color": "Navy",
+      "material": "Suede (Horween)",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "Copley last · 10 D · Jute-sole-edge detail (Copley is slimmer/more elegant than Van; prior tagging incorrectly said Van)",
+      "tags": [
+        "alden",
+        "copley",
+        "full-strap",
+        "navy",
+        "penny",
+        "suede"
+      ],
+      "id": "s_30"
+    },
+    {
+      "name": "Allen Edmonds McAllister Longwing (Walnut)",
+      "category": "Footwear",
+      "subcategory": "Wingtip",
+      "brand": "Allen Edmonds",
+      "color": "Brown - Walnut",
+      "material": "Calf skin - Smooth",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Business Casual",
+      "status": "Active",
+      "notes": "10.5",
+      "tags": [
+        "brown",
+        "wingtip"
+      ],
+      "id": "s_31"
+    },
+    {
+      "name": "Baudoin & Lange Calvi Espadrille (Marina Navy)",
+      "category": "Footwear",
+      "subcategory": "Espadrille",
+      "brand": "Baudoin and Lange",
+      "color": "Navy Blue",
+      "material": "Suede and Gros Grain",
+      "season": [
+        "Spring",
+        "Summer"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "Size 10 · Italy",
+      "tags": [
+        "navy",
+        "suede"
+      ],
+      "id": "s_32"
+    },
+    {
+      "name": "Bed|Stü Full Brogue Oxford (Mid-Brown)",
+      "category": "Footwear",
+      "subcategory": "Oxford",
+      "brand": "Bed|Stü",
+      "color": "Mid-Brown",
+      "material": "Calf - Rugged leather",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Casual",
+      "status": "Active",
+      "notes": "EU 43",
+      "tags": [
+        "brown",
+        "full-brogue",
+        "wingtip"
+      ],
+      "id": "s_33"
+    },
+    {
+      "name": "Stefano Bemer 4202 Side-Lace Wholecut (Brown)",
+      "category": "Footwear",
+      "subcategory": "Oxford",
+      "brand": "Stefano Bemer",
+      "color": "Brown 020",
+      "material": "Pelle Bulgaro",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Formal",
+      "status": "Active",
+      "notes": "Form C · EU 43.5 · Florence",
+      "tags": [
+        "brown",
+        "dress-register",
+        "wholecut"
+      ],
+      "id": "s_34"
+    },
+    {
+      "name": "Stefano Bemer 6711 Balmoral Wholecut (Black/Grey)",
+      "category": "Footwear",
+      "subcategory": "Oxford",
+      "brand": "Stefano Bemer",
+      "color": "Black (Nero Grey)",
+      "material": "Pelle Umbrani",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Formal",
+      "status": "Active",
+      "notes": "Form J · EU 43.5 · Florence",
+      "tags": [
+        "balmoral-brogue",
+        "black",
+        "dress-register",
+        "wholecut"
+      ],
+      "id": "s_35"
+    },
+    {
+      "name": "Carpe Diem Mid-Rise Boot (Dark Brown)",
+      "category": "Footwear",
+      "subcategory": "Boot",
+      "brand": "Carpe Diem",
+      "color": "Dark Brown",
+      "material": "Cowhide (Vacchetta)",
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "formality": "Artisan Casual",
+      "status": "Active",
+      "notes": "EU 44 · Italy",
+      "tags": [
+        "boot",
+        "brown"
+      ],
+      "id": "s_36"
+    },
+    {
+      "name": "Carpe Diem Reverse Shell PTB Derby (Natural, 2001)",
+      "category": "Footwear",
+      "subcategory": "Derby",
+      "brand": "Carpe Diem",
+      "color": "Natural (reverse)",
+      "material": "Shell Cordovan Reverse (Horween)",
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "EU 45 · Italy · **Collectible** — Horween vamp stamp dated 2001 from Carpe Diem's peak period under Maurizio Altieri · Reverse-side-out shell aged into polished chromatic warm chestnut-brown patina over 20+ years · Low-shoe derby (corrected from prior boot tagging) · CARPE DIEM era (foundational, predates m_moriabc). Serves the m_moriabc triad's PAST role by interpretation only — it is a Carpe Diem piece, NOT a literal m_moriabc \"A\" object. Pairs with s_110 Moria B (present, incoming) and a future slow Altieri C commission. Subject of direct IG dialogue with Maurizio Altieri (Jan 2026).",
+      "tags": [
+        "carpe-diem",
+        "collectible",
+        "derby",
+        "horween-2001",
+        "natural",
+        "natural-reverse",
+        "plain-toe",
+        "shell",
+        "altieri",
+        "m_moriabc",
+        "triad",
+        "carpe-diem-era",
+        "triad-past-anchor"
+      ],
+      "id": "s_37"
+    },
+    {
+      "name": "Chiappini Chukka Norvegese (Cognac)",
+      "category": "Footwear",
+      "subcategory": "Boot",
+      "brand": "Chiappini",
+      "color": "Light Brown / Cognac",
+      "material": "Calf",
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "EU 43 · Italy",
+      "tags": [
+        "boot",
+        "brown",
+        "chukka"
+      ],
+      "id": "s_38"
+    },
+    {
+      "name": "Christian Louboutin Chambeliss Night Strass (Black Patent)",
+      "category": "Footwear",
+      "subcategory": "Derby",
+      "brand": "Christian Louboutin",
+      "color": "Black",
+      "material": "Patent leather",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Statement Formal",
+      "status": "Active",
+      "notes": "EU 44.5",
+      "tags": [
+        "black",
+        "dress-register",
+        "statement"
+      ],
+      "id": "s_39"
+    },
+    {
+      "name": "Crockett & Jones Kensington Albert Loafer (Black)",
+      "category": "Footwear",
+      "subcategory": "Loafer",
+      "brand": "Crockett & Jones",
+      "color": "Black",
+      "material": "Box Calf",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Formal",
+      "status": "Active",
+      "notes": "341 last · UK 9E",
+      "tags": [
+        "albert",
+        "black",
+        "dress-register",
+        "loafer"
+      ],
+      "id": "s_40"
+    },
+    {
+      "name": "Doek Court Tennis Shoe (Ecru)",
+      "category": "Footwear",
+      "subcategory": "Sneaker",
+      "brand": "Doek",
+      "color": "Ecru",
+      "material": "Canvas",
+      "season": [
+        "Summer"
+      ],
+      "formality": "Casual",
+      "status": "Active",
+      "notes": "Size 27 · Japan",
+      "tags": [
+        "canvas"
+      ],
+      "id": "s_41"
+    },
+    {
+      "name": "Edward Green Cranleigh Shearling Boot (Mink Suede)",
+      "category": "Footwear",
+      "subcategory": "Boot",
+      "brand": "Edward Green",
+      "color": "Dark Brown",
+      "material": "Suede (mink)",
+      "season": [
+        "Winter"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "202 last · UK 9 · Ridgeway sole",
+      "tags": [
+        "boot",
+        "brown",
+        "edward green",
+        "edward-green",
+        "shearling",
+        "suede"
+      ],
+      "id": "s_42"
+    },
+    {
+      "name": "Edward Green Dover (Dark Oak Patina)",
+      "category": "Footwear",
+      "subcategory": "Derby",
+      "brand": "Edward Green",
+      "color": "Dark Oak",
+      "material": "Calf - Smooth Grain",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Formal",
+      "status": "Active",
+      "notes": "606 last · UK 9",
+      "tags": [
+        "dress-register",
+        "edward green",
+        "edward-green"
+      ],
+      "id": "s_43"
+    },
+    {
+      "name": "Edward Green Halifax Chukka Boot (Black Grain)",
+      "category": "Footwear",
+      "subcategory": "Boot",
+      "brand": "Edward Green",
+      "color": "Black",
+      "material": "Calf - London Grain",
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "202 last · UK 9.5 · Ridgeway",
+      "tags": [
+        "black",
+        "boot",
+        "chukka",
+        "edward green",
+        "edward-green",
+        "grain"
+      ],
+      "id": "s_44"
+    },
+    {
+      "name": "Edward Green Dover (Dark Brown Grain)",
+      "category": "Footwear",
+      "subcategory": "Derby",
+      "brand": "Edward Green",
+      "color": "Dark Brown",
+      "material": "Calf - London Grain",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Formal",
+      "status": "Active",
+      "notes": "606 last · UK 9.5",
+      "tags": [
+        "brown",
+        "dress-register",
+        "edward green",
+        "edward-green",
+        "grain"
+      ],
+      "id": "s_45"
+    },
+    {
+      "name": "Feiyue NYU Shanghai High-top (White/Blue)",
+      "category": "Footwear",
+      "subcategory": "Sneaker",
+      "brand": "Feiyue",
+      "color": "White (blue)",
+      "material": "Canvas",
+      "season": [
+        "Summer"
+      ],
+      "formality": "Casual",
+      "status": "Active",
+      "notes": "Size 11",
+      "tags": [
+        "canvas",
+        "white"
+      ],
+      "id": "s_46"
+    },
+    {
+      "name": "Gucci Jordaan Horsebit Loafer (Navy Blue)",
+      "category": "Footwear",
+      "subcategory": "Loafer",
+      "brand": "Gucci",
+      "color": "Navy Blue",
+      "material": "Calf - Jordaan Leather",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "UK 10D · Italy",
+      "tags": [
+        "bit",
+        "loafer",
+        "navy"
+      ],
+      "id": "s_47"
+    },
+    {
+      "name": "Hackett (Carmina) Almond Toe Loafer (Mid-Brown Patinated)",
+      "category": "Footwear",
+      "subcategory": "Loafer",
+      "brand": "Hackett London (by Carmina)",
+      "color": "Mid-Brown Patinated",
+      "material": "Calf skin - Smooth",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Business Casual",
+      "status": "Active",
+      "notes": "Forest last · UK 10D · Warm patinated (Carmina antiquing — lighter at toe crest, darker in shadows, visible chromatic movement)",
+      "tags": [
+        "brown",
+        "loafer",
+        "patinated",
+        "warm-patinated"
+      ],
+      "id": "s_48"
+    },
+    {
+      "name": "Hanover Longwing Blucher (Color 8 Shell)",
+      "category": "Footwear",
+      "subcategory": "Wingtip",
+      "brand": "Hanover",
+      "color": "Color 8",
+      "material": "Shell Cordovan (Horween)",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Formal",
+      "status": "Active",
+      "notes": "10.5 C · Vintage · Darkest-interpretation Color 8 reference piece in the collection — reads near-black with burgundy only visible at burnishing points",
+      "tags": [
+        "color 8",
+        "color-8",
+        "darkest-interpretation",
+        "dress-register",
+        "shell",
+        "wingtip"
+      ],
+      "id": "s_49"
+    },
+    {
+      "name": "Hender Scheme MIP-05 GAT (Natural Veg Tan)",
+      "category": "Footwear",
+      "subcategory": "Sneaker",
+      "brand": "Hender Scheme",
+      "color": "Natural unfinished",
+      "material": "Veg-tan cowhide",
+      "season": [
+        "Spring",
+        "Fall"
+      ],
+      "formality": "Creative Casual",
+      "status": "Active",
+      "notes": "Size 7 · Japan · Gum sole",
+      "tags": [
+        "brown",
+        "natural"
+      ],
+      "id": "s_50"
+    },
+    {
+      "name": "Hermès Espadrille Sandal (Light Brown)",
+      "category": "Footwear",
+      "subcategory": "Sandal",
+      "brand": "Hermes",
+      "color": "Light brown",
+      "material": "Calfskin",
+      "season": [
+        "Summer"
+      ],
+      "formality": "Casual",
+      "status": "Active",
+      "notes": "EU 44 · Spain · Gift",
+      "tags": [
+        "brown",
+        "sandal"
+      ],
+      "id": "s_51"
+    },
+    {
+      "name": "Heschung (CdG) Norwegian Buckle Boot (Charcoal)",
+      "category": "Footwear",
+      "subcategory": "Boot",
+      "brand": "Heschung",
+      "color": "Charcoal",
+      "material": "Elk/Deer Grain Leather",
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "EU 44 · France · Vibram Commando",
+      "tags": [
+        "boot"
+      ],
+      "id": "s_52"
+    },
+    {
+      "name": "John Lobb Tim Chukka (Dark Brown Suede)",
+      "category": "Footwear",
+      "subcategory": "Boot",
+      "brand": "John Lobb",
+      "color": "Dark Brown",
+      "material": "Suede",
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "formality": "Smart Casual",
+      "status": "Repair",
+      "notes": "7000 last · 9EE · At Lobb Plaza 66",
+      "tags": [
+        "apron-toe",
+        "boot",
+        "brown",
+        "chukka",
+        "john lobb",
+        "john-lobb",
+        "repair",
+        "suede"
+      ],
+      "id": "s_53"
+    },
+    {
+      "name": "John Lobb Alliance Double Buckle Boot (Black)",
+      "category": "Footwear",
+      "subcategory": "Boot",
+      "brand": "John Lobb",
+      "color": "Black",
+      "material": "Calf (polished)",
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "formality": "Smart Formal",
+      "status": "Active",
+      "notes": "7000 last · 8.5EE · Dainite + 360 storm welt",
+      "tags": [
+        "black",
+        "boot",
+        "double-buckle",
+        "dress-register",
+        "john lobb",
+        "john-lobb"
+      ],
+      "id": "s_54"
+    },
+    {
+      "name": "John Lobb City II Captoe Oxford (Dark Brown Museum)",
+      "category": "Footwear",
+      "subcategory": "Oxford",
+      "brand": "John Lobb",
+      "color": "Dark Brown",
+      "material": "Calf - Museum Calf",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Formal",
+      "status": "Active",
+      "notes": "7000 last · UK 9.5E",
+      "tags": [
+        "brown",
+        "captoe",
+        "dress-register",
+        "john lobb",
+        "john-lobb",
+        "museum"
+      ],
+      "id": "s_55"
+    },
+    {
+      "name": "John Lobb Garnier II Wholecut (Black)",
+      "category": "Footwear",
+      "subcategory": "Oxford",
+      "brand": "John Lobb",
+      "color": "Black",
+      "material": "Calf skin - Smooth",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Formal",
+      "status": "Active",
+      "notes": "7000 last · UK 9EE · Steel toe plates",
+      "tags": [
+        "black",
+        "dress-register",
+        "john lobb",
+        "john-lobb",
+        "wholecut"
+      ],
+      "id": "s_56"
+    },
+    {
+      "name": "John Lobb Lopez Loafer (Black)",
+      "category": "Footwear",
+      "subcategory": "Loafer",
+      "brand": "John Lobb",
+      "color": "Black",
+      "material": "Calf skin - Smooth",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Formal",
+      "status": "Active",
+      "notes": "4395 last · UK 9EE",
+      "tags": [
+        "black",
+        "dress-register",
+        "john lobb",
+        "john-lobb",
+        "loafer"
+      ],
+      "id": "s_57"
+    },
+    {
+      "name": "John Lobb Pace Loafer (Dark Brown Grain)",
+      "category": "Footwear",
+      "subcategory": "Loafer",
+      "brand": "John Lobb",
+      "color": "Dark brown",
+      "material": "Calf skin - Grain",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "423 last · UK 9.5E · Rubber sole",
+      "tags": [
+        "brown",
+        "john lobb",
+        "john-lobb",
+        "loafer"
+      ],
+      "id": "s_58"
+    },
+    {
+      "name": "John Lobb Philip II Captoe Oxford (Black)",
+      "category": "Footwear",
+      "subcategory": "Oxford",
+      "brand": "John Lobb",
+      "color": "Black",
+      "material": "Calf",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Formal",
+      "status": "Active",
+      "notes": "9E · Prestige line",
+      "tags": [
+        "black",
+        "captoe",
+        "dress-register",
+        "john lobb",
+        "john-lobb"
+      ],
+      "id": "s_59"
+    },
+    {
+      "name": "Jueshi Handmade Slip-On Mule (Dark Brown)",
+      "category": "Footwear",
+      "subcategory": "Sandal",
+      "brand": "Jueshi Handmade",
+      "color": "Dark Brown",
+      "material": "Crazy Horse Leather",
+      "season": [
+        "Summer"
+      ],
+      "formality": "Casual",
+      "status": "Active",
+      "notes": "EU 43 · Sichuan, China",
+      "tags": [
+        "brown",
+        "sandal",
+        "slip-on"
+      ],
+      "id": "s_61"
+    },
+    {
+      "name": "Loro Piana (Replica) Summer Walk Loafer (Deep Blue)",
+      "category": "Footwear",
+      "subcategory": "Loafer",
+      "brand": "Loro Piana (Replica)",
+      "color": "Deep Blue",
+      "material": "Suede",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "EU 43",
+      "tags": [
+        "loafer",
+        "suede",
+        "summer-walk"
+      ],
+      "id": "s_62"
+    },
+    {
+      "name": "Lucchese Full-Quill Ostrich Cowboy Boots (Tan Cognac)",
+      "category": "Footwear",
+      "subcategory": "Boot",
+      "brand": "Luchesse",
+      "color": "Tan Cognac",
+      "material": "Ostrich",
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "formality": "Statement Casual",
+      "status": "Active",
+      "notes": "11D · El Paso, TX",
+      "tags": [
+        "boot",
+        "brown",
+        "cowboy",
+        "exotic"
+      ],
+      "id": "s_63"
+    },
+    {
+      "name": "Maison Margiela GAT Replica (White/Grey)",
+      "category": "Footwear",
+      "subcategory": "Sneaker",
+      "brand": "Margiela - Replica",
+      "color": "White/Grey",
+      "material": "Calf/Suede",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Casual",
+      "status": "Active",
+      "notes": "EU 44 · Italy",
+      "tags": [
+        "suede",
+        "white"
+      ],
+      "id": "s_64"
+    },
+    {
+      "name": "Meccariello Argentum Chisel M Shortwing (Dark Brown)",
+      "category": "Footwear",
+      "subcategory": "Oxford",
+      "brand": "Meccariello",
+      "color": "Dark Brown",
+      "material": "Calf",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Formal",
+      "status": "Active",
+      "notes": "UK 9.5F · Italy",
+      "tags": [
+        "brown",
+        "dress-register",
+        "shortwing",
+        "wingtip"
+      ],
+      "id": "s_65"
+    },
+    {
+      "name": "Mr. Zhao Bespoke Chelsea Boot (Dark Espresso Shell)",
+      "category": "Footwear",
+      "subcategory": "Boot",
+      "brand": "Mr. Zhao Bespoke",
+      "color": "Dark Espresso Brown",
+      "material": "Shell Cordovan (Horween)",
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "formality": "Creative Formal",
+      "status": "En Route",
+      "notes": "Custom last · EU 44 · Shanghai",
+      "tags": [
+        "boot",
+        "brown",
+        "chelsea",
+        "dress-register",
+        "en-route",
+        "shell"
+      ],
+      "id": "s_66"
+    },
+    {
+      "name": "OnCloud CloudRunner (Black)",
+      "category": "Footwear",
+      "subcategory": "Sneaker",
+      "brand": "OnCloud",
+      "color": "Black",
+      "material": "Fabric",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Casual",
+      "status": "Active",
+      "notes": "EU 44",
+      "tags": [
+        "black"
+      ],
+      "id": "s_67"
+    },
+    {
+      "name": "Paraboot Sand (Bordeaux Shell)",
+      "category": "Footwear",
+      "subcategory": "Split-Toe Derby",
+      "brand": "Paraboot",
+      "color": "Bordeaux (Cordo Bordeaux shell)",
+      "material": "Shell Cordovan (Horween)",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "UK 9.5 · France · Norwegian Welt · Activ rubber sole · Horween Color 8 with Paraboot claret-leaning finish · Actem last · ref 140214 · UK 9.5 · Sand is refined/sleeker than Avignon (slimmer toe, less bulky sole)",
+      "tags": [
+        "burgundy",
+        "color 8",
+        "dress-register",
+        "paraboot",
+        "shell",
+        "bordeaux",
+        "cordo-bordeaux",
+        "split-toe",
+        "refined-rugged"
+      ],
+      "id": "s_68",
+      "model": "Sand"
+    },
+    {
+      "name": "Paraboot Michael (Walnut Suede)",
+      "category": "Footwear",
+      "subcategory": "Derby",
+      "brand": "Paraboot",
+      "color": "Light Noix",
+      "material": "Suede",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "UK 9.5 · France · Light Noix (Paraboot colorway)",
+      "tags": [
+        "brown",
+        "light-noix",
+        "paraboot",
+        "suede"
+      ],
+      "id": "s_69"
+    },
+    {
+      "name": "Paraboot Thiers Sport Derby (Dark Brown)",
+      "category": "Footwear",
+      "subcategory": "Rugged All-Weather",
+      "brand": "Paraboot",
+      "color": "Dark Brown",
+      "material": "Full-grain pebbled leather",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Casual",
+      "status": "Active",
+      "notes": "UK 9.5 · France",
+      "tags": [
+        "brown",
+        "paraboot"
+      ],
+      "id": "s_70"
+    },
+    {
+      "name": "Peal & Co. Captoe Boot (Dark Brown Suede)",
+      "category": "Footwear",
+      "subcategory": "Boot",
+      "brand": "Peal & Co./Brooks Brothers",
+      "color": "Dark Brown",
+      "material": "Suede",
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "UK 9.5 · Dainite + storm welt",
+      "tags": [
+        "boot",
+        "brown",
+        "captoe",
+        "suede"
+      ],
+      "id": "s_71"
+    },
+    {
+      "name": "Peal & Co. Coniston Cap-Toe Boot (Burgundy Shell)",
+      "category": "Footwear",
+      "subcategory": "Boot",
+      "brand": "Peal & Co./Brooks Brothers",
+      "color": "Burgundy (non-Color-8 Horween shell)",
+      "material": "Shell Cordovan (Horween)",
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "formality": "Smart Formal",
+      "status": "Active",
+      "notes": "C&J Coniston · 10D · Non-Color-8 Horween shell — brighter warm burgundy SKU, distinct from Color 8 lane",
+      "tags": [
+        "boot",
+        "burgundy",
+        "captoe",
+        "dress-register",
+        "non-color-8-shell",
+        "shell",
+        "warm-burgundy"
+      ],
+      "id": "s_72"
+    },
+    {
+      "name": "Quadratura Classica Orientale Sandal (Teak Deerskin)",
+      "category": "Footwear",
+      "subcategory": "Sandal",
+      "brand": "Private Collection/Quadratura Classica",
+      "color": "Teak Brown",
+      "material": "Deerskin",
+      "season": [
+        "Summer"
+      ],
+      "formality": "Casual",
+      "status": "Active",
+      "notes": "EU 43 · Italy",
+      "tags": [
+        "brown",
+        "sandal"
+      ],
+      "id": "s_73"
+    },
+    {
+      "name": "Ralph Lauren (Allen Edmonds) Longwing Derby (Black Calf)",
+      "category": "Footwear",
+      "subcategory": "Wingtip",
+      "brand": "Ralph Lauren (by Allen Edmonds)",
+      "color": "Black",
+      "material": "Calf skin - Smooth",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Business Casual",
+      "status": "Active",
+      "notes": "McAllister/AE 65 · 10 B/D",
+      "tags": [
+        "black",
+        "ralph-lauren",
+        "wingtip",
+        "allen-edmonds"
+      ],
+      "id": "s_74"
+    },
+    {
+      "name": "Ralph Lauren (C&J) Cap Toe Oxford (Light Tan)",
+      "category": "Footwear",
+      "subcategory": "Oxford",
+      "brand": "Ralph Lauren (by Crockett & Jones)",
+      "color": "Light Tan",
+      "material": "Calf skin - Smooth",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Business Casual",
+      "status": "Active",
+      "notes": "UK 9.5E",
+      "tags": [
+        "brown",
+        "captoe",
+        "ralph-lauren"
+      ],
+      "id": "s_75"
+    },
+    {
+      "name": "Ralph Lauren (C&J) Livingstone II Service Boot (Dark Brown Grain)",
+      "category": "Footwear",
+      "subcategory": "Boot",
+      "brand": "Ralph Lauren (by Crockett & Jones)",
+      "color": "Dark brown",
+      "material": "Calf - Grain (dark brown)",
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "US 10.5 · Commando · Grained calf, NOT Horween CXL — uniform dark brown, no red pull-up patina",
+      "tags": [
+        "boot",
+        "brown",
+        "grain",
+        "ralph-lauren",
+        "service"
+      ],
+      "id": "s_76"
+    },
+    {
+      "name": "Ralph Lauren (Santoni) Cap Toe Oxford (Chestnut Suede)",
+      "category": "Footwear",
+      "subcategory": "Oxford",
+      "brand": "Ralph Lauren (by Santoni)",
+      "color": "Chestnut brown",
+      "material": "Suede",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "11D · Italy",
+      "tags": [
+        "brown",
+        "captoe",
+        "ralph-lauren",
+        "suede"
+      ],
+      "id": "s_77"
+    },
+    {
+      "name": "Ralph Lauren Purple Label Driving Loafer (Dark Grey Suede)",
+      "category": "Footwear",
+      "subcategory": "Loafer",
+      "brand": "Ralph Lauren Purple Label",
+      "color": "Dark Grey",
+      "material": "Suede",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "11D · Italy",
+      "tags": [
+        "driving",
+        "loafer",
+        "ralph-lauren",
+        "suede"
+      ],
+      "id": "s_79"
+    },
+    {
+      "name": "Rancourt Baxter Ranger Moc (Rye)",
+      "category": "Footwear",
+      "subcategory": "Moccasin",
+      "brand": "Rancourt",
+      "color": "Rye Brown",
+      "material": "Crazy Horse Leather",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Casual",
+      "status": "Active",
+      "notes": "US 10.5D · Maine",
+      "tags": [
+        "brown",
+        "loafer",
+        "ranger"
+      ],
+      "id": "s_80"
+    },
+    {
+      "name": "Rancourt Pinch Penny Loafer (Caramel Shell)",
+      "category": "Footwear",
+      "subcategory": "Loafer",
+      "brand": "Rancourt",
+      "color": "Caramel",
+      "material": "Shell Cordovan (Horween)",
+      "season": [
+        "Spring",
+        "Summer",
+        "Fall"
+      ],
+      "formality": "Smart Casual",
+      "status": "En Route",
+      "notes": "10.5D · Maine · MTO",
+      "tags": [
+        "en-route",
+        "loafer",
+        "penny",
+        "shell"
+      ],
+      "id": "s_81"
+    },
+    {
+      "name": "Red Wing 9871 (Oro Russet, Vibram resole)",
+      "category": "Footwear",
+      "subcategory": "Boot",
+      "brand": "Redwing",
+      "color": "Gold tan",
+      "material": "Full grain leather",
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "formality": "Rugged Casual",
+      "status": "Active",
+      "notes": "10D · Japan model",
+      "tags": [
+        "boot",
+        "brown"
+      ],
+      "id": "s_82"
+    },
+    {
+      "name": "Riccardo Bestetti Chukka Boot (Burgundy Burnished)",
+      "category": "Footwear",
+      "subcategory": "Boot",
+      "brand": "Riccardo Bestetti",
+      "color": "Burgundy burnished",
+      "material": "Calf (small grain)",
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "formality": "Artisan Smart",
+      "status": "Active",
+      "notes": "UK 9 · Milan",
+      "tags": [
+        "boot",
+        "burgundy",
+        "chukka"
+      ],
+      "id": "s_83"
+    },
+    {
+      "name": "Santoni Double Monk Strap (Dark Chocolate Suede)",
+      "category": "Footwear",
+      "subcategory": "Monk Strap",
+      "brand": "Santoni",
+      "color": "Dark Chocolate Brown",
+      "material": "Suede",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "9.5 · Italy · Silver buckles",
+      "tags": [
+        "brown",
+        "double-monk",
+        "suede"
+      ],
+      "id": "s_85"
+    },
+    {
+      "name": "Santoni Ugolino Double Monk (Charcoal Patinated)",
+      "category": "Footwear",
+      "subcategory": "Monk Strap",
+      "brand": "Santoni",
+      "color": "Black/Charcoal Patinated",
+      "material": "Calf - Hand-patinated",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Statement Formal",
+      "status": "Repair",
+      "notes": "EU 43 · At GM Shoecare",
+      "tags": [
+        "black",
+        "double-monk",
+        "dress-register",
+        "patinated",
+        "repair",
+        "statement"
+      ],
+      "id": "s_86"
+    },
+    {
+      "name": "Santoni Split-Toe Derby (Red Clay Patinated)",
+      "category": "Footwear",
+      "subcategory": "Derby",
+      "brand": "Santoni",
+      "color": "Red Clay",
+      "material": "Calf - Hand-patinated",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Statement Casual",
+      "status": "Active",
+      "notes": "Italy · Limited edition",
+      "tags": [
+        "patinated",
+        "split-toe",
+        "statement"
+      ],
+      "id": "s_87"
+    },
+    {
+      "name": "Paolo Scafora 508 Captoe Semi-Brogue (Dark Brown)",
+      "category": "Footwear",
+      "subcategory": "Oxford",
+      "brand": "Paolo Scafora",
+      "color": "Dark Brown (Testa di Moro)",
+      "material": "Calf skin (Vitello)",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Formal",
+      "status": "Active",
+      "notes": "Size 9 · Naples · Handwelted",
+      "tags": [
+        "brown",
+        "captoe",
+        "dress-register",
+        "semi-brogue"
+      ],
+      "id": "s_88"
+    },
+    {
+      "name": "Shanghai Custom Chelsea Boot (Black)",
+      "category": "Footwear",
+      "subcategory": "Boot",
+      "brand": "Shanghai Custom",
+      "color": "Black",
+      "material": "Calf skin - Smooth",
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "formality": "Business Casual",
+      "status": "Active",
+      "notes": "EU 43 · MTO",
+      "tags": [
+        "black",
+        "boot",
+        "chelsea"
+      ],
+      "id": "s_89"
+    },
+    {
+      "name": "Shoto 1122 Caos Chelsea Boot (Tobacco)",
+      "category": "Footwear",
+      "subcategory": "Boot",
+      "brand": "Shoto",
+      "color": "Tobacco Brown",
+      "material": "Buffalo - wrinkled full grain",
+      "season": [
+        "Fall",
+        "Winter"
+      ],
+      "formality": "Artisan Casual",
+      "status": "Active",
+      "notes": "9.5 · Italy",
+      "tags": [
+        "boot",
+        "brown",
+        "chelsea"
+      ],
+      "id": "s_90"
+    },
+    {
+      "name": "Shoto Service Captoe Boot (Cognac)",
+      "category": "Footwear",
+      "subcategory": "Boot",
+      "brand": "Shoto",
+      "color": "Cognac Brown",
+      "material": "Horse Softy Tamp Caos",
+      "season": [
+        "Fall",
+        "Winter"
+      ],
+      "formality": "Artisan Casual",
+      "status": "Active",
+      "notes": "EU 44 · Italy",
+      "tags": [
+        "boot",
+        "brown",
+        "captoe",
+        "service"
+      ],
+      "id": "s_91"
+    },
+    {
+      "name": "Timberland × DOE 3-Eye Vibram Boat Shoe (Black)",
+      "category": "Footwear",
+      "subcategory": "Rugged All-Weather",
+      "brand": "Timberland × DOE",
+      "color": "Black",
+      "material": "Full-grain black leather",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Casual",
+      "status": "Active",
+      "notes": "US 10 / EU 44 · Vibram sole (not Wedge)",
+      "tags": [
+        "black",
+        "vibram"
+      ],
+      "id": "s_92"
+    },
+    {
+      "name": "TLB Mallorca 114 Artista Derby (Dark Brown Hatch Grain)",
+      "category": "Footwear",
+      "subcategory": "Derby",
+      "brand": "TLB Mallorca (MTO)",
+      "color": "Dark Brown Hatch-Grain",
+      "material": "Hatch Grain Leather",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Business Casual",
+      "status": "Active",
+      "notes": "Picasso last · UK 9.5E",
+      "tags": [
+        "brown",
+        "grain"
+      ],
+      "id": "s_93"
+    },
+    {
+      "name": "TLB Mallorca 121 Artista Semi-Brogue (Black Shell Rocado)",
+      "category": "Footwear",
+      "subcategory": "Oxford",
+      "brand": "TLB Mallorca (MTO)",
+      "color": "Black",
+      "material": "Shell Cordovan (Rocado)",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Formal",
+      "status": "Active",
+      "notes": "Last 121 · UK 9.5E",
+      "tags": [
+        "black",
+        "dress-register",
+        "semi-brogue",
+        "shell"
+      ],
+      "id": "s_94"
+    },
+    {
+      "name": "Vans Vault x Horween Old Skool (Dark Brown CXL)",
+      "category": "Footwear",
+      "subcategory": "Sneaker",
+      "brand": "Vans",
+      "color": "Dark Brown",
+      "material": "Calf (Horween CXL)",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "Size 10 · Gum sole",
+      "tags": [
+        "brown",
+        "cxl"
+      ],
+      "id": "s_95"
+    },
+    {
+      "name": "Vass Alt English Captoe Balmoral (Antique Cognac)",
+      "category": "Footwear",
+      "subcategory": "Oxford",
+      "brand": "Vass",
+      "color": "Antique Cognac",
+      "material": "Calf (matte)",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "F last · EU 43.5 · Budapest · Patina straddles cognac and burgundy depending on light — sits at the warm-bright end of the warm-red family and also touches cognac-patinated cluster",
+      "tags": [
+        "balmoral-brogue",
+        "brown",
+        "burgundy-straddle",
+        "captoe"
+      ],
+      "id": "s_96"
+    },
+    {
+      "name": "Vass Budapest Longwing Blucher (Bordeaux Scotch Grain)",
+      "category": "Footwear",
+      "subcategory": "Wingtip",
+      "brand": "Vass",
+      "color": "Dark Brown (Bordeaux-tagged, reads dark brown)",
+      "material": "Scotch grain and museum calf",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "Last 3636 · EU 43 · Double leather JR sole · Inventory-labeled Bordeaux but reads as dark brown in wear; scotch grain panels with museum calf smooth sections",
+      "tags": [
+        "burgundy",
+        "grain",
+        "museum",
+        "wingtip"
+      ],
+      "id": "s_97"
+    },
+    {
+      "name": "Viberg 2030 Service Boot Captoe (Charcoal Chamois Roughout)",
+      "category": "Footwear",
+      "subcategory": "Boot",
+      "brand": "Viberg",
+      "color": "Charcoal Black",
+      "material": "Chamois Roughout",
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "formality": "Rugged Smart Casual",
+      "status": "Active",
+      "notes": "Chamois roughout (plusher/longer nap than standard roughout) · captoe · 2030 service boot last",
+      "tags": [
+        "black",
+        "boot",
+        "captoe",
+        "chamois-roughout",
+        "charcoal",
+        "service",
+        "suede",
+        "viberg"
+      ],
+      "id": "s_98"
+    },
+    {
+      "name": "Viberg 2030 Service Boot Captoe (Chestnut Horsebutt)",
+      "category": "Footwear",
+      "subcategory": "Boot",
+      "brand": "Viberg",
+      "color": "Chestnut brown",
+      "material": "Horsebutt (Maryam)",
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "formality": "Rugged Smart Casual",
+      "status": "Active",
+      "notes": "2030 last · 10.5E · Canada",
+      "tags": [
+        "boot",
+        "brown",
+        "captoe",
+        "service",
+        "viberg"
+      ],
+      "id": "s_99"
+    },
+    {
+      "name": "Viberg 2030 Service Boot Plain Toe (Black CXL)",
+      "category": "Footwear",
+      "subcategory": "Boot",
+      "brand": "Viberg",
+      "color": "Black",
+      "material": "CXL Calf (Horween)",
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "formality": "Rugged Smart Casual",
+      "status": "Active",
+      "notes": "2030 last · 10.5 · Canada",
+      "tags": [
+        "black",
+        "boot",
+        "cxl",
+        "plain-toe",
+        "service",
+        "viberg"
+      ],
+      "id": "s_100"
+    },
+    {
+      "name": "Yohei Fukuda Double Monk (Mahogany Museum Calf)",
+      "category": "Footwear",
+      "subcategory": "Monk Strap",
+      "brand": "Yohei Fukuda",
+      "color": "Mahogany Brown",
+      "material": "Calfskin",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Formal",
+      "status": "Active",
+      "notes": "House last · UK 9 · Japan",
+      "tags": [
+        "brown",
+        "double-monk",
+        "dress-register",
+        "museum"
+      ],
+      "id": "s_101"
+    },
+    {
+      "name": "Yohji Yamamoto Pour Homme Crepe Derby (Brown Calf)",
+      "category": "Footwear",
+      "subcategory": "Derby",
+      "brand": "Yohji Yamamoto",
+      "color": "Brown",
+      "material": "Calfskin",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "Japan · Crepe sole",
+      "tags": [
+        "brown"
+      ],
+      "id": "s_102"
+    },
+    {
+      "name": "Zhou Lv 拙履 West Lake Wholecut (Amber Brown)",
+      "category": "Footwear",
+      "subcategory": "Oxford",
+      "brand": "Zhou Lv - 拙履",
+      "color": "Amber Brown Museum",
+      "material": "Calf skin - full grain",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Formal",
+      "status": "Active",
+      "notes": "EU 45 · Changsha · Handmade MTO",
+      "tags": [
+        "brown",
+        "dress-register",
+        "museum",
+        "wholecut"
+      ],
+      "id": "s_104"
+    },
+    {
+      "name": "Mayton Boot — Natural Shell Cordovan PTB",
+      "category": "Footwear",
+      "subcategory": "Boot",
+      "brand": "Mayton Boot",
+      "color": "Natural",
+      "material": "Shell Cordovan (Horween)",
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "formality": "Smart Casual",
+      "status": "Wishlist",
+      "notes": "Last 379x · MTO · Natural shell PTB",
+      "tags": [
+        "boot",
+        "natural",
+        "plain-toe",
+        "shell",
+        "wishlist"
+      ],
+      "id": "s_105"
+    },
+    {
+      "name": "Mayton Boot — Black CF Stead Repello PTB",
+      "category": "Footwear",
+      "subcategory": "Boot",
+      "brand": "Mayton Boot",
+      "color": "Black",
+      "material": "CF Stead Repello",
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "formality": "Smart Casual",
+      "status": "Wishlist",
+      "notes": "Last 379x · MTO · Lactae Hevea sole · Black storm welt",
+      "tags": [
+        "black",
+        "boot",
+        "plain-toe",
+        "wishlist"
+      ],
+      "id": "s_106"
+    },
+    {
+      "name": "Mayton Boot — Ravello/Chestnut/Whisky Shell PTB",
+      "category": "Footwear",
+      "subcategory": "Boot",
+      "brand": "Mayton Boot",
+      "color": "Ravello / Chestnut / Whisky",
+      "material": "Shell Cordovan (Horween)",
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "formality": "Smart Casual",
+      "status": "Wishlist",
+      "notes": "Last 379x · MTO · Leather sole · Blind waist",
+      "tags": [
+        "boot",
+        "brown",
+        "plain-toe",
+        "ravello",
+        "shell",
+        "whisky",
+        "wishlist"
+      ],
+      "id": "s_107"
+    },
+    {
+      "name": "Zegna 15milmil15 Jacket",
+      "category": "Clothing",
+      "subcategory": "Jacket",
+      "brand": "Zegna",
+      "color": "Dark blue",
+      "material": "15-micron merino wool",
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "formality": "Business Formal",
+      "status": "Active",
+      "notes": "58R. Presentation and dinner anchor.",
+      "tags": [
+        "jacket",
+        "formal"
+      ],
+      "id": "c_0"
+    },
+    {
+      "name": "Suitsupply Dark Grey Suit",
+      "category": "Clothing",
+      "subcategory": "Suit",
+      "brand": "Suitsupply",
+      "color": "Dark grey",
+      "material": "VBC Super 110s wool",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Business Formal",
+      "status": "Active",
+      "notes": "Versatile professional / evening suit.",
+      "tags": [
+        "suit",
+        "formal"
+      ],
+      "id": "c_1"
+    },
+    {
+      "name": "Brooks Brothers Sport Coat (Blue Glen Plaid)",
+      "category": "Clothing",
+      "subcategory": "Jacket",
+      "brand": "Brooks Brothers",
+      "color": "Blue / black glen plaid",
+      "material": "Wool/cotton Emmetex",
+      "season": [
+        "Fall",
+        "Spring"
+      ],
+      "formality": "Business Casual",
+      "status": "Active",
+      "notes": "Classic Fit 46R.",
+      "tags": [
+        "jacket"
+      ],
+      "id": "c_2"
+    },
+    {
+      "name": "Armani Collezioni Velvet Jacket (Dark Brown)",
+      "category": "Clothing",
+      "subcategory": "Jacket",
+      "brand": "Armani Collezioni",
+      "color": "Dark brown",
+      "material": "Herringbone velvet",
+      "season": [
+        "Fall",
+        "Winter"
+      ],
+      "formality": "Statement Seasonal",
+      "status": "Active",
+      "notes": "48R.",
+      "tags": [
+        "jacket",
+        "brown"
+      ],
+      "id": "c_3"
+    },
+    {
+      "name": "Gentspace Suede Shacket (Honey)",
+      "category": "Clothing",
+      "subcategory": "Outerwear",
+      "brand": "Gentspace",
+      "color": "Honey",
+      "material": "Suede",
+      "season": [
+        "Fall",
+        "Spring"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "Core soft-luxury casual layer.",
+      "tags": [
+        "suede",
+        "gentspace"
+      ],
+      "id": "c_4"
+    },
+    {
+      "name": "RLPL Olive Quilted Coat",
+      "category": "Clothing",
+      "subcategory": "Coat",
+      "brand": "Ralph Lauren Purple Label",
+      "color": "Olive",
+      "material": "Quilted (not wool, not weatherproof)",
+      "season": [
+        "Fall",
+        "Winter"
+      ],
+      "formality": "Elegant",
+      "status": "Active",
+      "notes": "Above 0°C dressy/refined winter option. Not wool. Not weatherproof.",
+      "tags": [
+        "coat",
+        "winter",
+        "quilted"
+      ],
+      "id": "c_5"
+    },
+    {
+      "name": "PWVC Manchester Marine Parka",
+      "category": "Clothing",
+      "subcategory": "Outerwear",
+      "brand": "PWVC",
+      "color": "Ivory black",
+      "material": "Ventile cotton",
+      "season": [
+        "Winter"
+      ],
+      "formality": "Technical Smart Casual",
+      "status": "Active",
+      "notes": "Size 6. Below 0°C bad weather layering only.",
+      "tags": [
+        "parka",
+        "winter",
+        "pwvc"
+      ],
+      "id": "c_6"
+    },
+    {
+      "name": "Bosideng Down Parka",
+      "category": "Clothing",
+      "subcategory": "Outerwear",
+      "brand": "Bosideng",
+      "color": "Dark",
+      "material": "Down-filled",
+      "season": [
+        "Winter"
+      ],
+      "formality": "Casual",
+      "status": "Repair",
+      "notes": "Replace zipper.",
+      "tags": [
+        "parka",
+        "winter"
+      ],
+      "id": "c_7"
+    },
+    {
+      "name": "Herno Zip-Up Hoodie Outerwear",
+      "category": "Clothing",
+      "subcategory": "Outerwear",
+      "brand": "Herno",
+      "color": "Dark neutral",
+      "material": "Technical / knit",
+      "season": [
+        "Fall",
+        "Winter"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "Nov–Feb primary rotation only.",
+      "tags": [
+        "herno",
+        "seasonal"
+      ],
+      "id": "c_8"
+    },
+    {
+      "name": "Black Wool Mid-Length Coat",
+      "category": "Clothing",
+      "subcategory": "Coat",
+      "brand": "Unknown",
+      "color": "Black",
+      "material": "Pure wool",
+      "season": [
+        "Fall",
+        "Winter"
+      ],
+      "formality": "Dressy",
+      "status": "Active",
+      "notes": "Came with maroon/grey cashmere scarf.",
+      "tags": [
+        "coat",
+        "black"
+      ],
+      "id": "c_9"
+    },
+    {
+      "name": "Momotaro Indigo Chore Coat",
+      "category": "Clothing",
+      "subcategory": "Outerwear",
+      "brand": "Momotaro",
+      "color": "Indigo",
+      "material": "Denim",
+      "season": [
+        "Spring",
+        "Fall"
+      ],
+      "formality": "Casual",
+      "status": "Active",
+      "notes": "Core casual workwear layer.",
+      "tags": [
+        "momotaro",
+        "denim"
+      ],
+      "id": "c_10"
+    },
+    {
+      "name": "Momotaro Chambray Shirt (Blue)",
+      "category": "Clothing",
+      "subcategory": "Shirt",
+      "brand": "Momotaro",
+      "color": "Blue",
+      "material": "Denim chambray",
+      "season": [
+        "Spring",
+        "Fall"
+      ],
+      "formality": "Casual",
+      "status": "Active",
+      "notes": "",
+      "tags": [
+        "shirt",
+        "momotaro"
+      ],
+      "id": "c_11"
+    },
+    {
+      "name": "Momotaro Plaid Shirt (Brown/Black)",
+      "category": "Clothing",
+      "subcategory": "Shirt",
+      "brand": "Momotaro",
+      "color": "Brown / black",
+      "material": "Cotton",
+      "season": [
+        "Fall",
+        "Winter"
+      ],
+      "formality": "Casual",
+      "status": "Active",
+      "notes": "",
+      "tags": [
+        "shirt",
+        "momotaro"
+      ],
+      "id": "c_12"
+    },
+    {
+      "name": "Momotaro 15oz Slim Denim",
+      "category": "Clothing",
+      "subcategory": "Jeans",
+      "brand": "Momotaro",
+      "color": "Indigo",
+      "material": "15oz denim",
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "formality": "Casual",
+      "status": "Active",
+      "notes": "Waist 38. Shanghai rule: jeans until mid-November.",
+      "tags": [
+        "jeans",
+        "momotaro"
+      ],
+      "id": "c_13"
+    },
+    {
+      "name": "Samurai Heavyweight Knit Turtleneck (Cream)",
+      "category": "Clothing",
+      "subcategory": "Knitwear",
+      "brand": "Samurai",
+      "color": "Warm cream / ecru",
+      "material": "Heavy knit",
+      "season": [
+        "Fall",
+        "Winter"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "",
+      "tags": [
+        "knitwear",
+        "samurai"
+      ],
+      "id": "c_14"
+    },
+    {
+      "name": "Academy of Love Cream Linen Shirt",
+      "category": "Clothing",
+      "subcategory": "Shirt",
+      "brand": "Academy of Love",
+      "color": "Cream",
+      "material": "Linen",
+      "season": [
+        "Spring",
+        "Summer"
+      ],
+      "formality": "Casual Smart",
+      "status": "Active",
+      "notes": "Worn untucked.",
+      "tags": [
+        "shirt",
+        "linen"
+      ],
+      "id": "c_16"
+    },
+    {
+      "name": "Brooks Brothers White Chinos",
+      "category": "Clothing",
+      "subcategory": "Trousers",
+      "brand": "Brooks Brothers",
+      "color": "White",
+      "material": "Cotton",
+      "season": [
+        "Spring",
+        "Summer"
+      ],
+      "formality": "Casual Smart",
+      "status": "Active",
+      "notes": "",
+      "tags": [
+        "chinos",
+        "summer"
+      ],
+      "id": "c_18"
+    },
+    {
+      "name": "Brooks Brothers Dark Blue Linen Trousers",
+      "category": "Clothing",
+      "subcategory": "Trousers",
+      "brand": "Brooks Brothers",
+      "color": "Dark blue",
+      "material": "Solbiati linen",
+      "season": [
+        "Spring",
+        "Summer"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "W40 / L30.",
+      "tags": [
+        "trousers",
+        "linen"
+      ],
+      "id": "c_19"
+    },
+    {
+      "name": "Brooks Brothers Wool Flannel Dress Pants (Dark Navy)",
+      "category": "Clothing",
+      "subcategory": "Trousers",
+      "brand": "Brooks Brothers",
+      "color": "Dark navy",
+      "material": "Wool flannel",
+      "season": [
+        "Fall",
+        "Winter"
+      ],
+      "formality": "Business Formal",
+      "status": "Active",
+      "notes": "38×31.",
+      "tags": [
+        "trousers",
+        "formal"
+      ],
+      "id": "c_20"
+    },
+    {
+      "name": "Navy Chino Shorts",
+      "category": "Clothing",
+      "subcategory": "Shorts",
+      "brand": "Unknown",
+      "color": "Navy",
+      "material": "Cotton chino",
+      "season": [
+        "Summer"
+      ],
+      "formality": "Casual",
+      "status": "Active",
+      "notes": "",
+      "tags": [
+        "shorts",
+        "summer"
+      ],
+      "id": "c_21"
+    },
+    {
+      "name": "White Linen Shorts",
+      "category": "Clothing",
+      "subcategory": "Shorts",
+      "brand": "Unknown",
+      "color": "White",
+      "material": "Linen",
+      "season": [
+        "Summer"
+      ],
+      "formality": "Casual",
+      "status": "Active",
+      "notes": "Drawstring — no belt loops.",
+      "tags": [
+        "shorts",
+        "summer"
+      ],
+      "id": "c_22"
+    },
+    {
+      "name": "Brooks Brothers Navy Hopsack Jacket",
+      "category": "Clothing",
+      "subcategory": "Jacket",
+      "brand": "Brooks Brothers",
+      "color": "Navy",
+      "material": "Hopsack wool",
+      "season": [
+        "Spring",
+        "Fall"
+      ],
+      "formality": "Business Casual",
+      "status": "Active",
+      "notes": "Unlined. ~46R/48R.",
+      "tags": [
+        "jacket",
+        "navy"
+      ],
+      "id": "c_23"
+    },
+    {
+      "name": "Brooks Brothers 1818 Wool Topcoat (Black)",
+      "category": "Clothing",
+      "subcategory": "Coat",
+      "brand": "Brooks Brothers",
+      "color": "Black",
+      "material": "Wool",
+      "season": [
+        "Fall",
+        "Winter"
+      ],
+      "formality": "Business Formal",
+      "status": "Active",
+      "notes": "~46R/48R.",
+      "tags": [
+        "coat",
+        "black"
+      ],
+      "id": "c_24"
+    },
+    {
+      "name": "J. Lindeberg Wool Trench Coat (Dark Grey)",
+      "category": "Clothing",
+      "subcategory": "Coat",
+      "brand": "J. Lindeberg",
+      "color": "Dark grey",
+      "material": "Wool",
+      "season": [
+        "Fall",
+        "Winter"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "~XL.",
+      "tags": [
+        "coat",
+        "trench",
+        "grey"
+      ],
+      "id": "c_25"
+    },
+    {
+      "name": "Camel Overcoat",
+      "category": "Clothing",
+      "subcategory": "Coat",
+      "brand": "Unknown",
+      "color": "Camel",
+      "material": "Wool",
+      "season": [
+        "Fall",
+        "Winter"
+      ],
+      "formality": "Dressy",
+      "status": "Active",
+      "notes": "~XL.",
+      "tags": [
+        "coat",
+        "camel"
+      ],
+      "id": "c_26"
+    },
+    {
+      "name": "PWVC Charcoal Wool Jacket",
+      "category": "Clothing",
+      "subcategory": "Outerwear",
+      "brand": "PWVC",
+      "color": "Charcoal",
+      "material": "Wool",
+      "season": [
+        "Fall",
+        "Winter"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "",
+      "tags": [
+        "pwvc",
+        "jacket",
+        "wool"
+      ],
+      "id": "c_27"
+    },
+    {
+      "name": "PWVC Navy Mac Coat",
+      "category": "Clothing",
+      "subcategory": "Outerwear",
+      "brand": "PWVC",
+      "color": "Navy",
+      "material": "Ventile",
+      "season": [
+        "Spring",
+        "Fall"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "",
+      "tags": [
+        "pwvc",
+        "coat",
+        "navy",
+        "ventile"
+      ],
+      "id": "c_28"
+    },
+    {
+      "name": "PWVC x MR PORTER Denim Chore Coat",
+      "category": "Clothing",
+      "subcategory": "Outerwear",
+      "brand": "PWVC",
+      "color": "Denim",
+      "material": "Denim",
+      "season": [
+        "Spring",
+        "Fall"
+      ],
+      "formality": "Casual",
+      "status": "Active",
+      "notes": "MR PORTER collaboration.",
+      "tags": [
+        "chore",
+        "denim",
+        "pwvc"
+      ],
+      "id": "c_29"
+    },
+    {
+      "name": "Blue Suede Jacket",
+      "category": "Clothing",
+      "subcategory": "Outerwear",
+      "brand": "Unknown",
+      "color": "Blue",
+      "material": "Suede",
+      "season": [
+        "Spring",
+        "Fall"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "~XL.",
+      "tags": [
+        "jacket",
+        "suede",
+        "blue"
+      ],
+      "id": "c_30"
+    },
+    {
+      "name": "Navy Lightweight Zip Jacket",
+      "category": "Clothing",
+      "subcategory": "Outerwear",
+      "brand": "Pierre Cardin",
+      "color": "Navy",
+      "material": "Lightweight",
+      "season": [
+        "Spring",
+        "Fall"
+      ],
+      "formality": "Casual",
+      "status": "Active",
+      "notes": "Spring/fall weight.",
+      "tags": [
+        "jacket",
+        "navy"
+      ],
+      "id": "c_31"
+    },
+    {
+      "name": "White Oxford Button-Downs (multiple)",
+      "category": "Clothing",
+      "subcategory": "Shirt",
+      "brand": "Unknown",
+      "color": "White",
+      "material": "Oxford cotton",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Business Casual",
+      "status": "Active",
+      "notes": "2XL. Multiple pairs.",
+      "tags": [
+        "shirt",
+        "oxford",
+        "white",
+        "staple"
+      ],
+      "id": "c_32"
+    },
+    {
+      "name": "Blue / Blue-White Stripe Poplin Shirts (multiple)",
+      "category": "Clothing",
+      "subcategory": "Shirt",
+      "brand": "Unknown",
+      "color": "Blue / blue-white stripe",
+      "material": "Poplin cotton",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Business Casual",
+      "status": "Active",
+      "notes": "2XL. Multiple pairs.",
+      "tags": [
+        "shirt",
+        "poplin",
+        "blue",
+        "staple"
+      ],
+      "id": "c_33"
+    },
+    {
+      "name": "Light Pink & Lavender Dress Shirts (multiple)",
+      "category": "Clothing",
+      "subcategory": "Shirt",
+      "brand": "Unknown",
+      "color": "Light pink / lavender",
+      "material": "Cotton",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Business Casual",
+      "status": "Active",
+      "notes": "2XL. Multiple pairs.",
+      "tags": [
+        "shirt",
+        "pastel"
+      ],
+      "id": "c_35"
+    },
+    {
+      "name": "Zara Navy SS Shirt (Cream Diamond Stitch)",
+      "category": "Clothing",
+      "subcategory": "Shirt",
+      "brand": "Zara",
+      "color": "Navy",
+      "material": "Cotton",
+      "season": [
+        "Summer"
+      ],
+      "formality": "Casual Smart",
+      "status": "Active",
+      "notes": "XL. Untucked.",
+      "tags": [
+        "shirt",
+        "summer",
+        "navy"
+      ],
+      "id": "c_36"
+    },
+    {
+      "name": "Black Seersucker Short-Sleeve Shirt",
+      "category": "Clothing",
+      "subcategory": "Shirt",
+      "brand": "Unknown",
+      "color": "Black",
+      "material": "Seersucker",
+      "season": [
+        "Summer"
+      ],
+      "formality": "Casual Smart",
+      "status": "Active",
+      "notes": "~XL/2XL.",
+      "tags": [
+        "shirt",
+        "summer",
+        "black"
+      ],
+      "id": "c_37"
+    },
+    {
+      "name": "Rhone Black Shirt",
+      "category": "Clothing",
+      "subcategory": "Shirt",
+      "brand": "Rhone",
+      "color": "Black",
+      "material": "Technical knit",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "XL.",
+      "tags": [
+        "shirt",
+        "black"
+      ],
+      "id": "c_38"
+    },
+    {
+      "name": "Black Poplin Button-Down",
+      "category": "Clothing",
+      "subcategory": "Shirt",
+      "brand": "Unknown",
+      "color": "Black",
+      "material": "Poplin cotton",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "XL.",
+      "tags": [
+        "shirt",
+        "black",
+        "poplin"
+      ],
+      "id": "c_39"
+    },
+    {
+      "name": "Zegna Black Cardigan",
+      "category": "Clothing",
+      "subcategory": "Knitwear",
+      "brand": "Zegna",
+      "color": "Black",
+      "material": "Wool",
+      "season": [
+        "Fall",
+        "Winter"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "XL.",
+      "tags": [
+        "knitwear",
+        "cardigan",
+        "black"
+      ],
+      "id": "c_40"
+    },
+    {
+      "name": "Loopwheeler Black Sweatshirt",
+      "category": "Clothing",
+      "subcategory": "Knitwear",
+      "brand": "Loopwheeler",
+      "color": "Black",
+      "material": "Loopwheel cotton",
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "formality": "Casual",
+      "status": "Active",
+      "notes": "XL.",
+      "tags": [
+        "sweatshirt",
+        "loopwheel",
+        "black"
+      ],
+      "id": "c_41"
+    },
+    {
+      "name": "Blue Herringbone Quarter-Zip Pullover",
+      "category": "Clothing",
+      "subcategory": "Knitwear",
+      "brand": "Unknown",
+      "color": "Blue herringbone",
+      "material": "Cotton",
+      "season": [
+        "Fall",
+        "Spring"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "XL.",
+      "tags": [
+        "knitwear",
+        "quarter-zip"
+      ],
+      "id": "c_42"
+    },
+    {
+      "name": "Momotaro Long-Sleeve Tees (multiple)",
+      "category": "Clothing",
+      "subcategory": "Top",
+      "brand": "Momotaro",
+      "color": "Mixed incl. black",
+      "material": "Heavyweight cotton",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Casual",
+      "status": "Active",
+      "notes": "~XL/2XL. Multiple pairs.",
+      "tags": [
+        "top",
+        "tee",
+        "momotaro"
+      ],
+      "id": "c_43"
+    },
+    {
+      "name": "Base Tees White/Black (multiple)",
+      "category": "Clothing",
+      "subcategory": "Top",
+      "brand": "Unknown",
+      "color": "White / black",
+      "material": "Cotton",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Casual",
+      "status": "Active",
+      "notes": "~XL/2XL. Base layer staples.",
+      "tags": [
+        "top",
+        "tee",
+        "staple"
+      ],
+      "id": "c_44"
+    },
+    {
+      "name": "Charcoal High-Twist Worsted Trousers (Shanghai MTM)",
+      "category": "Clothing",
+      "subcategory": "Trousers",
+      "brand": "Shanghai MTM",
+      "color": "Charcoal",
+      "material": "High-twist worsted wool (pick-and-pick / sharkskin)",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Business Formal",
+      "status": "Active",
+      "notes": "38×31. Crisp dry hand, salt-and-pepper grain. Conference/presentation anchor. Pairs with Alden 5165 black cap-toe + dark charcoal ribbed socks.",
+      "tags": [
+        "trousers",
+        "formal",
+        "charcoal",
+        "high-twist",
+        "mtm",
+        "year-round"
+      ],
+      "id": "c_45"
+    },
+    {
+      "name": "Navy High-Twist Worsted Trousers (Shanghai MTM)",
+      "category": "Clothing",
+      "subcategory": "Trousers",
+      "brand": "Shanghai MTM",
+      "color": "Navy",
+      "material": "High-twist worsted wool",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Business Formal",
+      "status": "Active",
+      "notes": "38×31. Same Shanghai MTO tailor as c_45. Conference/presentation anchor.",
+      "tags": [
+        "trousers",
+        "formal",
+        "navy",
+        "high-twist",
+        "mtm",
+        "year-round"
+      ],
+      "id": "c_46"
+    },
+    {
+      "name": "Pescarolo Navy Chinos",
+      "category": "Clothing",
+      "subcategory": "Trousers",
+      "brand": "Pescarolo",
+      "color": "Navy",
+      "material": "Cotton",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "38×31.",
+      "tags": [
+        "chinos",
+        "navy"
+      ],
+      "id": "c_47",
+      "model": "Nerano M"
+    },
+    {
+      "name": "PT Torino Khaki Trousers",
+      "category": "Clothing",
+      "subcategory": "Trousers",
+      "brand": "PT Torino",
+      "color": "Khaki",
+      "material": "Cotton",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Casual",
+      "status": "Repair",
+      "notes": "Size 38. Needs hemming.",
+      "tags": [
+        "trousers",
+        "khaki"
+      ],
+      "id": "c_48"
+    },
+    {
+      "name": "Blue Linen Trousers",
+      "category": "Clothing",
+      "subcategory": "Trousers",
+      "brand": "Unknown",
+      "color": "Blue",
+      "material": "Linen",
+      "season": [
+        "Spring",
+        "Summer"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "38×31. Distinct from BB Solbiati dark blue.",
+      "tags": [
+        "trousers",
+        "linen",
+        "blue"
+      ],
+      "id": "c_49"
+    },
+    {
+      "name": "AllSaints Light Grey Jeans",
+      "category": "Clothing",
+      "subcategory": "Jeans",
+      "brand": "AllSaints",
+      "color": "Light grey",
+      "material": "Denim",
+      "season": [
+        "Spring",
+        "Fall"
+      ],
+      "formality": "Casual",
+      "status": "Active",
+      "notes": "Size 38.",
+      "tags": [
+        "jeans",
+        "grey"
+      ],
+      "id": "c_50"
+    },
+    {
+      "name": "AllSaints Black Jeans",
+      "category": "Clothing",
+      "subcategory": "Jeans",
+      "brand": "AllSaints",
+      "color": "Black",
+      "material": "Denim",
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "formality": "Casual",
+      "status": "Active",
+      "notes": "Size 38. Slim/elastic fit through lower legs. Light wear at edges. Pairs with sneakers and chunky boots; not the best with refined Aldens.",
+      "tags": [
+        "jeans",
+        "black"
+      ],
+      "id": "c_51"
+    },
+    {
+      "name": "Rag & Bone Black Jeans (Wide Leg)",
+      "category": "Clothing",
+      "subcategory": "Jeans",
+      "brand": "Rag & Bone",
+      "color": "Black",
+      "material": "Denim",
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "formality": "Casual",
+      "status": "Active",
+      "notes": "Waist 38. Wider leg through hip and calf — less fitted than AllSaints. Solid deep black (no edge wear). Reads cleaner/dressier; pairs proportionally with shell wingtips, longwings, and refined boots.",
+      "tags": [
+        "jeans",
+        "black",
+        "wide leg"
+      ],
+      "id": "c_52"
+    },
+    {
+      "name": "Ralph Lauren Beige Shorts",
+      "category": "Clothing",
+      "subcategory": "Shorts",
+      "brand": "Ralph Lauren",
+      "color": "Beige",
+      "material": "Cotton",
+      "season": [
+        "Summer"
+      ],
+      "formality": "Casual",
+      "status": "Active",
+      "notes": "XL.",
+      "tags": [
+        "shorts",
+        "summer",
+        "beige"
+      ],
+      "id": "c_53"
+    },
+    {
+      "name": "DOE Black Loopwheel Balaclava Knit Pullover",
+      "category": "Clothing",
+      "subcategory": "Knitwear",
+      "brand": "DOE",
+      "color": "Black",
+      "material": "Loopwheel knit",
+      "season": [
+        "Fall",
+        "Winter"
+      ],
+      "formality": "Creative Casual",
+      "status": "Active",
+      "notes": "XL. Statement knit.",
+      "tags": [
+        "knitwear",
+        "black",
+        "statement"
+      ],
+      "id": "c_54"
+    },
+    {
+      "name": "PWVC Park Jacket",
+      "category": "Clothing",
+      "subcategory": "Outerwear",
+      "brand": "PWVC",
+      "color": "Black",
+      "material": "Flannel-lined",
+      "season": [
+        "Fall",
+        "Winter"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "Primary winter jacket above 0°C for black looks. Flannel lined. Worn without hood.",
+      "tags": [
+        "pwvc",
+        "jacket",
+        "winter",
+        "black"
+      ],
+      "id": "c_55"
+    },
+    {
+      "name": "PWVC Technical Pants",
+      "category": "Clothing",
+      "subcategory": "Trousers",
+      "brand": "PWVC",
+      "color": "Dark olive/grey",
+      "material": "Technical",
+      "season": [
+        "Spring",
+        "Fall",
+        "Winter"
+      ],
+      "formality": "Technical Smart Casual",
+      "status": "Active",
+      "notes": "Size 38.",
+      "tags": [
+        "pwvc",
+        "trousers",
+        "technical"
+      ],
+      "id": "c_56"
+    },
+    {
+      "name": "Bogner Quarter-Zip Fleece (White)",
+      "category": "Clothing",
+      "subcategory": "Knitwear",
+      "brand": "Bogner",
+      "color": "White",
+      "material": "Fleece",
+      "season": [
+        "Spring",
+        "Fall",
+        "Winter"
+      ],
+      "formality": "Casual Smart",
+      "status": "Active",
+      "notes": "Layering piece. Worn under shacket/blazer or solo on cool spring days.",
+      "tags": [
+        "knitwear",
+        "fleece",
+        "white",
+        "quarter-zip",
+        "layering"
+      ],
+      "id": "c_57"
+    },
+    {
+      "name": "Ashland Shell Cordovan Belt (Black)",
+      "category": "Belt",
+      "subcategory": "Dress Belt",
+      "brand": "Ashland",
+      "color": "Black",
+      "material": "Shell cordovan",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Formal",
+      "status": "Active",
+      "notes": "Paired with black footwear.",
+      "tags": [
+        "belt",
+        "black",
+        "shell"
+      ],
+      "id": "b_0"
+    },
+    {
+      "name": "Alden Shell Cordovan Belt (Color 8)",
+      "category": "Belt",
+      "subcategory": "Dress Belt",
+      "brand": "Alden",
+      "color": "Color 8",
+      "material": "Shell cordovan",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Formal",
+      "status": "Active",
+      "notes": "40in · nickel buckle · 1.25in width.",
+      "tags": [
+        "belt",
+        "shell",
+        "color 8"
+      ],
+      "id": "b_1"
+    },
+    {
+      "name": "Montblanc Smooth Leather Belt (Brown)",
+      "category": "Belt",
+      "subcategory": "Dress Belt",
+      "brand": "Montblanc",
+      "color": "Brown",
+      "material": "Smooth leather",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Formal",
+      "status": "Active",
+      "notes": "Polished silver buckle. Not tonal with Color 8 cordovan.",
+      "tags": [
+        "belt",
+        "brown",
+        "formal"
+      ],
+      "id": "b_2"
+    },
+    {
+      "name": "Craftmasters of Nantucket Woven Belt (Cream/Saddle)",
+      "category": "Belt",
+      "subcategory": "Casual Belt",
+      "brand": "Craftmasters of Nantucket",
+      "color": "Cream / saddle tan",
+      "material": "Woven textile",
+      "season": [
+        "Spring",
+        "Summer"
+      ],
+      "formality": "Casual",
+      "status": "Active",
+      "notes": "Satin nickel brass buckle.",
+      "tags": [
+        "belt",
+        "woven",
+        "summer"
+      ],
+      "id": "b_3"
+    },
+    {
+      "name": "Ximraood Suede Belt (Medium Brown)",
+      "category": "Belt",
+      "subcategory": "Casual Belt",
+      "brand": "Ximraood",
+      "color": "Medium brown",
+      "material": "Suede",
+      "season": [
+        "Fall",
+        "Spring"
+      ],
+      "formality": "Casual Smart",
+      "status": "Active",
+      "notes": "",
+      "tags": [
+        "belt",
+        "suede",
+        "brown"
+      ],
+      "id": "b_4"
+    },
+    {
+      "name": "Ximraood Suede Belt (Cobalt Blue)",
+      "category": "Belt",
+      "subcategory": "Casual Belt",
+      "brand": "Ximraood",
+      "color": "Cobalt blue",
+      "material": "Suede",
+      "season": [
+        "Spring",
+        "Summer"
+      ],
+      "formality": "Casual Smart",
+      "status": "Active",
+      "notes": "",
+      "tags": [
+        "belt",
+        "suede",
+        "blue"
+      ],
+      "id": "b_5"
+    },
+    {
+      "name": "Shinola Pebbled Belt (Cognac)",
+      "category": "Belt",
+      "subcategory": "Casual Belt",
+      "brand": "Shinola",
+      "color": "Cognac",
+      "material": "Pebbled leather",
+      "season": [
+        "Spring",
+        "Summer",
+        "Fall"
+      ],
+      "formality": "Casual Smart",
+      "status": "Active",
+      "notes": "Silver buckle. White contrast stitching.",
+      "tags": [
+        "belt",
+        "cognac",
+        "pebbled",
+        "silver-buckle"
+      ],
+      "id": "b_6"
+    },
+    {
+      "name": "Ximenez Calf Belt (Saddle Tan)",
+      "category": "Belt",
+      "subcategory": "Casual Belt",
+      "brand": "Ximenez",
+      "color": "Saddle tan",
+      "material": "Smooth calf",
+      "season": [
+        "Spring",
+        "Summer",
+        "Fall"
+      ],
+      "formality": "Casual Smart",
+      "status": "Active",
+      "notes": "Silver buckle. White contrast stitching.",
+      "tags": [
+        "belt",
+        "tan",
+        "calf",
+        "silver-buckle"
+      ],
+      "id": "b_7"
+    },
+    {
+      "name": "Ashland Croc-Stamped Belt (Dark Brown)",
+      "category": "Belt",
+      "subcategory": "Dress Belt",
+      "brand": "Ashland",
+      "color": "Dark brown",
+      "material": "Full-grain leather, croc-stamped",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart",
+      "status": "Active",
+      "notes": "Brass buckle.",
+      "tags": [
+        "belt",
+        "brown",
+        "croc-stamp",
+        "brass-buckle"
+      ],
+      "id": "b_8"
+    },
+    {
+      "name": "Flint & Tinder Full-Grain Belt (Dark Cognac)",
+      "category": "Belt",
+      "subcategory": "Casual Belt",
+      "brand": "Flint & Tinder",
+      "color": "Dark cognac",
+      "material": "Full-grain leather",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Casual Smart",
+      "status": "Active",
+      "notes": "Brass buckle.",
+      "tags": [
+        "belt",
+        "cognac",
+        "full-grain",
+        "brass-buckle"
+      ],
+      "id": "b_9"
+    },
+    {
+      "name": "Edward Green Mink Suede Belt (Dark Brown)",
+      "category": "Belt",
+      "subcategory": "Casual Belt",
+      "brand": "Edward Green",
+      "color": "Dark brown",
+      "material": "Mink suede",
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "formality": "Smart",
+      "status": "Active",
+      "notes": "Silver buckle.",
+      "tags": [
+        "belt",
+        "brown",
+        "suede",
+        "silver-buckle"
+      ],
+      "id": "b_10"
+    },
+    {
+      "name": "Andersen Shell Cordovan Belt (Whiskey/Ravello Rocado)",
+      "category": "Belt",
+      "subcategory": "Dress Belt",
+      "brand": "Andersen",
+      "color": "Whiskey / Ravello",
+      "material": "Shell Cordovan (Rocado)",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart",
+      "status": "Active",
+      "notes": "Italian Rocado shell (not Horween). Warm whiskey/ravello chromatic position — pairs tonally with whisky, ravello, cigar, and warm chestnut shell shoes.",
+      "tags": [
+        "belt",
+        "shell",
+        "rocado",
+        "warm-brown",
+        "whisky",
+        "ravello"
+      ],
+      "id": "b_11"
+    },
+    {
+      "name": "Cartier Santos Dumont (Yellow Gold / Dark Navy)",
+      "category": "Watch",
+      "subcategory": "Dress Watch",
+      "brand": "Cartier",
+      "color": "Yellow gold / dark navy",
+      "material": "Quartz",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Formal",
+      "status": "Active",
+      "notes": "Yellow gold case. Dark navy dial with gold Roman numerals. Dark navy strap. Quartz. Primary refined daily wear.",
+      "tags": [
+        "watch",
+        "cartier",
+        "yellow gold",
+        "navy"
+      ],
+      "id": "w_0"
+    },
+    {
+      "name": "Piaget Altiplano (Dark Grey Enamel Guilloche, #32/88)",
+      "category": "Watch",
+      "subcategory": "Dress Watch",
+      "brand": "Piaget",
+      "color": "White gold / dark grey",
+      "material": "White gold, enamel guilloche dial",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Formal",
+      "status": "Active",
+      "notes": "White gold case. Dark grey enamel guilloche dial. Dark grey alligator strap. Limited edition #32 of 88.",
+      "tags": [
+        "watch",
+        "piaget",
+        "white gold",
+        "limited edition",
+        "guilloche"
+      ],
+      "id": "w_1"
+    },
+    {
+      "name": "Rolex Explorer II",
+      "category": "Watch",
+      "subcategory": "Sport Watch",
+      "brand": "Rolex",
+      "color": "Steel",
+      "material": "Oyster bracelet",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "Frequent casual and teaching choice.",
+      "tags": [
+        "watch",
+        "rolex",
+        "sport",
+        "steel"
+      ],
+      "id": "w_2"
+    },
+    {
+      "name": "Rolex Datejust 1601 (Vintage 1964)",
+      "category": "Watch",
+      "subcategory": "Dress Sport",
+      "brand": "Rolex",
+      "color": "Silver dial / white gold bezel",
+      "material": "White gold fluted bezel",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Formal",
+      "status": "Active",
+      "notes": "1964 vintage. White gold fluted bezel.",
+      "tags": [
+        "watch",
+        "rolex",
+        "vintage",
+        "datejust"
+      ],
+      "id": "w_3"
+    },
+    {
+      "name": "Cartier Tank Basculante",
+      "category": "Watch",
+      "subcategory": "Dress Watch",
+      "brand": "Cartier",
+      "color": "Steel / taupe-tan",
+      "material": "Steel case, taupe leather or tan ostrich strap",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Formal",
+      "status": "Active",
+      "notes": "Often worn with creative-smart daytime looks.",
+      "tags": [
+        "watch",
+        "cartier",
+        "tank",
+        "steel"
+      ],
+      "id": "w_4"
+    },
+    {
+      "name": "Alden 6221L Unlined Penny Loafer (Snuff Suede)",
+      "category": "Footwear",
+      "subcategory": "Loafer",
+      "brand": "Alden",
+      "color": "Snuff Brown",
+      "material": "Suede (Horween)",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "Van · 10 B/D · Leisure rubber sole · Unlined",
+      "tags": [
+        "alden",
+        "brown",
+        "penny",
+        "suede",
+        "unlined"
+      ],
+      "id": "s_new_6221f",
+      "model": "6221L"
+    },
+    {
+      "name": "Suitsupply Double Monk (Black Calf)",
+      "category": "Footwear",
+      "subcategory": "Monk Strap",
+      "brand": "Suitsupply",
+      "color": "Black",
+      "material": "Calf skin - Smooth",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Formal",
+      "status": "Active",
+      "notes": "EU 43 · Silver buckles · Leather sole",
+      "tags": [
+        "black",
+        "double-monk",
+        "dress-register",
+        "formal",
+        "monk"
+      ],
+      "id": "s_new_ssdm"
+    },
+    {
+      "name": "Alden D6627C V-Tip Blucher (Color 8 Shell)",
+      "category": "Footwear",
+      "subcategory": "Derby",
+      "brand": "Alden",
+      "color": "Color 8",
+      "material": "Shell Cordovan (Horween)",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Formal",
+      "status": "Active",
+      "notes": "Barrie · 9.5 B/D",
+      "tags": [
+        "alden",
+        "color 8",
+        "color-8",
+        "dress-register",
+        "shell",
+        "v-tip"
+      ],
+      "id": "s_new_d6627c"
+    },
+    {
+      "name": "Lemargo Ebano Laced Dress Boot (Ebony)",
+      "category": "Footwear",
+      "subcategory": "Boot",
+      "brand": "Lemargo",
+      "color": "Ebony / Dark Brown",
+      "material": "Calf skin - Polished",
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "formality": "Formal",
+      "status": "Active",
+      "notes": "EU 42 · Italy · Leather sole · Sleek polished dress boot",
+      "tags": [
+        "boot",
+        "brown",
+        "dress-boot",
+        "dress-register",
+        "ebano",
+        "formal",
+        "laced"
+      ],
+      "id": "s_new_lemargo"
+    },
+    {
+      "name": "AllSaints Black Leather Shirt-Jacket",
+      "category": "Clothing",
+      "subcategory": "Outerwear",
+      "brand": "AllSaints",
+      "color": "Black",
+      "material": "Smooth glossy leather",
+      "season": [
+        "Spring",
+        "Fall"
+      ],
+      "formality": "Casual Smart",
+      "status": "Active",
+      "notes": "Point collar, snap-front, patch chest pockets — leather chore-coat silhouette (NOT moto/biker/bomber).",
+      "tags": [
+        "outerwear",
+        "leather",
+        "black",
+        "shirt-jacket",
+        "allsaints"
+      ],
+      "id": "c_58"
+    },
+    {
+      "name": "J. Crew White Linen LS Shirt",
+      "category": "Clothing",
+      "subcategory": "Shirt",
+      "brand": "J. Crew",
+      "color": "White",
+      "material": "Linen",
+      "season": [
+        "Spring",
+        "Summer"
+      ],
+      "formality": "Casual Smart",
+      "status": "Active",
+      "notes": "Long-sleeve white linen. Distinct from c_16 Academy of Love cream linen shirt.",
+      "tags": [
+        "shirt",
+        "linen",
+        "white",
+        "jcrew"
+      ],
+      "id": "c_59"
+    },
+    {
+      "name": "Buck Mason Heavy Black T-Shirt",
+      "category": "Clothing",
+      "subcategory": "Top",
+      "brand": "Buck Mason",
+      "color": "Black",
+      "material": "Heavyweight cotton (slub/curved-hem tee)",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Casual",
+      "status": "Active",
+      "notes": "Heavyweight black tee. Casual base layer / standalone with denim.",
+      "tags": [
+        "top",
+        "tee",
+        "black",
+        "staple",
+        "buck-mason"
+      ],
+      "id": "c_60"
+    },
+    {
+      "name": "Buck Mason Ecru T-Shirt",
+      "category": "Clothing",
+      "subcategory": "Top",
+      "brand": "Buck Mason",
+      "color": "Ecru",
+      "material": "Heavyweight cotton (slub/curved-hem tee)",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Casual",
+      "status": "Active",
+      "notes": "Ecru heavyweight tee. Casual base layer / standalone; warm-tone counterpart to c_60 black.",
+      "tags": [
+        "top",
+        "tee",
+        "ecru",
+        "staple",
+        "buck-mason"
+      ],
+      "id": "c_61"
+    },
+    {
+      "name": "Ruttshoes Ridley Split V-Tip Blucher (Color 8 Shell)",
+      "category": "Footwear",
+      "subcategory": "Derby",
+      "brand": "The Ruttshoes & Co.",
+      "color": "Color 8",
+      "material": "Shell Cordovan (Horween)",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "Five Count line · 168M last (refined 1940s US military) · US 9H (9.5) · E width · Storm welt · Leather sole + Quabaug #419 heel + Triumph 150 toe plate · Japan (Asakusa) · SMU Classic Works Shanghai · RMB 10,000 (~$1,380) · Director Ken Kawamura · Personal note: Ruttshoes/Ruttmann phonetic resonance · Hand-stitched apron · Hand-welted construction (top tier, not base GYW) — confirmed",
+      "tags": [
+        "asian-tradition",
+        "blucher",
+        "color 8",
+        "color-8",
+        "japan",
+        "ruttshoes",
+        "shell",
+        "smu",
+        "split-toe",
+        "storm-welt",
+        "v-tip"
+      ],
+      "id": "s_109",
+      "last": "168M"
+    },
+    {
+      "name": "Altieri m_moriabc B — Black Shell Cordovan Ankle Boot (Moria B)",
+      "category": "Footwear",
+      "subcategory": "Boot",
+      "brand": "Maurizio Altieri (m_moriabc)",
+      "color": "Black",
+      "material": "Shell Cordovan (Horween) — pending in-hand/maker confirmation",
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "formality": "Artisan Avant-Garde",
+      "status": "En Route",
+      "notes": "EU 43 · B last · m_moriabc \"present\" chapter. Bought via Xianyu (secondhand, lightly worn), May 2026. Fills the previously-empty BLACK SHELL BOOT slot. Conceptual triad: A = s_37 Carpe Diem Reverse Shell Derby (past, owned); B = THIS (present, incoming); C = future, slow direct commission with Altieri (not yet specced — inconclusive by project definition). Diligence open: confirm Horween shell vs glazed calf, B-last, true 43, sole/heel/welt-pin condition — Altieri has offered to answer directly by audio.",
+      "tags": [
+        "boot",
+        "black",
+        "shell-cordovan",
+        "altieri",
+        "m_moriabc",
+        "moria-b",
+        "avant-garde",
+        "artisan",
+        "incoming",
+        "triad"
+      ],
+      "id": "s_110"
+    },
+    {
+      "name": "Carpe Diem Mid-Height Lace Boot (Brown) — DETAILS TO FILL",
+      "category": "Footwear",
+      "subcategory": "Boot",
+      "brand": "Carpe Diem (Maurizio Altieri)",
+      "color": "Brown",
+      "material": "Leather — TO CONFIRM",
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "formality": "Artisan Avant-Garde",
+      "status": "Active",
+      "notes": "OWNED. Carpe Diem-era piece (foundational Altieri era, predates m_moriabc) — distinct era from s_110 m_moriabc B. Second Carpe Diem holding alongside s_37. Smooth waxy brown, mid-height lace boot, leather laces, low stacked heel. STUB ENTRY — year, exact leather, last/size, condition still to be filled.",
+      "tags": [
+        "boot",
+        "brown",
+        "carpe-diem",
+        "carpe-diem-era",
+        "altieri",
+        "artisan",
+        "avant-garde",
+        "owned",
+        "stub-needs-detail"
+      ],
+      "id": "s_111"
+    }
+  ],
+  "retired": [
+    {
+      "name": "Allen Edmonds Walden Loafer (Burgundy)",
+      "brand": "Allen Edmonds",
+      "type": "Loafer",
+      "color": "Burgundy",
+      "material": "Calf skin - Smooth",
+      "size": "9.5",
+      "country": "US - Wisconsin",
+      "condition": "Nearly new (try-on only)",
+      "pricePaid": 380,
+      "xianyuList": 850,
+      "xianyuExp": 650,
+      "ebayList": 150,
+      "ebayExp": 110,
+      "currency": "RMB",
+      "notes": "",
+      "id": "r_0"
+    },
+    {
+      "name": "Bed|Stü Sneaker Leather Top (Reddish Brown)",
+      "brand": "Bed|Stü",
+      "type": "Shoe",
+      "color": "Reddish Brown",
+      "material": "Calf - Distressed leather",
+      "size": "11",
+      "country": "Mexico - Leon",
+      "condition": "",
+      "pricePaid": 336,
+      "xianyuList": 700,
+      "xianyuExp": 500,
+      "ebayList": 0,
+      "ebayExp": 110,
+      "currency": "RMB",
+      "notes": "Casual use",
+      "id": "r_1"
+    },
+    {
+      "name": "Cheaney Chelsea Boot (Reddish Brown)",
+      "brand": "Cheaney",
+      "type": "Boot",
+      "color": "Reddish Brown",
+      "material": "Calf skin - Smooth",
+      "size": "43",
+      "country": "UK - Northampton",
+      "condition": "",
+      "pricePaid": 200,
+      "xianyuList": 800,
+      "xianyuExp": 600,
+      "ebayList": 150,
+      "ebayExp": 110,
+      "currency": "RMB",
+      "notes": "",
+      "id": "r_2"
+    },
+    {
+      "name": "Crockett & Jones 330 Single Monk Brogue Boot (Chestnut)",
+      "brand": "Crockett & Jones",
+      "type": "Boot",
+      "color": "Chestnut",
+      "material": "Calf skin - Smooth",
+      "size": "UK 9.5D / EU 43.5",
+      "country": "UK - Northampton",
+      "condition": "Lightly worn",
+      "pricePaid": 490,
+      "xianyuList": 1500,
+      "xianyuExp": 1200,
+      "ebayList": 220,
+      "ebayExp": 180,
+      "currency": "RMB",
+      "notes": "251 last. Rare single-monk brogue boot. Renovateur + Saphir 37 + Neutral wax.",
+      "id": "r_3"
+    },
+    {
+      "name": "East Rock Wingtip Chelsea Boot (Black)",
+      "brand": "East Rock",
+      "type": "Boot",
+      "color": "Black",
+      "material": "Calf (matte)",
+      "size": "EU 43",
+      "country": "Philippines (brand inactive)",
+      "condition": "Excellent",
+      "pricePaid": 100,
+      "xianyuList": 300,
+      "xianyuExp": 150,
+      "ebayList": 60,
+      "ebayExp": 35,
+      "currency": "RMB",
+      "notes": "Slightly loose with thin socks. Commando rubber + Goodyear welt.",
+      "id": "r_4"
+    },
+    {
+      "name": "Grenson Cambridge Semi-Brogue Oxford (Black)",
+      "brand": "Grenson",
+      "type": "Shoe",
+      "color": "Black",
+      "material": "Calf skin - Smooth",
+      "size": "11D",
+      "country": "UK - Northampton",
+      "condition": "",
+      "pricePaid": 780,
+      "xianyuList": 1300,
+      "xianyuExp": 950,
+      "ebayList": 220,
+      "ebayExp": 180,
+      "currency": "RMB",
+      "notes": "Benchgrade. Formal / business use.",
+      "id": "r_5"
+    },
+    {
+      "name": "Joseph Cheaney Warwick Cap-Toe Oxford (Dark Brown)",
+      "brand": "Cheaney",
+      "type": "Shoe",
+      "color": "Dark Brown",
+      "material": "Calf skin - Smooth",
+      "size": "UK 9.5 / EU 43.5",
+      "country": "UK - Northampton",
+      "condition": "Near-new (2–3 wears)",
+      "pricePaid": 765,
+      "xianyuList": 1300,
+      "xianyuExp": 950,
+      "ebayList": 220,
+      "ebayExp": 180,
+      "currency": "RMB",
+      "notes": "11525(F) last. Saphir Dark Brown Cream #5 + Neutral Wax.",
+      "id": "r_6"
+    },
+    {
+      "name": "Löf & Tung Aldrin Shortwing Oxford (Color 8 Shell)",
+      "brand": "Löf & Tung",
+      "type": "Shoe",
+      "color": "Color 8",
+      "material": "Shell Cordovan (Horween)",
+      "size": "UK 9",
+      "country": "Spain - Almansa",
+      "condition": "",
+      "pricePaid": 3000,
+      "xianyuList": 3800,
+      "xianyuExp": 3250,
+      "ebayList": 650,
+      "ebayExp": 550,
+      "currency": "RMB",
+      "notes": "S last. Dainite sole.",
+      "id": "r_7"
+    },
+    {
+      "name": "Massimo Dutti Wholecut Limited Edition (Dark Blue Suede)",
+      "brand": "Massimo Dutti",
+      "type": "Shoe",
+      "color": "Dark Blue",
+      "material": "Suede",
+      "size": "44",
+      "country": "Italy",
+      "condition": "",
+      "pricePaid": 101,
+      "xianyuList": 399,
+      "xianyuExp": 175,
+      "ebayList": 70,
+      "ebayExp": 45,
+      "currency": "RMB",
+      "notes": "Semi-formal / statement piece.",
+      "id": "r_8"
+    },
+    {
+      "name": "Santoni Double Monk Strap (Dark Navy Suede)",
+      "brand": "Santoni",
+      "type": "Shoe",
+      "color": "Dark Navy Blue",
+      "material": "Suede",
+      "size": "9.5",
+      "country": "Italy",
+      "condition": "",
+      "pricePaid": 900,
+      "xianyuList": 1600,
+      "xianyuExp": 1300,
+      "ebayList": 300,
+      "ebayExp": 220,
+      "currency": "RMB",
+      "notes": "FAM handmade. Silver buckles. Leather sole.",
+      "id": "r_9"
+    },
+    {
+      "name": "Shanghai Custom Wholecut Semi-Brogue (Dark Brown)",
+      "brand": "Shanghai Custom",
+      "type": "Shoe",
+      "color": "Dark Brown (Espresso)",
+      "material": "Calf skin - Smooth",
+      "size": "11",
+      "country": "China",
+      "condition": "",
+      "pricePaid": 800,
+      "xianyuList": 1299,
+      "xianyuExp": 850,
+      "ebayList": 180,
+      "ebayExp": 120,
+      "currency": "RMB",
+      "notes": "MTO. Dainite sole.",
+      "id": "r_10"
+    },
+    {
+      "name": "Tricker's Semi-Brogue Oxford (Mahogany Brown)",
+      "brand": "Tricker's",
+      "type": "Shoe",
+      "color": "Mahogany Brown",
+      "material": "Calf skin - Smooth",
+      "size": "UK 9.5 / EU 43.5",
+      "country": "UK - Northampton",
+      "condition": "Lightly worn",
+      "pricePaid": 399,
+      "xianyuList": 900,
+      "xianyuExp": 650,
+      "ebayList": 160,
+      "ebayExp": 110,
+      "currency": "RMB",
+      "notes": "4444 Regent family. Renovateur + Saphir Med Brown 37.",
+      "id": "r_11"
+    },
+    {
+      "name": "Zegna Triple Stitch Sneaker (Black)",
+      "brand": "Zegna",
+      "type": "Shoe",
+      "color": "Black",
+      "material": "Calf skin - Smooth",
+      "size": "44",
+      "country": "Italy",
+      "condition": "",
+      "pricePaid": 115,
+      "xianyuList": 400,
+      "xianyuExp": 275,
+      "ebayList": 90,
+      "ebayExp": 55,
+      "currency": "RMB",
+      "notes": "",
+      "id": "r_12"
+    },
+    {
+      "name": "Zegna Tiziano Sneaker (White/Brown)",
+      "brand": "Zegna",
+      "type": "Shoe",
+      "color": "White (brown)",
+      "material": "Calf skin - Smooth",
+      "size": "44",
+      "country": "Italy",
+      "condition": "",
+      "pricePaid": 0,
+      "xianyuList": 500,
+      "xianyuExp": 300,
+      "ebayList": 100,
+      "ebayExp": 65,
+      "currency": "Gift",
+      "notes": "Birthday present from Carrie. Rubber sole. Smart casual sneaker.",
+      "id": "r_13"
+    },
+    {
+      "name": "Ralph Lauren RRL Travel Slipper (Dark Brown)",
+      "brand": "Ralph Lauren (RRL)",
+      "type": "Shoe",
+      "color": "Dark Brown",
+      "material": "Calf (matte)",
+      "size": "",
+      "country": "",
+      "condition": "",
+      "pricePaid": 0,
+      "xianyuList": 0,
+      "xianyuExp": 0,
+      "ebayList": 0,
+      "ebayExp": 0,
+      "currency": "RMB",
+      "notes": "Moved to retire 2026. Reason: user no longer wears.",
+      "id": "r_retired_s_78"
+    },
+    {
+      "name": "Santoni Carter Penny Loafer (Greige Suede)",
+      "brand": "Santoni",
+      "type": "Shoe",
+      "color": "Greige",
+      "material": "Suede",
+      "size": "Italy",
+      "country": "",
+      "condition": "",
+      "pricePaid": 0,
+      "xianyuList": 0,
+      "xianyuExp": 0,
+      "ebayList": 0,
+      "ebayExp": 0,
+      "currency": "RMB",
+      "notes": "Moved to retire 2026. Reason: user no longer wears.",
+      "id": "r_retired_s_84"
+    },
+    {
+      "name": "John Lobb Shore Loafer (Black Deerskin)",
+      "brand": "John Lobb",
+      "type": "Loafer",
+      "color": "Black",
+      "material": "Deerskin",
+      "size": "9E",
+      "country": "Italy",
+      "condition": "",
+      "pricePaid": 0,
+      "xianyuList": 0,
+      "xianyuExp": 0,
+      "ebayList": 0,
+      "ebayExp": 0,
+      "currency": "RMB",
+      "notes": "Moved to retire April 2026. Reason: British lane loafer slot anchored by Lobb Pace (casual) + Lobb Lopez (dress penny) + C&J Kensington (dress Albert). Shore was the deerskin casual black counterpart but did not earn a distinct occasion-purpose alongside the three anchors.",
+      "id": "r_16"
+    },
+    {
+      "name": "Leeward (Zegna) Secondskin Flex Loafer (Dark Brown)",
+      "brand": "Leeward (Zegna)",
+      "type": "Loafer",
+      "color": "Dark Brown",
+      "material": "Deerskin",
+      "size": "EU 43",
+      "country": "Italy (replica)",
+      "condition": "",
+      "pricePaid": 0,
+      "xianyuList": 0,
+      "xianyuExp": 0,
+      "ebayList": 0,
+      "ebayExp": 0,
+      "currency": "RMB",
+      "notes": "Moved to retire April 2026. Reason: replica piece in a slot already covered by the authentic Lobb Pace (dark brown pebble grain unlined loafer, British lane casual anchor). Replica-beside-original in the same styling slot not justified.",
+      "id": "r_17"
+    },
+    {
+      "name": "Burberry Short-Sleeve Button-Down (Tan Plaid)",
+      "brand": "Burberry",
+      "type": "Shirt",
+      "color": "Tan / cream / grey plaid",
+      "material": "Cotton",
+      "size": "Large",
+      "country": "",
+      "condition": "",
+      "pricePaid": 0,
+      "xianyuList": 0,
+      "xianyuExp": 0,
+      "ebayList": 0,
+      "ebayExp": 0,
+      "currency": "RMB",
+      "notes": "Moved to retire May 2026. Reason: user dislikes fit/look — not good for him.",
+      "id": "r_retired_c_17"
+    },
+    {
+      "name": "Samurai Mock Neck Tee (Natural)",
+      "brand": "Samurai",
+      "type": "Knitwear",
+      "color": "Natural / ecru",
+      "material": "16oz Japanese cotton",
+      "size": "",
+      "country": "",
+      "condition": "",
+      "pricePaid": 0,
+      "xianyuList": 0,
+      "xianyuExp": 0,
+      "ebayList": 0,
+      "ebayExp": 0,
+      "currency": "RMB",
+      "notes": "Moved to retire May 2026. Reason: user no longer wears.",
+      "id": "r_retired_c_15"
+    },
+    {
+      "name": "Massimo Dutti Light Blue Shirt",
+      "brand": "Massimo Dutti",
+      "type": "Shirt",
+      "color": "Light blue",
+      "material": "Cotton",
+      "size": "2XL",
+      "country": "",
+      "condition": "",
+      "pricePaid": 0,
+      "xianyuList": 0,
+      "xianyuExp": 0,
+      "ebayList": 0,
+      "ebayExp": 0,
+      "currency": "RMB",
+      "notes": "Moved to retire May 2026. Reason: user no longer wears.",
+      "id": "r_retired_c_34"
+    }
+  ],
+  "versionNote": "c_0 Zegna 15milmil15: color 'Dark blue / burgundy' → 'Dark blue' (no burgundy tones, confirmed from photo May 29 2026); c_47 Pescarolo Navy Chinos: model field populated 'Nerano M'; s_74: brand 'Ralph Lauren (by Alden)' → 'Ralph Lauren (by Allen Edmonds)'; name updated; last reference Plaza → McAllister/AE 65; tags alden→allen-edmonds. [Open: confirm size — McAllister sizing is 10.5 per s_31, this record currently 10 B/D inherited from Plaza]; s_68 Paraboot: Avignon → SAND model corrected. Bordeaux Cordo Shell (native, not Color 8 finish). Split-Toe Derby. Actem last. Smart Casual. Tag cleanup.; s_new_6221f: model number 6221F → 6221L corrected (ID left as referential key for wear tracker/dashboard state). Van last, unlined, Leisure 3 sole.; s_12 Alden 29364F CXL PTB: 'blind eyelets' added to notes (more formal than s_21 oiled nubuck which has open metal eyelets); s_109 last field populated (168M); construction line updated from \"to confirm\" → \"hand-welted confirmed\""
+}

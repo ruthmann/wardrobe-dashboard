@@ -1,0 +1,8 @@
+# Full-resolution originals — too large to host; resized copies live in assets/shoes/
+images/
+
+# macOS
+.DS_Store
+
+# Local tooling / preview config
+.claude/
