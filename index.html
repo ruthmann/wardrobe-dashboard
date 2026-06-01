@@ -3,13 +3,14 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Wardrobe Dashboard — Stephen Alexander Ruthmann</title>
+<title>Footwear Collection — Stephen Alexander Ruthmann</title>
 <style>
   :root{
     --color-background-primary:#ffffff;
     --color-background-secondary:#f5f4f2;
     --color-text-primary:#1a1a1a;
     --color-text-secondary:#6b6b6b;
+    --color-text-tertiary:#9a9a96;
     --color-border-primary:#1a1a1a;
     --color-border-secondary:#bdbdbd;
     --color-border-tertiary:#e3e1dd;
@@ -21,11 +22,11 @@
   html,body{margin:0;padding:0;}
   body{background:var(--color-background-secondary);color:var(--color-text-primary);font-family:var(--font-sans);-webkit-font-smoothing:antialiased;}
   #root{max-width:1200px;margin:0 auto;padding:0 16px 60px;}
-  input,select,textarea{font-family:inherit;font-size:13px;padding:6px 10px;border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);background:var(--color-background-primary);color:var(--color-text-primary);}
+  input,select,textarea{font-family:inherit;}
   input:focus,select:focus,textarea:focus{outline:none;border-color:var(--color-border-secondary);}
   button{font-family:inherit;}
   .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;}
-  table{font-family:inherit;}
+  .tag{font-size:10px;padding:2px 7px;border-radius:10px;line-height:1.4;}
   img{max-width:100%;}
 </style>
 <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
@@ -35,28 +36,9 @@
 <body>
 <div id="root"></div>
 <script type="text/babel" data-presets="react">
-const {useState,useMemo,useEffect,useRef}=React;
+const {useState,useMemo,useEffect}=React;
 
-const STORAGE_KEY = "wardrobe_state";
-const STORAGE_META_KEY = "wardrobe_meta";
-const STORAGE_VERSION_KEY = "wardrobe_dataversion";
-
-const meta = {
-  owner: "Stephen Alexander Ruthmann",
-  bodyProfile: "180cm · 96kg · Jacket 48R / Zegna 58R · Trousers W38×L31 · Shirts 2XL · Belt 38in (working)",
-  wardrobeRules: [
-    "Only suggest items listed in the master wardrobe unless explicitly requested otherwise.",
-    "Jeans in Shanghai until mid-November unless attending a formal event.",
-    "Herno zip-up hoodie is a Nov–Feb primary rotation piece only.",
-    "Winter rotation — above 0°C dressy/refined: RLPL Olive Quilted Coat (not wool, not weatherproof).",
-    "Winter rotation — above 0°C black/casual-smart: PWVC Park Jacket (flannel-lined, worn without hood).",
-    "Winter rotation — below 0°C bad weather layering: PWVC Manchester Marine Parka (size 6).",
-    "White linen shorts have no belt loops — no belt.",
-    "PWVC default size: 5 across all items except Marine Parka (size 6).",
-    "No tassel loafers — not in collection, not to be suggested.",
-    "Montblanc brown belt is not a tonal match for Color 8 shell cordovan shoes.",
-  ],
-};
+const STORAGE_KEY = "shoe_browser_v1_state";
 
 // Maps an item id to its photo filename in assets/shoes/.
 const IMAGE_MAP = {
@@ -65,7 +47,8 @@ const IMAGE_MAP = {
   s_14:"Alden4060.jpeg", s_15:"Alden4074.jpeg", s_16:"Alden5165.jpeg", s_17:"Alden67540.jpeg",
   s_18:"Alden704L.jpeg", s_19:"Alden73921.jpeg", s_21:"Alden9431S.jpeg", s_22:"Alden9662F.jpeg",
   s_23:"Alden9750.jpeg", s_24:"Alden96817.jpeg", s_25:"AldenA0908H.jpeg", s_28:"AldenD2875HC.jpeg",
-  s_29:"AldenD2941C.jpeg", s_new_d6627c:"AldenD6627C.jpeg", s_34:"BemerSidelace.jpeg",
+  s_29:"AldenD2941C.jpeg", s_new_6221f:"Alden6221L.jpeg", s_new_d6627c:"AldenD6627C.jpeg",
+  s_113:"AldenD9622.jpeg", s_34:"BemerSidelace.jpeg",
   s_35:"BemerWholecut.jpeg", s_40:"CJKensingtonAlbert.jpeg", s_39:"CLPatentDerby.jpeg",
   s_42:"EGCranleigh.jpeg", s_43:"EGDoverAntiqueCalf.jpeg", s_45:"EGDoverLondonGrain.jpeg",
   s_44:"EGHalifax.jpeg", s_101:"FukudaDoubleMonk.jpeg", s_47:"GucciNavyLoafer.jpeg",
@@ -80,827 +63,516 @@ const IMAGE_MAP = {
   s_88:"ScaforaSemiBrogueCaptoe.jpeg", s_90:"ShotoChelsea.jpeg",
   s_93:"TLB114.jpeg", s_94:"TLB121.jpeg", s_92:"TimberlandDOE.jpeg", s_95:"VansHorween.jpeg",
   s_100:"Viberg2030BlackCXLBoot.jpeg", s_98:"Viberg2030ChamoisRoughoutBoot.jpeg",
-  s_99:"Viberg2030MaryamBoot.jpeg", s_104:"ZhouLvWholecut.jpeg",
-  r_0:"AEBurgundyCalfLoafer.jpeg", r_3:"CJWinterGeorgeBoot.jpeg", r_5:"GrensonCaptoe.jpeg", r_6:"CheaneyWarwickCaptoe.jpeg",
-  r_11:"TrickersSemiBrogueCaptoe.jpeg", r_16:"LobbShoreLoafer.jpeg",
+  s_99:"Viberg2030MaryamBoot.jpeg", s_112:"VibergSavoy.jpeg", s_104:"ZhouLvWholecut.jpeg",
+  r_0:"AEBurgundyCalfLoafer.jpeg", r_3:"CJWinterGeorgeBoot.jpeg", r_5:"GrensonCaptoe.jpeg",
+  r_6:"CheaneyWarwickCaptoe.jpeg", r_11:"TrickersSemiBrogueCaptoe.jpeg", r_16:"LobbShoreLoafer.jpeg",
   r_retired_s_78:"RRLTravelLoafer9D.jpeg",
 };
 function imgFor(item){ return item && IMAGE_MAP[item.id] ? "assets/shoes/"+IMAGE_MAP[item.id] : null; }
 
-const TABS = ["Active Collection","Retired / To-Sell"];
-const CATS = ["All","Footwear","Clothing","Belt","Watch"];
-const STATUSES = ["All","Active","En Route","Repair","Wishlist"];
-const SEASONS = ["All","Year-round","Spring","Summer","Fall","Winter"];
-const ALL_SEASONS = ["Year-round","Spring","Summer","Fall","Winter"];
-const ALL_CATEGORIES = ["Footwear","Clothing","Belt","Watch"];
-const EDIT_STATUSES = ["Active","En Route","Repair","Wishlist"];
+// Fallback swatch derived from the color name, for any item lacking an explicit swatch.
+function deriveSwatch(color){
+  const c=(color||"").toLowerCase();
+  const table=[["color 8","#3a1414"],["ravello","#8B3A1F"],["cigar","#5C3A1F"],["whisk","#A05020"],
+    ["burgundy","#5a2424"],["bordeaux","#5C2424"],["snuff","#B8826A"],["navy","#1F2848"],
+    ["black","#1f1f1f"],["nero","#1f1f1f"],["ebon","#3F2A1B"],["cognac","#8B4520"],
+    ["chestnut","#7C3A1F"],["mahogany","#5A2D1F"],["walnut","#7C5235"],["tobacco","#9A6238"],
+    ["dark brown","#3F2A1B"],["espresso","#3F2818"],["medium brown","#7B5235"],["brown","#5C3825"],
+    ["tan","#C09060"],["white","#F0EDE5"],["cream","#E5DCC8"],["ecru","#E5DCC8"],
+    ["grey","#3a3a3c"],["gray","#3a3a3c"],["charcoal","#383838"],["blue","#2A3858"],
+    ["natural","#A87850"],["amber","#7C4525"]];
+  for(const [k,v] of table){ if(c.includes(k)) return v; }
+  return "#888880";
+}
+function swOf(item){ return item.swatch || deriveSwatch(item.color); }
 
-const SC = {
-  Active:{bg:"#eafaf1",text:"#1a7a45",border:"#9adec8"},
-  "En Route":{bg:"#fef9e7",text:"#9a6c00",border:"#f0c050"},
-  Repair:{bg:"#fef0f0",text:"#9a1a1a",border:"#f0a0a0"},
-  Wishlist:{bg:"#eef0fe",text:"#3a3a9a",border:"#a0a8f0"},
+// ===== Field grouping helpers =====
+
+const MATERIAL_GROUPS = {
+  "Shell": (m,n)=>/shell/i.test(m),
+  "Suede": (m,n)=>/suede|chamois|nubuck/i.test(m),
+  "CXL/Pull-up": (m,n)=>/cxl|pull-up|pull up|crazy horse/i.test(m)||/cxl/i.test(n),
+  "Patent": (m,n)=>/patent/i.test(m),
+  "Horse leather": (m,n)=>/horse(?!\s+leather)|horsebutt|tampy|tamp|maryam/i.test(m)||/horse leather/i.test(m),
+  "Vachetta": (m,n)=>/vachetta|vacchetta/i.test(m),
+  "Calf": (m,n)=>/calf/i.test(m)&&!/cxl/i.test(m)&&!/grain/i.test(m)&&!/horse/i.test(m),
+  "Grain": (m,n)=>/grain|pebble|hatch|london grain/i.test(m),
+  "Exotic": (m,n)=>/ostrich|crocodile|alligator|exotic|kangaroo/i.test(m),
+  "Canvas": (m,n)=>/canvas/i.test(m),
+  "Synthetic": (m,n)=>/synthetic|mesh|fabric/i.test(m),
+  "Other leather": (m,n)=>/leather|deerskin|buffalo|pelle|cowhide/i.test(m),
 };
 
-function fmt(n){return n?`¥${n.toLocaleString()}`:"—";}
-function fmtUSD(n){return n?`$${n}`:"—";}
-function uid() { return `x_${Date.now()}_${Math.random().toString(36).slice(2,8)}`; }
-
-const EMPTY_ACTIVE = {
-  id: "", name: "", category: "Clothing", subcategory: "", brand: "",
-  color: "", material: "", season: ["Year-round"], formality: "", status: "Active",
-  notes: "", tags: []
-};
-const EMPTY_RETIRED = {
-  id: "", name: "", brand: "", type: "", color: "", material: "", size: "",
-  country: "", condition: "", pricePaid: 0, xianyuList: 0, xianyuExp: 0,
-  ebayList: 0, ebayExp: 0, currency: "RMB", notes: ""
+const FORMALITY_GROUPS = {
+  "Formal": ["Formal","Statement Formal","Creative Formal"],
+  "Smart Formal": ["Smart Formal"],
+  "Smart Casual": ["Smart Casual","Refined Casual","Artisan Smart","Rugged Smart Casual"],
+  "Business Casual": ["Business Casual"],
+  "Casual": ["Casual","Creative Casual","Statement Casual","Artisan Casual","Rugged Casual","Artisan Avant-Garde"],
 };
 
-const EMPTY_STATE = { active: [], retired: [] };
+const TRADITION_TAGS = {
+  "American": ["alden","ralph-lauren","viberg","red-wing","redwing","rancourt","hanover","timberland","allen-edmonds","bed|stu","bed|stü","vans","oncloud","margiela","americana","east rock"],
+  "British": ["john-lobb","john lobb","edward-green","edward green","peal","crockett","hackett","grenson","kensington","cheaney","tricker","löf","loef","trickers"],
+  "Continental": ["paraboot","santoni","carmina","carpe-diem","carpe diem","meccariello","scafora","fukuda","tlb","vass","bemer","heschung","loro-piana","loro piana","baudoin","quadratura","christian-louboutin","louboutin","gucci","leeward","zegna","hermès","hermes","lemargo","bestetti","stefano-bemer","yohei-fukuda","chiappini","shoto","lucchese","luchesse","suitsupply","chambeliss","massimo dutti","massimo","dinkelacker"],
+  "Asian": ["zhou-lv","zhou lv","拙履","mr-zhao","mr. zhao","shanghai","feiyue","doek","hender-scheme","hender","jueshi","yohji","yohji-yamamoto","yamamoto","scheme","ruttshoes","rutt"],
+};
 
-function WardrobeDashboard() {
-  const [state, setState] = useState(EMPTY_STATE);
-  const [loaded, setLoaded] = useState(false);
-  const [savedAt, setSavedAt] = useState(null);
-  const [dataVersion, setDataVersion] = useState("");
-  const [loadError, setLoadError] = useState("");
-  const fileInputRef = useRef(null);
-  const seedRef = useRef(EMPTY_STATE); // canonical data from data.json
+function getMaterialGroup(m,n){
+  for(const [g,test] of Object.entries(MATERIAL_GROUPS)){ if(test(m||"",n||"")) return g; }
+  return "Other";
+}
+function getFormalityGroup(f){
+  for(const [g,list] of Object.entries(FORMALITY_GROUPS)){ if(list.includes(f)) return g; }
+  return "Casual";
+}
+function getTradition(item){
+  const search=(item.brand+" "+(item.tags||[]).join(" ")+" "+item.name).toLowerCase();
+  for(const t of ["Asian","British","American","Continental"]){
+    if(TRADITION_TAGS[t].some(m=>search.includes(m))) return t;
+  }
+  return "Other";
+}
+function getColorLane(item){
+  const c=(item.color||"").toLowerCase();
+  const tags=(item.tags||[]).map(t=>t.toLowerCase());
+  if(c.includes("color 8")) return "Color 8";
+  if(tags.includes("color 8")||tags.includes("color-8")) return "Color 8";
+  if(c.includes("ravello")) return "Ravello";
+  if(c.includes("cigar")) return "Cigar";
+  if(c.includes("color 4")) return "Color 4";
+  if(c.includes("color 2")) return "Color 2";
+  if(c.includes("whisk")) return "Whisky";
+  if(c.includes("natural")&&c.includes("reverse")) return "Natural reverse";
+  if(c.includes("burgundy")||c.includes("bordeaux")||tags.includes("burgundy")) return "Burgundy";
+  if(c.includes("snuff")) return "Snuff";
+  if(c.includes("dark chocolate")||c.includes("dark brown")) return "Dark brown";
+  if(c.includes("medium brown")||c.includes("mid-brown")) return "Medium brown";
+  if(c.includes("walnut")) return "Walnut";
+  if(c.includes("cognac")||c.includes("chestnut")) return "Cognac/Chestnut";
+  if(c.includes("mahogany")) return "Mahogany";
+  if(c.includes("tobacco")||c.includes("noix")) return "Tobacco/Noix";
+  if(c.includes("black")||c.includes("ebon")||c.includes("nero")) return "Black";
+  if(c.includes("navy")||c.includes("blue")||c.includes("cobalt")) return "Blue/Navy";
+  if(c.includes("grey")||c.includes("gray")||c.includes("charcoal")) return "Grey/Charcoal";
+  if(c.includes("white")||c.includes("ecru")||c.includes("ivory")||c.includes("cream")) return "White/Ecru";
+  if(c.includes("teak")||c.includes("rye")||c.includes("oro")||c.includes("amber")) return "Warm patinated";
+  return "Other";
+}
 
-  // Load canonical data.json, then reconcile with any browser-local edits.
-  useEffect(() => {
-    (async () => {
-      try {
-        const res = await fetch("data.json?v=" + Date.now(), { cache: "no-store" });
-        if (!res.ok) throw new Error("HTTP " + res.status);
-        const seed = await res.json();
-        const canonical = { active: seed.active || [], retired: seed.retired || [] };
-        seedRef.current = canonical;
-        const version = String(seed.version ?? "");
-        setDataVersion(version);
+// ===== Tag styling =====
 
-        let useState_ = canonical;
-        try {
-          const savedVersion = localStorage.getItem(STORAGE_VERSION_KEY);
-          const raw = localStorage.getItem(STORAGE_KEY);
-          if (raw && savedVersion === version) {
-            const parsed = JSON.parse(raw);
-            if (parsed && Array.isArray(parsed.active) && Array.isArray(parsed.retired)) {
-              useState_ = parsed;
-              const metaRaw = localStorage.getItem(STORAGE_META_KEY);
-              if (metaRaw) setSavedAt(JSON.parse(metaRaw).savedAt);
-            }
-          } else {
-            // New canonical data published — adopt it and clear stale local edits.
-            localStorage.setItem(STORAGE_VERSION_KEY, version);
-            localStorage.removeItem(STORAGE_KEY);
-            localStorage.removeItem(STORAGE_META_KEY);
-            setSavedAt(null);
-          }
-        } catch (e) { /* localStorage unavailable */ }
-        setState(useState_);
-      } catch (e) {
-        // Fetch failed (e.g. opened via file://). Fall back to local edits if present.
-        try {
-          const raw = localStorage.getItem(STORAGE_KEY);
-          if (raw) {
-            const parsed = JSON.parse(raw);
-            if (parsed && Array.isArray(parsed.active) && Array.isArray(parsed.retired)) {
-              setState(parsed);
-              seedRef.current = parsed;
-            } else throw new Error("bad local");
-          } else throw new Error("no local");
-        } catch (e2) {
-          setLoadError("Could not load data.json. If you opened this file directly, serve it over http (e.g. a local server or GitHub Pages).");
-        }
-      } finally {
+function MaterialTag({material,name}){
+  const g=getMaterialGroup(material,name);
+  const styles={
+    "Shell":{bg:"#FCEBEB",color:"#791F1F"}, "Suede":{bg:"#FAECE7",color:"#712B13"},
+    "CXL/Pull-up":{bg:"#FAEEDA",color:"#633806"}, "Calf":{bg:"#F1EFE8",color:"#444441"},
+    "Grain":{bg:"#EAF3DE",color:"#27500A"}, "Patent":{bg:"#252830",color:"#FFFFFF"},
+    "Horse leather":{bg:"#F4C0D1",color:"#72243E"}, "Vachetta":{bg:"#FAEEDA",color:"#854F0B"},
+    "Exotic":{bg:"#FBEAF0",color:"#72243E"}, "Canvas":{bg:"#EEEDFE",color:"#3C3489"},
+    "Synthetic":{bg:"#E1F5EE",color:"#085041"}, "Other leather":{bg:"#F1EFE8",color:"#5F5E5A"},
+    "Other":{bg:"#F1EFE8",color:"#5F5E5A"},
+  };
+  const s=styles[g]||styles.Other;
+  return <span className="tag" style={{background:s.bg,color:s.color}}>{g.toLowerCase()}</span>;
+}
+function FormalityTag({formality}){
+  const g=getFormalityGroup(formality);
+  const styles={
+    "Formal":{bg:"#E6F1FB",color:"#0C447C"}, "Smart Formal":{bg:"#E6F1FB",color:"#185FA5"},
+    "Smart Casual":{bg:"#EEEDFE",color:"#3C3489"}, "Business Casual":{bg:"#E1F5EE",color:"#0F6E56"},
+    "Casual":{bg:"#F1EFE8",color:"#5F5E5A"},
+  };
+  const s=styles[g]||styles.Casual;
+  return <span className="tag" style={{background:s.bg,color:s.color}}>{g.toLowerCase()}</span>;
+}
+function StatusTag({status}){
+  const styles={
+    "Active":{bg:"#EAF3DE",color:"#3B6D11"}, "Repair":{bg:"#FCEBEB",color:"#A32D2D"},
+    "En Route":{bg:"#FAEEDA",color:"#BA7517"}, "Wishlist":{bg:"#EEEDFE",color:"#534AB7"},
+    "Retired":{bg:"#F1EFE8",color:"#5F5E5A"},
+  };
+  const s=styles[status]||styles.Active;
+  return <span className="tag" style={{background:s.bg,color:s.color}}>{(status||"").toLowerCase()}</span>;
+}
+function TraditionTag({tradition}){
+  return <span className="tag" style={{background:"#E1F5EE",color:"#085041",fontWeight:500}}>{tradition.toLowerCase()}</span>;
+}
+function LaneTag({lane}){
+  return <span className="tag" style={{background:"#F1EFE8",color:"#2C2C2A"}}>{lane.toLowerCase()}</span>;
+}
+
+// ===== Multi-select chip filter =====
+
+function ChipFilter({label,options,selected,onChange}){
+  return (
+    <div style={{display:"flex",alignItems:"center",gap:6,flexWrap:"wrap"}}>
+      <span style={{fontSize:11,color:"var(--color-text-tertiary)",textTransform:"uppercase",letterSpacing:"0.4px",marginRight:2,width:78,flexShrink:0}}>{label}</span>
+      {options.map(opt=>{
+        const active=selected.includes(opt);
+        return (
+          <span key={opt}
+            onClick={()=>onChange(active?selected.filter(s=>s!==opt):[...selected,opt])}
+            style={{
+              fontSize:11, padding:"3px 10px", borderRadius:12,
+              background:active?"#185FA5":"var(--color-background-primary)",
+              color:active?"#FFFFFF":"var(--color-text-secondary)",
+              border:active?"0.5px solid #185FA5":"0.5px solid var(--color-border-tertiary)",
+              fontWeight:active?500:400, cursor:"pointer", userSelect:"none",
+              boxShadow:active?"0 0 0 1px #185FA5":"none", transition:"background 0.1s, color 0.1s",
+            }}>{opt.toLowerCase()}</span>
+        );
+      })}
+    </div>
+  );
+}
+
+// ===== Card =====
+
+function ShoeCard({item,onClick}){
+  const tradition=getTradition(item);
+  const lane=getColorLane(item);
+  const photo=imgFor(item);
+  const lastSubmatch=(item.notes||"").match(/(Barrie|Plaza|Aberdeen|Hampton|Van|Copley|Grant|Leydon|Orleans|Trubalance|Picasso|Forest|Actem|Cantilever|Modified last|Form [A-Z]|F last|Last \d+|\d{3,4}x?\b)/i);
+  const lastName=lastSubmatch?lastSubmatch[0]:null;
+  const sizeMatch=(item.notes||"").match(/(\d+(?:\.5)?\s*(?:[A-Z]\/?[A-Z]?|EU\s*\d+|UK\s*\d+(?:\.5)?[A-Z]*|US\s*\d+(?:\.5)?[A-Z]?))/);
+  const size=sizeMatch?sizeMatch[0]:null;
+
+  return (
+    <div onClick={onClick}
+      style={{background:"var(--color-background-primary)",border:"0.5px solid var(--color-border-tertiary)",
+        borderRadius:"var(--border-radius-lg)",padding:"12px 14px",display:"flex",gap:12,alignItems:"flex-start",cursor:"pointer"}}>
+      <div style={{display:"flex",flexDirection:"column",gap:4,flexShrink:0,alignItems:"center",paddingTop:2}}>
+        {photo
+          ? <img src={photo} alt={item.name} loading="lazy"
+              style={{width:52,height:52,borderRadius:6,objectFit:"cover",border:"0.5px solid rgba(0,0,0,0.15)",background:swOf(item)}}/>
+          : <div title={item.color}
+              style={{width:42,height:42,borderRadius:6,background:swOf(item),border:"0.5px solid rgba(0,0,0,0.15)"}}/>}
+        <span style={{fontSize:9,color:"var(--color-text-tertiary)",textTransform:"uppercase",letterSpacing:"0.3px",textAlign:"center",lineHeight:1.2,maxWidth:54}}>
+          {getMaterialGroup(item.material,item.name)}
+        </span>
+      </div>
+      <div style={{flex:1,minWidth:0}}>
+        <p style={{fontSize:11,color:"var(--color-text-tertiary)",textTransform:"uppercase",letterSpacing:"0.4px",margin:"0 0 1px"}}>
+          {item.brand} · {item.id}
+        </p>
+        <p style={{fontSize:14,fontWeight:500,margin:"0 0 4px",lineHeight:1.3,wordBreak:"break-word"}}>
+          {item.name.replace(/\s*\([^)]+\)\s*$/,"")}
+        </p>
+        <p style={{fontSize:11,color:"var(--color-text-secondary)",margin:"0 0 6px",lineHeight:1.4}}>
+          <strong style={{fontWeight:500,color:"var(--color-text-primary)"}}>{item.color}</strong>
+          {lastName?` · ${lastName}`:""}
+          {size?` · ${size}`:""}
+          {item.subcategory?` · ${item.subcategory.toLowerCase()}`:""}
+        </p>
+        <div style={{display:"flex",flexWrap:"wrap",gap:4,marginTop:4}}>
+          <MaterialTag material={item.material} name={item.name}/>
+          <LaneTag lane={lane}/>
+          <FormalityTag formality={item.formality}/>
+          <TraditionTag tradition={tradition}/>
+          <StatusTag status={item.status}/>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ===== Detail panel =====
+
+function DetailPanel({item,onClose}){
+  const [lightbox,setLightbox]=useState(false);
+  if(!item) return null;
+  const photo=imgFor(item);
+  return (
+    <div onClick={onClose}
+      style={{position:"fixed",inset:0,background:"rgba(0,0,0,0.4)",zIndex:1000,display:"flex",
+        alignItems:"center",justifyContent:"center",padding:20}}>
+      <div onClick={e=>e.stopPropagation()}
+        style={{background:"var(--color-background-primary)",border:"0.5px solid var(--color-border-secondary)",
+          borderRadius:"var(--border-radius-lg)",padding:24,maxWidth:560,width:"100%",maxHeight:"88vh",overflow:"auto"}}>
+        <div style={{display:"flex",gap:16,alignItems:"flex-start",marginBottom:16}}>
+          {photo
+            ? <img src={photo} alt={item.name} onClick={()=>setLightbox(true)}
+                style={{width:150,maxHeight:200,objectFit:"contain",borderRadius:8,border:"0.5px solid rgba(0,0,0,0.12)",
+                  background:swOf(item),flexShrink:0,cursor:"zoom-in"}}/>
+            : <div style={{width:80,height:80,borderRadius:8,background:swOf(item),border:"0.5px solid rgba(0,0,0,0.15)",flexShrink:0}}/>}
+          <div style={{flex:1,minWidth:0}}>
+            <p style={{fontSize:12,color:"var(--color-text-tertiary)",textTransform:"uppercase",letterSpacing:"0.4px",margin:"0 0 2px"}}>{item.brand} · {item.id}</p>
+            <h2 style={{fontSize:18,fontWeight:500,margin:"0 0 6px",lineHeight:1.3}}>{item.name}</h2>
+            <div style={{display:"flex",flexWrap:"wrap",gap:4}}>
+              <StatusTag status={item.status}/>
+              <FormalityTag formality={item.formality}/>
+              <TraditionTag tradition={getTradition(item)}/>
+            </div>
+          </div>
+        </div>
+        <div style={{display:"grid",gridTemplateColumns:"120px 1fr",gap:"8px 16px",fontSize:13,marginBottom:12}}>
+          <span style={{color:"var(--color-text-secondary)"}}>Color</span><span>{item.color}</span>
+          <span style={{color:"var(--color-text-secondary)"}}>Material</span><span>{item.material}</span>
+          <span style={{color:"var(--color-text-secondary)"}}>Subcategory</span><span>{item.subcategory}</span>
+          <span style={{color:"var(--color-text-secondary)"}}>Color lane</span><span>{getColorLane(item)}</span>
+          <span style={{color:"var(--color-text-secondary)"}}>Season</span><span>{(item.season||[]).join(", ")}</span>
+          {item.notes && <><span style={{color:"var(--color-text-secondary)"}}>Notes</span><span style={{lineHeight:1.5}}>{item.notes}</span></>}
+          {item.tags && item.tags.length>0 && <><span style={{color:"var(--color-text-secondary)"}}>Tags</span><span>{item.tags.join(", ")}</span></>}
+        </div>
+        <button onClick={onClose}
+          style={{background:"transparent",border:"0.5px solid var(--color-border-secondary)",borderRadius:"var(--border-radius-md)",
+            padding:"6px 14px",fontSize:13,color:"var(--color-text-primary)",cursor:"pointer",fontFamily:"var(--font-sans)"}}>Close</button>
+      </div>
+      {lightbox && photo && (
+        <div onClick={e=>{e.stopPropagation();setLightbox(false);}}
+          style={{position:"fixed",inset:0,background:"rgba(0,0,0,0.85)",zIndex:1100,display:"flex",alignItems:"center",justifyContent:"center",padding:24,cursor:"zoom-out"}}>
+          <img src={photo} alt={item.name} style={{maxWidth:"100%",maxHeight:"100%",objectFit:"contain",borderRadius:8}}/>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ===== Color spectrum sorting =====
+
+function hexToHsl(hex){
+  if(!hex||typeof hex!=="string") return {h:0,s:0,l:50};
+  const cleaned=hex.replace("#","");
+  if(cleaned.length!==6) return {h:0,s:0,l:50};
+  const r=parseInt(cleaned.slice(0,2),16)/255;
+  const g=parseInt(cleaned.slice(2,4),16)/255;
+  const b=parseInt(cleaned.slice(4,6),16)/255;
+  const max=Math.max(r,g,b), min=Math.min(r,g,b);
+  const l=(max+min)/2;
+  let h=0,s=0;
+  if(max!==min){
+    const d=max-min;
+    s=l>0.5?d/(2-max-min):d/(max+min);
+    if(max===r) h=((g-b)/d+(g<b?6:0));
+    else if(max===g) h=(b-r)/d+2;
+    else h=(r-g)/d+4;
+    h*=60;
+  }
+  return {h,s:s*100,l:l*100};
+}
+function spectrumKey(item){
+  const {h,s,l}=hexToHsl(swOf(item));
+  if(s<8){
+    if(l>92) return [0,0,-l];
+    if(l>70) return [1,0,-l];
+    if(l>35) return [11,0,-l];
+    return [12,0,-l];
+  }
+  let bucket;
+  if(h>=30&&h<60) bucket=2;
+  else if(h>=5&&h<30) bucket=3;
+  else if(h>=0&&h<5) bucket=5;
+  else if(h>=340) bucket=5;
+  else if(h>=300&&h<340) bucket=6;
+  else if(h>=250&&h<300) bucket=9;
+  else if(h>=200&&h<250) bucket=8;
+  else if(h>=160&&h<200) bucket=7;
+  else if(h>=80&&h<160) bucket=10;
+  else bucket=13;
+  return [bucket,-l,h];
+}
+function compareSpectrum(a,b){
+  const ka=spectrumKey(a), kb=spectrumKey(b);
+  for(let i=0;i<ka.length;i++){ if(ka[i]!==kb[i]) return ka[i]-kb[i]; }
+  return a.name.localeCompare(b.name);
+}
+
+// ===== Main dashboard =====
+
+const CLOTHING_TYPE=/shirt|knit|trouser|jacket|coat|tee|sweat|cardigan/i;
+
+function normalizeRetired(r){
+  return {
+    ...r,
+    category:"Footwear",
+    subcategory:r.subcategory||r.type||"Other",
+    status:"Retired",
+    formality:r.formality||"Casual",
+    season:r.season||["Year-round"],
+    tags:r.tags||[],
+  };
+}
+
+function ShoeBrowser(){
+  const [items,setItems]=useState([]);
+  const [loaded,setLoaded]=useState(false);
+  const [loadError,setLoadError]=useState(null);
+
+  const [query,setQuery]=useState("");
+  const [statusFilter,setStatusFilter]=useState(["Active"]);
+  const [materialFilter,setMaterialFilter]=useState([]);
+  const [subcatFilter,setSubcatFilter]=useState([]);
+  const [formalityFilter,setFormalityFilter]=useState([]);
+  const [traditionFilter,setTraditionFilter]=useState([]);
+  const [laneFilter,setLaneFilter]=useState([]);
+  const [seasonFilter,setSeasonFilter]=useState([]);
+  const [sortBy,setSortBy]=useState("spectrum");
+  const [selected,setSelected]=useState(null);
+
+  // Load collection data
+  useEffect(()=>{
+    (async()=>{
+      try{
+        const res=await fetch("data.json?v="+Date.now(),{cache:"no-store"});
+        if(!res.ok) throw new Error("HTTP "+res.status);
+        const seed=await res.json();
+        const active=(seed.active||[]).filter(i=>i.category==="Footwear");
+        const retired=(seed.retired||[])
+          .filter(r=>!/_c_/.test(r.id||"") && !CLOTHING_TYPE.test(r.type||r.subcategory||""))
+          .map(normalizeRetired);
+        setItems([...active,...retired]);
+      }catch(e){
+        setLoadError("Could not load data.json. If you opened this file directly, serve it over http (e.g. a local server or GitHub Pages).");
+      }finally{
         setLoaded(true);
       }
     })();
-  }, []);
+  },[]);
 
-  // Persist edits to the browser after initial load.
-  useEffect(() => {
-    if (!loaded) return;
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-      const now = new Date().toISOString();
-      localStorage.setItem(STORAGE_META_KEY, JSON.stringify({ savedAt: now }));
-      if (dataVersion) localStorage.setItem(STORAGE_VERSION_KEY, dataVersion);
-      setSavedAt(now);
-    } catch (e) { /* ignore quota / private mode */ }
-  }, [state, loaded, dataVersion]);
-
-  const [tab, setTab] = useState(0);
-  const [editMode, setEditMode] = useState(false);
-  const [query, setQuery] = useState("");
-  const [cat, setCat] = useState("All");
-  const [subcat, setSubcat] = useState("All");
-  const [status, setStatus] = useState("All");
-  const [season, setSeason] = useState("All");
-  const [formality, setFormality] = useState("All");
-  const [expanded, setExpanded] = useState(null);
-  const [retiredQuery, setRetiredQuery] = useState("");
-  const [retiredSort, setRetiredSort] = useState("name");
-  const [editing, setEditing] = useState(null);
-  const [confirmDelete, setConfirmDelete] = useState(null);
-  const [confirmReset, setConfirmReset] = useState(false);
-  const [importError, setImportError] = useState("");
-  const [lightbox, setLightbox] = useState(null);
-
-  const activeItems = state.active;
-  const retiredData = state.retired;
-
-  const formalityOptions = useMemo(()=>{
-    const s=new Set(["All"]);
-    activeItems.forEach(i=>i.formality && s.add(i.formality));
-    return Array.from(s).sort();
-  },[activeItems]);
-
-  const subcatOptions = useMemo(()=>{
-    const s=new Set();
-    activeItems.forEach(i=>{
-      if(cat!=="All" && i.category!==cat) return;
-      if(i.subcategory) s.add(i.subcategory);
-    });
-    return ["All", ...Array.from(s).sort()];
-  },[activeItems,cat]);
-
-  const filtered = useMemo(()=>{
-    const q=query.trim().toLowerCase();
-    return activeItems.filter(item=>{
-      if(cat!=="All"&&item.category!==cat)return false;
-      if(subcat!=="All"&&item.subcategory!==subcat)return false;
-      if(status!=="All"&&item.status!==status)return false;
-      if(season!=="All"&&!(item.season||[]).includes(season))return false;
-      if(formality!=="All"&&item.formality!==formality)return false;
-      if(q){
-        const text=[item.name,item.brand,item.color,item.material,item.subcategory,item.notes,...(item.tags||[])].join(" ").toLowerCase();
-        if(!text.includes(q))return false;
+  // Restore saved filter state
+  useEffect(()=>{
+    try{
+      const raw=localStorage.getItem(STORAGE_KEY);
+      if(raw){
+        const s=JSON.parse(raw);
+        if(s.statusFilter) setStatusFilter(s.statusFilter);
+        if(s.materialFilter) setMaterialFilter(s.materialFilter);
+        if(s.subcatFilter) setSubcatFilter(s.subcatFilter);
+        if(s.formalityFilter) setFormalityFilter(s.formalityFilter);
+        if(s.traditionFilter) setTraditionFilter(s.traditionFilter);
+        if(s.laneFilter) setLaneFilter(s.laneFilter);
+        if(s.seasonFilter) setSeasonFilter(s.seasonFilter);
+        if(s.sortBy) setSortBy(s.sortBy);
       }
-      return true;
-    });
-  },[query,cat,subcat,status,season,formality,activeItems]);
+    }catch(e){/* ignore */}
+  },[]);
 
-  const filteredRetired = useMemo(()=>{
-    const q=retiredQuery.trim().toLowerCase();
-    let list=retiredData.filter(item=>{
-      if(!q)return true;
-      return [item.name,item.brand,item.color,item.material,item.notes,item.condition].join(" ").toLowerCase().includes(q);
-    });
-    if(retiredSort==="xianyuList")list=[...list].sort((a,b)=>b.xianyuList-a.xianyuList);
-    else if(retiredSort==="ebayList")list=[...list].sort((a,b)=>b.ebayList-a.ebayList);
-    else if(retiredSort==="pricePaid")list=[...list].sort((a,b)=>b.pricePaid-a.pricePaid);
-    else list=[...list].sort((a,b)=>a.name.localeCompare(b.name));
-    return list;
-  },[retiredQuery,retiredSort,retiredData]);
+  // Persist filter state
+  useEffect(()=>{
+    if(!loaded) return;
+    try{
+      localStorage.setItem(STORAGE_KEY,JSON.stringify({
+        statusFilter,materialFilter,subcatFilter,formalityFilter,traditionFilter,laneFilter,seasonFilter,sortBy,
+      }));
+    }catch(e){/* ignore */}
+  },[loaded,statusFilter,materialFilter,subcatFilter,formalityFilter,traditionFilter,laneFilter,seasonFilter,sortBy]);
 
-  const totalXianYuList = retiredData.reduce((s,i)=>s+(i.xianyuList||0),0);
-  const totalXianYuExp = retiredData.reduce((s,i)=>s+(i.xianyuExp||0),0);
-  const totalEbayList = retiredData.reduce((s,i)=>s+(i.ebayList||0),0);
-  const shellRetired = retiredData.filter(i=>i.material&&i.material.includes("Shell")).length;
-  const shellCount=activeItems.filter(i=>i.material&&i.material.toLowerCase().includes("shell")).length;
-  const activeCount=activeItems.filter(i=>i.status==="Active").length;
-  const shoeCount=activeItems.filter(i=>i.category==="Footwear").length;
-  const enRoute=activeItems.filter(i=>i.status==="En Route").length;
+  const subcatOptions=useMemo(()=>[...new Set(items.map(i=>i.subcategory))].sort(),[items]);
+  const laneOptions=useMemo(()=>[...new Set(items.map(getColorLane))].sort(),[items]);
 
-  // ============ CRUD ACTIONS ============
-  function saveItem(kind, updated, isNew) {
-    setState(prev => {
-      const key = kind === "active" ? "active" : "retired";
-      if (isNew) {
-        return { ...prev, [key]: [...prev[key], { ...updated, id: updated.id || uid() }] };
-      }
-      return { ...prev, [key]: prev[key].map(i => i.id === updated.id ? updated : i) };
-    });
-    setEditing(null);
-  }
+  const seasonOptions=["Year-round","Spring","Summer","Fall","Winter"];
+  const statusOptions=["Active","Repair","En Route","Wishlist","Retired"];
+  const materialOptions=["Shell","Suede","CXL/Pull-up","Calf","Grain","Patent","Horse leather","Vachetta","Exotic","Canvas","Synthetic","Other leather"];
+  const formalityOptions=["Formal","Smart Formal","Smart Casual","Business Casual","Casual"];
+  const traditionOptions=["American","British","Continental","Asian"];
 
-  function deleteItem(kind, id) {
-    setState(prev => {
-      const key = kind === "active" ? "active" : "retired";
-      return { ...prev, [key]: prev[key].filter(i => i.id !== id) };
-    });
-    setConfirmDelete(null);
-  }
+  const filtered=useMemo(()=>{
+    let list=items;
+    if(statusFilter.length>0) list=list.filter(i=>statusFilter.includes(i.status));
+    if(materialFilter.length>0) list=list.filter(i=>materialFilter.includes(getMaterialGroup(i.material,i.name)));
+    if(subcatFilter.length>0) list=list.filter(i=>subcatFilter.includes(i.subcategory));
+    if(formalityFilter.length>0) list=list.filter(i=>formalityFilter.includes(getFormalityGroup(i.formality)));
+    if(traditionFilter.length>0) list=list.filter(i=>traditionFilter.includes(getTradition(i)));
+    if(laneFilter.length>0) list=list.filter(i=>laneFilter.includes(getColorLane(i)));
+    if(seasonFilter.length>0) list=list.filter(i=>(i.season||[]).some(s=>seasonFilter.includes(s)));
+    if(query.trim()){
+      const q=query.toLowerCase();
+      list=list.filter(i=>(i.name+" "+i.brand+" "+i.color+" "+i.material+" "+(i.notes||"")+" "+(i.tags||[]).join(" ")).toLowerCase().includes(q));
+    }
+    const sorted=[...list];
+    if(sortBy==="spectrum") sorted.sort(compareSpectrum);
+    else if(sortBy==="brand") sorted.sort((a,b)=>a.brand.localeCompare(b.brand)||a.name.localeCompare(b.name));
+    else if(sortBy==="color") sorted.sort((a,b)=>getColorLane(a).localeCompare(getColorLane(b))||a.name.localeCompare(b.name));
+    else if(sortBy==="formality"){
+      const order=["Formal","Smart Formal","Smart Casual","Business Casual","Casual"];
+      sorted.sort((a,b)=>order.indexOf(getFormalityGroup(a.formality))-order.indexOf(getFormalityGroup(b.formality))||a.name.localeCompare(b.name));
+    }
+    else if(sortBy==="subcategory") sorted.sort((a,b)=>a.subcategory.localeCompare(b.subcategory)||a.name.localeCompare(b.name));
+    else if(sortBy==="id") sorted.sort((a,b)=>a.id.localeCompare(b.id));
+    return sorted;
+  },[items,query,statusFilter,materialFilter,subcatFilter,formalityFilter,traditionFilter,laneFilter,seasonFilter,sortBy]);
 
-  function duplicateItem(kind, item) {
-    const copy = { ...item, id: uid(), name: `${item.name} (copy)` };
-    setState(prev => {
-      const key = kind === "active" ? "active" : "retired";
-      return { ...prev, [key]: [...prev[key], copy] };
-    });
-  }
+  const clearFilters=()=>{
+    setStatusFilter(["Active"]); setMaterialFilter([]); setSubcatFilter([]); setFormalityFilter([]);
+    setTraditionFilter([]); setLaneFilter([]); setSeasonFilter([]); setQuery("");
+  };
 
-  function moveToRetired(item) {
-    const retired = {
-      id: uid(), name: item.name, brand: item.brand || "", type: item.subcategory || "",
-      color: item.color || "", material: item.material || "", size: "", country: "",
-      condition: "", pricePaid: 0, xianyuList: 0, xianyuExp: 0, ebayList: 0, ebayExp: 0,
-      currency: "RMB", notes: item.notes || ""
-    };
-    setState(prev => ({
-      active: prev.active.filter(i => i.id !== item.id),
-      retired: [...prev.retired, retired]
-    }));
-  }
+  const totalByStatus=useMemo(()=>{
+    const c={}; items.forEach(i=>{c[i.status]=(c[i.status]||0)+1;}); return c;
+  },[items]);
 
-  function resetToSeed() {
-    setState(seedRef.current);
-    setConfirmReset(false);
-  }
-
-  // ============ IMPORT / EXPORT ============
-  function exportJson() {
-    const payload = { version: dataVersion || "local", exportedAt: new Date().toISOString(), ...state };
-    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = `wardrobe_backup_${new Date().toISOString().slice(0,10)}.json`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  }
-
-  function triggerImport() { setImportError(""); fileInputRef.current?.click(); }
-
-  function handleImport(e) {
-    const file = e.target.files?.[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = (ev) => {
-      try {
-        const parsed = JSON.parse(ev.target.result);
-        if (!parsed || !Array.isArray(parsed.active) || !Array.isArray(parsed.retired)) {
-          setImportError("Invalid file: missing active/retired arrays");
-          return;
-        }
-        const active = parsed.active.map(i => ({ ...i, id: i.id || uid() }));
-        const retired = parsed.retired.map(i => ({ ...i, id: i.id || uid() }));
-        setState({ active, retired });
-        setImportError("");
-      } catch (err) {
-        setImportError("Could not parse file");
-      }
-    };
-    reader.readAsText(file);
-    e.target.value = "";
-  }
-
-  function pill(val,current,setter,small){
-    const active=val===current;
-    return(
-      <button key={val} onClick={()=>setter(val)}
-        style={{padding:small?"3px 10px":"4px 12px",borderRadius:20,border:`0.5px solid ${active?"var(--color-border-primary)":"var(--color-border-tertiary)"}`,background:active?"var(--color-text-primary)":"transparent",color:active?"var(--color-background-primary)":"var(--color-text-secondary)",fontSize:12,cursor:"pointer",whiteSpace:"nowrap"}}>
-        {val}
-      </button>
-    );
-  }
-
-  function statCard(label,value,sub){
-    return(
-      <div style={{background:"var(--color-background-secondary)",borderRadius:"var(--border-radius-md)",padding:"12px 16px",minWidth:0}}>
-        <div style={{fontSize:22,fontWeight:500,color:"var(--color-text-primary)"}}>{value}</div>
-        <div style={{fontSize:11,color:"var(--color-text-secondary)",marginTop:2,textTransform:"uppercase",letterSpacing:"0.06em"}}>{label}</div>
-        {sub&&<div style={{fontSize:11,color:"var(--color-text-secondary)",marginTop:1}}>{sub}</div>}
-      </div>
-    );
-  }
-
-  function iconBtn(label, onClick, opts={}) {
-    return (
-      <button onClick={(e)=>{e.stopPropagation();onClick();}}
-        style={{
-          fontSize:11, padding:"3px 9px", borderRadius:"var(--border-radius-md)",
-          border:"0.5px solid var(--color-border-tertiary)",
-          background: opts.danger ? "#fef0f0" : "var(--color-background-primary)",
-          color: opts.danger ? "#9a1a1a" : "var(--color-text-secondary)",
-          cursor:"pointer", whiteSpace:"nowrap"
-        }}>
-        {label}
-      </button>
-    );
-  }
-
-  if (!loaded) {
-    return (
-      <div style={{padding:"3rem 0",textAlign:"center",color:"var(--color-text-secondary)",fontSize:13}}>
-        Loading wardrobe…
-      </div>
-    );
-  }
-
-  return(
-    <div style={{padding:"1rem 0",fontFamily:"var(--font-sans)"}}>
-      <h2 className="sr-only">Master wardrobe dashboard for Stephen Alexander Ruthmann</h2>
-
-      {/* HEADER */}
-      <div style={{marginBottom:"1rem",display:"flex",justifyContent:"space-between",alignItems:"flex-start",gap:12,flexWrap:"wrap"}}>
-        <div>
-          <div style={{fontSize:11,letterSpacing:"0.1em",textTransform:"uppercase",color:"var(--color-text-secondary)",marginBottom:4}}>Master Wardrobe Dashboard{dataVersion?` · v${dataVersion}`:""}</div>
-          <div style={{fontSize:18,fontWeight:500,color:"var(--color-text-primary)"}}>{meta.owner}</div>
-          <div style={{fontSize:12,color:"var(--color-text-secondary)",marginTop:2}}>{meta.bodyProfile}</div>
-        </div>
-        <div style={{display:"flex",gap:6,alignItems:"center",flexWrap:"wrap"}}>
-          <button onClick={()=>setEditMode(!editMode)}
-            style={{
-              padding:"6px 12px",fontSize:12,borderRadius:"var(--border-radius-md)",
-              border:"0.5px solid var(--color-border-tertiary)",
-              background:editMode?"var(--color-text-primary)":"transparent",
-              color:editMode?"var(--color-background-primary)":"var(--color-text-primary)",
-              cursor:"pointer",fontWeight:500
-            }}>
-            {editMode ? "✓ Edit mode" : "Edit"}
-          </button>
-          <button onClick={exportJson} style={{padding:"6px 12px",fontSize:12,borderRadius:"var(--border-radius-md)",border:"0.5px solid var(--color-border-tertiary)",background:"transparent",color:"var(--color-text-secondary)",cursor:"pointer"}}>
-            Export
-          </button>
-          <button onClick={triggerImport} style={{padding:"6px 12px",fontSize:12,borderRadius:"var(--border-radius-md)",border:"0.5px solid var(--color-border-tertiary)",background:"transparent",color:"var(--color-text-secondary)",cursor:"pointer"}}>
-            Import
-          </button>
-          <input ref={fileInputRef} type="file" accept="application/json" onChange={handleImport} style={{display:"none"}}/>
-          {editMode && (
-            <button onClick={()=>setConfirmReset(true)}
-              style={{padding:"6px 12px",fontSize:12,borderRadius:"var(--border-radius-md)",border:"0.5px solid #f0a0a0",background:"transparent",color:"#9a1a1a",cursor:"pointer"}}>
-              Reset to published
-            </button>
-          )}
-        </div>
+  return (
+    <div style={{position:"relative",padding:"4px 0"}}>
+      <div style={{padding:"20px 0 12px"}}>
+        <div style={{fontSize:11,letterSpacing:"0.14em",textTransform:"uppercase",color:"var(--color-text-secondary)"}}>Footwear Collection</div>
+        <div style={{fontSize:22,fontWeight:600,marginTop:2}}>Stephen Alexander Ruthmann</div>
       </div>
 
-      {loadError && (
-        <div style={{padding:"8px 12px",background:"#fef0f0",border:"0.5px solid #f0a0a0",borderRadius:"var(--border-radius-md)",fontSize:12,color:"#9a1a1a",marginBottom:"1rem"}}>
-          {loadError}
-        </div>
-      )}
+      {loadError && <div style={{padding:"14px 16px",background:"#FCEBEB",color:"#791F1F",borderRadius:"var(--border-radius-md)",fontSize:13,marginBottom:14}}>{loadError}</div>}
+      {!loaded && !loadError && <div style={{padding:"40px 0",color:"var(--color-text-secondary)",fontSize:14}}>Loading collection…</div>}
 
-      {savedAt && (
-        <div style={{fontSize:10,color:"var(--color-text-secondary)",marginBottom:"1rem",letterSpacing:"0.04em"}}>
-          Local edits auto-saved · {new Date(savedAt).toLocaleString()} · Stored in this browser only
-        </div>
-      )}
+      {loaded && !loadError && <>
+      <div style={{display:"flex",gap:12,alignItems:"center",marginBottom:12,flexWrap:"wrap"}}>
+        <input type="text" value={query} onChange={e=>setQuery(e.target.value)}
+          placeholder="Search by brand, model, color, last, notes…"
+          style={{flex:1,minWidth:200,padding:"8px 12px",border:"0.5px solid var(--color-border-tertiary)",
+            borderRadius:"var(--border-radius-md)",fontSize:13,background:"var(--color-background-primary)",color:"var(--color-text-primary)"}}/>
+        <select value={sortBy} onChange={e=>setSortBy(e.target.value)}
+          style={{padding:"8px 10px",border:"0.5px solid var(--color-border-tertiary)",borderRadius:"var(--border-radius-md)",
+            fontSize:13,background:"var(--color-background-primary)",color:"var(--color-text-primary)"}}>
+          <option value="spectrum">Sort: color spectrum (light → dark)</option>
+          <option value="brand">Sort: brand</option>
+          <option value="color">Sort: color lane</option>
+          <option value="formality">Sort: formality</option>
+          <option value="subcategory">Sort: subcategory</option>
+          <option value="id">Sort: id</option>
+        </select>
+        <button onClick={clearFilters}
+          style={{padding:"8px 12px",border:"0.5px solid var(--color-border-tertiary)",borderRadius:"var(--border-radius-md)",
+            fontSize:13,background:"transparent",color:"var(--color-text-secondary)",cursor:"pointer"}}>Reset</button>
+        <span style={{fontSize:12,color:"var(--color-text-secondary)",padding:"4px 10px",background:"var(--color-background-secondary)",borderRadius:"var(--border-radius-md)"}}>
+          {filtered.length} of {items.length}
+        </span>
+      </div>
 
-      {importError && (
-        <div style={{padding:"8px 12px",background:"#fef0f0",border:"0.5px solid #f0a0a0",borderRadius:"var(--border-radius-md)",fontSize:12,color:"#9a1a1a",marginBottom:"1rem"}}>
-          Import error: {importError}
-        </div>
-      )}
+      <div style={{display:"flex",flexDirection:"column",gap:8,padding:12,background:"var(--color-background-secondary)",
+        borderRadius:"var(--border-radius-md)",marginBottom:14}}>
+        <ChipFilter label="status" options={statusOptions} selected={statusFilter} onChange={setStatusFilter}/>
+        <ChipFilter label="material" options={materialOptions} selected={materialFilter} onChange={setMaterialFilter}/>
+        <ChipFilter label="type" options={subcatOptions} selected={subcatFilter} onChange={setSubcatFilter}/>
+        <ChipFilter label="formality" options={formalityOptions} selected={formalityFilter} onChange={setFormalityFilter}/>
+        <ChipFilter label="tradition" options={traditionOptions} selected={traditionFilter} onChange={setTraditionFilter}/>
+        <ChipFilter label="color lane" options={laneOptions} selected={laneFilter} onChange={setLaneFilter}/>
+        <ChipFilter label="season" options={seasonOptions} selected={seasonFilter} onChange={setSeasonFilter}/>
+      </div>
 
-      {/* TABS */}
-      <div style={{display:"flex",gap:8,marginBottom:"1.25rem",borderBottom:"0.5px solid var(--color-border-tertiary)",paddingBottom:0}}>
-        {TABS.map((t,i)=>(
-          <button key={t} onClick={()=>{setTab(i);setExpanded(null);}}
-            style={{padding:"8px 16px",fontSize:13,fontWeight:500,border:"none",background:"transparent",cursor:"pointer",borderBottom:tab===i?"2px solid var(--color-text-primary)":"2px solid transparent",color:tab===i?"var(--color-text-primary)":"var(--color-text-secondary)",marginBottom:-1}}>
-            {t}
-            <span style={{marginLeft:6,fontSize:11,padding:"1px 6px",borderRadius:10,background:"var(--color-background-secondary)",color:"var(--color-text-secondary)"}}>
-              {i===0?activeItems.length:retiredData.length}
-            </span>
-          </button>
+      <div style={{display:"flex",gap:12,marginBottom:14,fontSize:12,color:"var(--color-text-secondary)",flexWrap:"wrap"}}>
+        {statusOptions.map(s=>totalByStatus[s]!==undefined && (
+          <span key={s} style={{display:"flex",alignItems:"center",gap:4}}><StatusTag status={s}/> {totalByStatus[s]||0}</span>
         ))}
       </div>
 
-      {/* ACTIVE TAB */}
-      {tab===0&&(
-        <>
-          <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:10,marginBottom:"1rem"}}>
-            {statCard("Total items",activeItems.length)}
-            {statCard("Active",activeCount)}
-            {statCard("Footwear",shoeCount,`${shellCount} shell cordovan`)}
-            {statCard("En route",enRoute,"incoming")}
-          </div>
+      <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit, minmax(300px, 1fr))",gap:10}}>
+        {filtered.map(item=>(<ShoeCard key={item.id} item={item} onClick={()=>setSelected(item)}/>))}
+      </div>
 
-          <div style={{background:"var(--color-background-secondary)",borderRadius:"var(--border-radius-md)",padding:"10px 14px",marginBottom:"1rem",fontSize:12,color:"var(--color-text-secondary)"}}>
-            <div style={{fontWeight:500,color:"var(--color-text-primary)",marginBottom:5,fontSize:13}}>Wardrobe rules</div>
-            {meta.wardrobeRules.map((r,i)=><div key={i} style={{marginBottom:2}}>· {r}</div>)}
-          </div>
-
-          <div style={{marginBottom:"1rem",display:"flex",flexDirection:"column",gap:7}}>
-            <input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Search brand, model, color, material, tag..." style={{width:"100%",boxSizing:"border-box"}}/>
-            <div style={{display:"flex",flexWrap:"wrap",gap:5,alignItems:"center"}}>
-              <span style={{fontSize:11,color:"var(--color-text-secondary)",textTransform:"uppercase",letterSpacing:"0.07em",minWidth:60}}>Category</span>
-              {CATS.map(v=>pill(v,cat,(val)=>{setCat(val);setSubcat("All");}))}
-            </div>
-            {subcatOptions.length > 1 && (
-              <div style={{display:"flex",flexWrap:"wrap",gap:5,alignItems:"center"}}>
-                <span style={{fontSize:11,color:"var(--color-text-secondary)",textTransform:"uppercase",letterSpacing:"0.07em",minWidth:60}}>Type</span>
-                {subcatOptions.map(v=>pill(v,subcat,setSubcat,true))}
-              </div>
-            )}
-            <div style={{display:"flex",flexWrap:"wrap",gap:5,alignItems:"center"}}>
-              <span style={{fontSize:11,color:"var(--color-text-secondary)",textTransform:"uppercase",letterSpacing:"0.07em",minWidth:60}}>Status</span>
-              {STATUSES.map(v=>pill(v,status,setStatus))}
-            </div>
-            <div style={{display:"flex",flexWrap:"wrap",gap:5,alignItems:"center"}}>
-              <span style={{fontSize:11,color:"var(--color-text-secondary)",textTransform:"uppercase",letterSpacing:"0.07em",minWidth:60}}>Season</span>
-              {SEASONS.map(v=>pill(v,season,setSeason))}
-            </div>
-            <div style={{display:"flex",flexWrap:"wrap",gap:5,alignItems:"center"}}>
-              <span style={{fontSize:11,color:"var(--color-text-secondary)",textTransform:"uppercase",letterSpacing:"0.07em",minWidth:60}}>Formality</span>
-              {formalityOptions.slice(0,12).map(v=>pill(v,formality,setFormality,true))}
-            </div>
-          </div>
-
-          <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:10,gap:8,flexWrap:"wrap"}}>
-            <div style={{fontSize:13,color:"var(--color-text-secondary)"}}>{filtered.length} item{filtered.length!==1?"s":""}</div>
-            <div style={{display:"flex",gap:6}}>
-              {editMode && (
-                <button onClick={()=>setEditing({kind:"active",item:{...EMPTY_ACTIVE,id:uid()},isNew:true})}
-                  style={{fontSize:12,padding:"4px 12px",borderRadius:"var(--border-radius-md)",border:"0.5px solid var(--color-border-primary)",background:"var(--color-text-primary)",color:"var(--color-background-primary)",cursor:"pointer",fontWeight:500}}>
-                  + Add item
-                </button>
-              )}
-              <button onClick={()=>{setQuery("");setCat("All");setSubcat("All");setStatus("All");setSeason("All");setFormality("All");}}
-                style={{fontSize:12,padding:"4px 12px",borderRadius:"var(--border-radius-md)",border:"0.5px solid var(--color-border-tertiary)",background:"transparent",cursor:"pointer",color:"var(--color-text-secondary)"}}>
-                Reset filters
-              </button>
-            </div>
-          </div>
-
-          <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(270px,1fr))",gap:10}}>
-            {filtered.map((item)=>{
-              const sc=SC[item.status]||SC.Active;
-              const isOpen=expanded===item.id;
-              const photo=imgFor(item);
-              return(
-                <div key={item.id} onClick={()=>setExpanded(isOpen?null:item.id)}
-                  style={{background:"var(--color-background-primary)",border:"0.5px solid var(--color-border-tertiary)",borderRadius:"var(--border-radius-lg)",padding:"12px 14px",cursor:"pointer",overflow:"hidden"}}>
-                  {photo && (
-                    <div style={{margin:"-12px -14px 10px",background:"var(--color-background-secondary)",borderBottom:"0.5px solid var(--color-border-tertiary)"}}>
-                      <img src={photo} alt={item.name} loading="lazy"
-                        onClick={(e)=>{e.stopPropagation();setLightbox(photo);}}
-                        style={{width:"100%",height:isOpen?"auto":170,objectFit:"contain",display:"block"}}/>
-                    </div>
-                  )}
-                  <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",gap:8}}>
-                    <div style={{minWidth:0}}>
-                      <div style={{fontSize:11,color:"var(--color-text-secondary)",textTransform:"uppercase",letterSpacing:"0.07em",marginBottom:3}}>{item.category} · {item.subcategory}</div>
-                      <div style={{fontSize:13,fontWeight:500,color:"var(--color-text-primary)",lineHeight:1.3}}>{item.name}</div>
-                      <div style={{fontSize:12,color:"var(--color-text-secondary)",marginTop:2}}>{item.brand}</div>
-                    </div>
-                    <span style={{fontSize:10,padding:"2px 8px",borderRadius:10,background:sc.bg,color:sc.text,border:`0.5px solid ${sc.border}`,whiteSpace:"nowrap",flexShrink:0}}>{item.status}</span>
-                  </div>
-                  <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:8,marginTop:10,fontSize:12}}>
-                    <div><div style={{color:"var(--color-text-secondary)",fontSize:11}}>Color</div><div style={{color:"var(--color-text-primary)",fontWeight:500,fontSize:12}}>{item.color}</div></div>
-                    <div><div style={{color:"var(--color-text-secondary)",fontSize:11}}>Material</div><div style={{color:"var(--color-text-primary)",fontWeight:500,fontSize:12}}>{item.material||"—"}</div></div>
-                    <div><div style={{color:"var(--color-text-secondary)",fontSize:11}}>Formality</div><div style={{color:"var(--color-text-primary)",fontWeight:500,fontSize:12}}>{item.formality}</div></div>
-                  </div>
-                  {isOpen&&(
-                    <div style={{marginTop:10,paddingTop:10,borderTop:"0.5px solid var(--color-border-tertiary)"}}>
-                      <div style={{display:"flex",flexWrap:"wrap",gap:4,marginBottom:6}}>
-                        {(item.season||[]).map(s=>(<span key={s} style={{fontSize:11,padding:"2px 8px",borderRadius:10,background:"var(--color-background-secondary)",color:"var(--color-text-secondary)",border:"0.5px solid var(--color-border-tertiary)"}}>{s}</span>))}
-                      </div>
-                      {item.notes&&<div style={{fontSize:12,color:"var(--color-text-secondary)",lineHeight:1.6}}>{item.notes}</div>}
-                      {item.tags&&item.tags.length>0&&(
-                        <div style={{display:"flex",flexWrap:"wrap",gap:4,marginTop:6}}>
-                          {item.tags.map(t=>(<span key={t} style={{fontSize:10,padding:"1px 7px",borderRadius:10,border:"0.5px solid var(--color-border-tertiary)",color:"var(--color-text-secondary)"}}>#{t}</span>))}
-                        </div>
-                      )}
-                      {editMode && (
-                        <div style={{display:"flex",gap:5,marginTop:10,flexWrap:"wrap"}}>
-                          {iconBtn("Edit", ()=>setEditing({kind:"active",item,isNew:false}))}
-                          {iconBtn("Duplicate", ()=>duplicateItem("active",item))}
-                          {item.category==="Footwear" && iconBtn("Move to retired", ()=>moveToRetired(item))}
-                          {iconBtn("Delete", ()=>setConfirmDelete({kind:"active",id:item.id,name:item.name}), {danger:true})}
-                        </div>
-                      )}
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-        </>
-      )}
-
-      {/* RETIRED TAB */}
-      {tab===1&&(
-        <>
-          <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:10,marginBottom:"1rem"}}>
-            {statCard("Pairs to sell",retiredData.length,`${shellRetired} shell cordovan`)}
-            {statCard("XianYu ask total",fmt(totalXianYuList),"list prices")}
-            {statCard("XianYu expected",fmt(totalXianYuExp),"expected")}
-            {statCard("eBay ask total",fmtUSD(totalEbayList),"list prices")}
-          </div>
-          <div style={{display:"flex",gap:8,marginBottom:"1rem",flexWrap:"wrap",alignItems:"center"}}>
-            <input value={retiredQuery} onChange={e=>setRetiredQuery(e.target.value)} placeholder="Search retired inventory..." style={{flex:1,minWidth:200}}/>
-            <div style={{display:"flex",gap:6,alignItems:"center"}}>
-              <span style={{fontSize:11,color:"var(--color-text-secondary)",textTransform:"uppercase",letterSpacing:"0.06em"}}>Sort</span>
-              {[["name","Name"],["xianyuList","XianYu ↓"],["ebayList","eBay ↓"],["pricePaid","Paid ↓"]].map(([v,l])=>pill(l,retiredSort===v?l:"",(()=>setRetiredSort(v)),true))}
-            </div>
-            {editMode && (
-              <button onClick={()=>setEditing({kind:"retired",item:{...EMPTY_RETIRED,id:uid()},isNew:true})}
-                style={{fontSize:12,padding:"4px 12px",borderRadius:"var(--border-radius-md)",border:"0.5px solid var(--color-border-primary)",background:"var(--color-text-primary)",color:"var(--color-background-primary)",cursor:"pointer",fontWeight:500}}>
-                + Add retired
-              </button>
-            )}
-          </div>
-          <div style={{overflowX:"auto"}}>
-            <table style={{width:"100%",borderCollapse:"collapse",fontSize:12,tableLayout:"fixed"}}>
-              <colgroup>
-                <col style={{width:"4%"}}/>
-                <col style={{width:editMode?"18%":"20%"}}/>
-                <col style={{width:"12%"}}/>
-                <col style={{width:"12%"}}/>
-                <col style={{width:"10%"}}/>
-                <col style={{width:"8%"}}/>
-                <col style={{width:"8%"}}/>
-                <col style={{width:"8%"}}/>
-                <col style={{width:"8%"}}/>
-                <col style={{width:"7%"}}/>
-                {editMode && <col style={{width:"7%"}}/>}
-              </colgroup>
-              <thead>
-                <tr style={{borderBottom:"0.5px solid var(--color-border-tertiary)"}}>
-                  <th/>
-                  {["Name","Brand","Color","Condition","Paid ¥","XY Ask","XY Exp","eBay Ask","eBay Exp"].map(h=>(
-                    <th key={h} style={{textAlign:"left",padding:"6px 8px",fontSize:11,letterSpacing:"0.06em",textTransform:"uppercase",color:"var(--color-text-secondary)",fontWeight:500}}>{h}</th>
-                  ))}
-                  {editMode && <th style={{textAlign:"right",padding:"6px 8px",fontSize:11,letterSpacing:"0.06em",textTransform:"uppercase",color:"var(--color-text-secondary)",fontWeight:500}}>Actions</th>}
-                </tr>
-              </thead>
-              <tbody>
-                {filteredRetired.map((item)=>{
-                  const photo=imgFor(item);
-                  return(
-                  <tr key={item.id} style={{borderBottom:"0.5px solid var(--color-border-tertiary)"}}>
-                    <td style={{padding:"6px 4px"}}>
-                      {photo && <img src={photo} alt={item.name} loading="lazy" onClick={()=>setLightbox(photo)} style={{width:34,height:34,objectFit:"cover",borderRadius:4,cursor:"pointer",display:"block",background:"var(--color-background-secondary)"}}/>}
-                    </td>
-                    <td style={{padding:"9px 8px",color:"var(--color-text-primary)",fontWeight:500,lineHeight:1.3,wordBreak:"break-word"}}>{item.name}</td>
-                    <td style={{padding:"9px 8px",color:"var(--color-text-secondary)"}}>{item.brand}</td>
-                    <td style={{padding:"9px 8px",color:"var(--color-text-secondary)"}}>{item.color}</td>
-                    <td style={{padding:"9px 8px",color:"var(--color-text-secondary)",fontSize:11}}>{item.condition||"—"}</td>
-                    <td style={{padding:"9px 8px",color:"var(--color-text-secondary)",textAlign:"right"}}>{item.pricePaid?`¥${item.pricePaid.toLocaleString()}`:"Gift"}</td>
-                    <td style={{padding:"9px 8px",fontWeight:500,color:"var(--color-text-primary)",textAlign:"right"}}>{fmt(item.xianyuList)}</td>
-                    <td style={{padding:"9px 8px",color:"var(--color-text-secondary)",textAlign:"right"}}>{fmt(item.xianyuExp)}</td>
-                    <td style={{padding:"9px 8px",fontWeight:500,color:"var(--color-text-primary)",textAlign:"right"}}>{item.ebayList?`$${item.ebayList}`:"—"}</td>
-                    <td style={{padding:"9px 8px",color:"var(--color-text-secondary)",textAlign:"right"}}>{item.ebayExp?`$${item.ebayExp}`:"—"}</td>
-                    {editMode && (
-                      <td style={{padding:"9px 8px",textAlign:"right"}}>
-                        <div style={{display:"flex",gap:4,justifyContent:"flex-end"}}>
-                          {iconBtn("Edit", ()=>setEditing({kind:"retired",item,isNew:false}))}
-                          {iconBtn("×", ()=>setConfirmDelete({kind:"retired",id:item.id,name:item.name}), {danger:true})}
-                        </div>
-                      </td>
-                    )}
-                  </tr>
-                  );
-                })}
-              </tbody>
-              <tfoot>
-                <tr style={{borderTop:"1px solid var(--color-border-secondary)"}}>
-                  <td colSpan={6} style={{padding:"8px",fontSize:12,color:"var(--color-text-secondary)",fontWeight:500}}>Totals ({filteredRetired.length} pairs)</td>
-                  <td style={{padding:"8px",fontWeight:500,color:"var(--color-text-primary)",textAlign:"right"}}>{fmt(filteredRetired.reduce((s,i)=>s+(i.xianyuList||0),0))}</td>
-                  <td style={{padding:"8px",color:"var(--color-text-secondary)",textAlign:"right"}}>{fmt(filteredRetired.reduce((s,i)=>s+(i.xianyuExp||0),0))}</td>
-                  <td style={{padding:"8px",fontWeight:500,color:"var(--color-text-primary)",textAlign:"right"}}>${filteredRetired.reduce((s,i)=>s+(i.ebayList||0),0)}</td>
-                  <td style={{padding:"8px",color:"var(--color-text-secondary)",textAlign:"right"}}>${filteredRetired.reduce((s,i)=>s+(i.ebayExp||0),0)}</td>
-                  {editMode && <td/>}
-                </tr>
-              </tfoot>
-            </table>
-          </div>
-        </>
-      )}
-
-      {/* LIGHTBOX */}
-      {lightbox && (
-        <div onClick={()=>setLightbox(null)}
-          style={{position:"fixed",inset:0,background:"rgba(0,0,0,0.8)",display:"flex",alignItems:"center",justifyContent:"center",zIndex:1100,padding:24,cursor:"zoom-out"}}>
-          <img src={lightbox} alt="" style={{maxWidth:"100%",maxHeight:"100%",objectFit:"contain",borderRadius:"var(--border-radius-md)"}}/>
+      {filtered.length===0 && (
+        <div style={{textAlign:"center",padding:"40px 20px",color:"var(--color-text-secondary)",fontSize:14}}>
+          No shoes match the current filters.<br/>
+          <button onClick={clearFilters}
+            style={{marginTop:12,padding:"6px 14px",border:"0.5px solid var(--color-border-secondary)",borderRadius:"var(--border-radius-md)",
+              fontSize:13,background:"transparent",color:"var(--color-text-primary)",cursor:"pointer"}}>Reset filters</button>
         </div>
       )}
+      </>}
 
-      {/* EDIT MODAL */}
-      {editing && (
-        <EditModal
-          editing={editing}
-          onSave={(updated)=>saveItem(editing.kind, updated, editing.isNew)}
-          onClose={()=>setEditing(null)}
-        />
-      )}
-
-      {/* DELETE CONFIRM */}
-      {confirmDelete && (
-        <Modal onClose={()=>setConfirmDelete(null)}>
-          <div style={{fontSize:14,fontWeight:500,color:"var(--color-text-primary)",marginBottom:8}}>Delete item?</div>
-          <div style={{fontSize:13,color:"var(--color-text-secondary)",marginBottom:16}}>{confirmDelete.name}</div>
-          <div style={{display:"flex",gap:8,justifyContent:"flex-end"}}>
-            <button onClick={()=>setConfirmDelete(null)} style={{padding:"6px 14px",fontSize:12,borderRadius:"var(--border-radius-md)",border:"0.5px solid var(--color-border-tertiary)",background:"transparent",cursor:"pointer"}}>Cancel</button>
-            <button onClick={()=>deleteItem(confirmDelete.kind, confirmDelete.id)} style={{padding:"6px 14px",fontSize:12,borderRadius:"var(--border-radius-md)",border:"0.5px solid #f0a0a0",background:"#fef0f0",color:"#9a1a1a",cursor:"pointer",fontWeight:500}}>Delete</button>
-          </div>
-        </Modal>
-      )}
-
-      {/* RESET CONFIRM */}
-      {confirmReset && (
-        <Modal onClose={()=>setConfirmReset(false)}>
-          <div style={{fontSize:14,fontWeight:500,color:"var(--color-text-primary)",marginBottom:8}}>Reset to published data?</div>
-          <div style={{fontSize:13,color:"var(--color-text-secondary)",marginBottom:16,lineHeight:1.5}}>This will discard all edits made in this browser and restore the data published in data.json. Export a backup first if you want to preserve your changes.</div>
-          <div style={{display:"flex",gap:8,justifyContent:"flex-end"}}>
-            <button onClick={()=>setConfirmReset(false)} style={{padding:"6px 14px",fontSize:12,borderRadius:"var(--border-radius-md)",border:"0.5px solid var(--color-border-tertiary)",background:"transparent",cursor:"pointer"}}>Cancel</button>
-            <button onClick={resetToSeed} style={{padding:"6px 14px",fontSize:12,borderRadius:"var(--border-radius-md)",border:"0.5px solid #f0a0a0",background:"#fef0f0",color:"#9a1a1a",cursor:"pointer",fontWeight:500}}>Reset</button>
-          </div>
-        </Modal>
-      )}
+      <DetailPanel item={selected} onClose={()=>setSelected(null)}/>
     </div>
   );
 }
 
-// ============ MODAL + EDIT FORM ============
-function Modal({ children, onClose }) {
-  return (
-    <div onClick={onClose}
-      style={{position:"fixed",inset:0,background:"rgba(0,0,0,0.3)",display:"flex",alignItems:"center",justifyContent:"center",zIndex:1000,padding:16}}>
-      <div onClick={(e)=>e.stopPropagation()}
-        style={{background:"var(--color-background-primary)",borderRadius:"var(--border-radius-lg)",padding:"20px 22px",maxWidth:560,width:"100%",maxHeight:"85vh",overflowY:"auto",boxShadow:"0 10px 40px rgba(0,0,0,0.15)"}}>
-        {children}
-      </div>
-    </div>
-  );
-}
-
-function EditModal({ editing, onSave, onClose }) {
-  const [form, setForm] = useState(editing.item);
-  function update(field, value) { setForm(f => ({...f, [field]: value})); }
-  function toggleSeason(s) {
-    setForm(f => {
-      const cur = f.season || [];
-      return {...f, season: cur.includes(s) ? cur.filter(x=>x!==s) : [...cur, s]};
-    });
-  }
-  function handleSave() {
-    if (!form.name || !form.name.trim()) { alert("Name is required"); return; }
-    onSave(form);
-  }
-  const isActive = editing.kind === "active";
-  const labelStyle = {fontSize:11,color:"var(--color-text-secondary)",textTransform:"uppercase",letterSpacing:"0.06em",marginBottom:3,display:"block"};
-  const inputStyle = {width:"100%",boxSizing:"border-box",padding:"6px 10px",fontSize:13,border:"0.5px solid var(--color-border-tertiary)",borderRadius:"var(--border-radius-md)",background:"var(--color-background-primary)",color:"var(--color-text-primary)",fontFamily:"inherit"};
-  const row = {display:"grid",gridTemplateColumns:"1fr 1fr",gap:10,marginBottom:10};
-
-  return (
-    <Modal onClose={onClose}>
-      <div style={{fontSize:14,fontWeight:500,color:"var(--color-text-primary)",marginBottom:14}}>
-        {editing.isNew ? "Add new item" : "Edit item"}
-      </div>
-
-      <div style={{marginBottom:10}}>
-        <label style={labelStyle}>Name *</label>
-        <input style={inputStyle} value={form.name||""} onChange={e=>update("name",e.target.value)}/>
-      </div>
-
-      {isActive ? (
-        <>
-          <div style={row}>
-            <div>
-              <label style={labelStyle}>Category</label>
-              <select style={inputStyle} value={form.category||""} onChange={e=>update("category",e.target.value)}>
-                {ALL_CATEGORIES.map(c=><option key={c} value={c}>{c}</option>)}
-              </select>
-            </div>
-            <div>
-              <label style={labelStyle}>Subcategory</label>
-              <input style={inputStyle} value={form.subcategory||""} onChange={e=>update("subcategory",e.target.value)}/>
-            </div>
-          </div>
-          <div style={row}>
-            <div>
-              <label style={labelStyle}>Brand</label>
-              <input style={inputStyle} value={form.brand||""} onChange={e=>update("brand",e.target.value)}/>
-            </div>
-            <div>
-              <label style={labelStyle}>Color</label>
-              <input style={inputStyle} value={form.color||""} onChange={e=>update("color",e.target.value)}/>
-            </div>
-          </div>
-          <div style={row}>
-            <div>
-              <label style={labelStyle}>Material</label>
-              <input style={inputStyle} value={form.material||""} onChange={e=>update("material",e.target.value)}/>
-            </div>
-            <div>
-              <label style={labelStyle}>Formality</label>
-              <input style={inputStyle} value={form.formality||""} onChange={e=>update("formality",e.target.value)}/>
-            </div>
-          </div>
-          <div style={{marginBottom:10}}>
-            <label style={labelStyle}>Status</label>
-            <div style={{display:"flex",gap:5,flexWrap:"wrap"}}>
-              {EDIT_STATUSES.map(s=>(
-                <button key={s} onClick={()=>update("status",s)}
-                  style={{padding:"4px 12px",fontSize:12,borderRadius:20,border:`0.5px solid ${form.status===s?"var(--color-border-primary)":"var(--color-border-tertiary)"}`,background:form.status===s?"var(--color-text-primary)":"transparent",color:form.status===s?"var(--color-background-primary)":"var(--color-text-secondary)",cursor:"pointer"}}>
-                  {s}
-                </button>
-              ))}
-            </div>
-          </div>
-          <div style={{marginBottom:10}}>
-            <label style={labelStyle}>Seasons (multi-select)</label>
-            <div style={{display:"flex",gap:5,flexWrap:"wrap"}}>
-              {ALL_SEASONS.map(s=>{
-                const on = (form.season||[]).includes(s);
-                return (
-                  <button key={s} onClick={()=>toggleSeason(s)}
-                    style={{padding:"4px 12px",fontSize:12,borderRadius:20,border:`0.5px solid ${on?"var(--color-border-primary)":"var(--color-border-tertiary)"}`,background:on?"var(--color-text-primary)":"transparent",color:on?"var(--color-background-primary)":"var(--color-text-secondary)",cursor:"pointer"}}>
-                    {s}
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-          <div style={{marginBottom:10}}>
-            <label style={labelStyle}>Tags (comma separated)</label>
-            <input style={inputStyle} value={(form.tags||[]).join(", ")} onChange={e=>update("tags",e.target.value.split(",").map(t=>t.trim()).filter(Boolean))}/>
-          </div>
-          <div style={{marginBottom:14}}>
-            <label style={labelStyle}>Notes</label>
-            <textarea style={{...inputStyle,minHeight:60,resize:"vertical"}} value={form.notes||""} onChange={e=>update("notes",e.target.value)}/>
-          </div>
-        </>
-      ) : (
-        <>
-          <div style={row}>
-            <div>
-              <label style={labelStyle}>Brand</label>
-              <input style={inputStyle} value={form.brand||""} onChange={e=>update("brand",e.target.value)}/>
-            </div>
-            <div>
-              <label style={labelStyle}>Type</label>
-              <input style={inputStyle} value={form.type||""} onChange={e=>update("type",e.target.value)}/>
-            </div>
-          </div>
-          <div style={row}>
-            <div>
-              <label style={labelStyle}>Color</label>
-              <input style={inputStyle} value={form.color||""} onChange={e=>update("color",e.target.value)}/>
-            </div>
-            <div>
-              <label style={labelStyle}>Material</label>
-              <input style={inputStyle} value={form.material||""} onChange={e=>update("material",e.target.value)}/>
-            </div>
-          </div>
-          <div style={row}>
-            <div>
-              <label style={labelStyle}>Size</label>
-              <input style={inputStyle} value={form.size||""} onChange={e=>update("size",e.target.value)}/>
-            </div>
-            <div>
-              <label style={labelStyle}>Country</label>
-              <input style={inputStyle} value={form.country||""} onChange={e=>update("country",e.target.value)}/>
-            </div>
-          </div>
-          <div style={{marginBottom:10}}>
-            <label style={labelStyle}>Condition</label>
-            <input style={inputStyle} value={form.condition||""} onChange={e=>update("condition",e.target.value)}/>
-          </div>
-          <div style={row}>
-            <div>
-              <label style={labelStyle}>Price paid (¥)</label>
-              <input type="number" style={inputStyle} value={form.pricePaid||0} onChange={e=>update("pricePaid",Number(e.target.value)||0)}/>
-            </div>
-            <div>
-              <label style={labelStyle}>Currency</label>
-              <input style={inputStyle} value={form.currency||"RMB"} onChange={e=>update("currency",e.target.value)}/>
-            </div>
-          </div>
-          <div style={row}>
-            <div>
-              <label style={labelStyle}>XianYu list (¥)</label>
-              <input type="number" style={inputStyle} value={form.xianyuList||0} onChange={e=>update("xianyuList",Number(e.target.value)||0)}/>
-            </div>
-            <div>
-              <label style={labelStyle}>XianYu expected (¥)</label>
-              <input type="number" style={inputStyle} value={form.xianyuExp||0} onChange={e=>update("xianyuExp",Number(e.target.value)||0)}/>
-            </div>
-          </div>
-          <div style={row}>
-            <div>
-              <label style={labelStyle}>eBay list ($)</label>
-              <input type="number" style={inputStyle} value={form.ebayList||0} onChange={e=>update("ebayList",Number(e.target.value)||0)}/>
-            </div>
-            <div>
-              <label style={labelStyle}>eBay expected ($)</label>
-              <input type="number" style={inputStyle} value={form.ebayExp||0} onChange={e=>update("ebayExp",Number(e.target.value)||0)}/>
-            </div>
-          </div>
-          <div style={{marginBottom:14}}>
-            <label style={labelStyle}>Notes</label>
-            <textarea style={{...inputStyle,minHeight:60,resize:"vertical"}} value={form.notes||""} onChange={e=>update("notes",e.target.value)}/>
-          </div>
-        </>
-      )}
-
-      <div style={{display:"flex",gap:8,justifyContent:"flex-end",borderTop:"0.5px solid var(--color-border-tertiary)",paddingTop:14}}>
-        <button onClick={onClose} style={{padding:"6px 14px",fontSize:12,borderRadius:"var(--border-radius-md)",border:"0.5px solid var(--color-border-tertiary)",background:"transparent",cursor:"pointer"}}>Cancel</button>
-        <button onClick={handleSave} style={{padding:"6px 14px",fontSize:12,borderRadius:"var(--border-radius-md)",border:"0.5px solid var(--color-border-primary)",background:"var(--color-text-primary)",color:"var(--color-background-primary)",cursor:"pointer",fontWeight:500}}>Save</button>
-      </div>
-    </Modal>
-  );
-}
-
-ReactDOM.createRoot(document.getElementById("root")).render(<WardrobeDashboard/>);
+ReactDOM.createRoot(document.getElementById("root")).render(<ShoeBrowser/>);
 </script>
 </body>
 </html>

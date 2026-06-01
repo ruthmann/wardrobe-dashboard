@@ -21,7 +21,8 @@
         "sandal",
         "white"
       ],
-      "id": "s_0"
+      "id": "s_0",
+      "swatch": "#F0EDE5"
     },
     {
       "name": "Adidas x CLOT Qi Flow Espadrille (Black)",
@@ -40,7 +41,8 @@
         "black",
         "sandal"
       ],
-      "id": "s_1"
+      "id": "s_1",
+      "swatch": "#1f1f1f"
     },
     {
       "name": "Alden 1031 NST Loafer (Cigar Shell)",
@@ -65,7 +67,8 @@
         "shell",
         "split-toe"
       ],
-      "id": "s_2"
+      "id": "s_2",
+      "swatch": "#5C3A1F"
     },
     {
       "name": "Alden 1340 Chukka PTB (Black Shell)",
@@ -91,7 +94,8 @@
         "plain-toe",
         "shell"
       ],
-      "id": "s_3"
+      "id": "s_3",
+      "swatch": "#1a1a1a"
     },
     {
       "name": "Alden 1473 Chukka PTB (Whisky Shell)",
@@ -116,7 +120,8 @@
         "shell",
         "whisky"
       ],
-      "id": "s_4"
+      "id": "s_4",
+      "swatch": "#A05020"
     },
     {
       "name": "Alden T7831 LHS Penny Loafer (Dark Brown CXL)",
@@ -139,7 +144,8 @@
         "penny",
         "unlined"
       ],
-      "id": "s_5"
+      "id": "s_5",
+      "swatch": "#3a2418"
     },
     {
       "name": "Alden 2160 STB (Color 8 Shell)",
@@ -161,7 +167,8 @@
         "dress-register",
         "shell"
       ],
-      "id": "s_6"
+      "id": "s_6",
+      "swatch": "#3a1414"
     },
     {
       "name": "Alden 2161 STB (Black Shell)",
@@ -182,7 +189,8 @@
         "dress-register",
         "shell"
       ],
-      "id": "s_7"
+      "id": "s_7",
+      "swatch": "#1a1a1a"
     },
     {
       "name": "Alden 2210 NST Derby (Color 8 Shell)",
@@ -206,7 +214,8 @@
         "shell",
         "split-toe"
       ],
-      "id": "s_8"
+      "id": "s_8",
+      "swatch": "#3a1414"
     },
     {
       "name": "Alden 2259 STB (Ravello Shell)",
@@ -227,7 +236,8 @@
         "ravello",
         "shell"
       ],
-      "id": "s_9"
+      "id": "s_9",
+      "swatch": "#8B3A1F"
     },
     {
       "name": "Alden 2451 Norwegian Blucher (Black Shell)",
@@ -248,7 +258,8 @@
         "dress-register",
         "shell"
       ],
-      "id": "s_10"
+      "id": "s_10",
+      "swatch": "#1a1a1a"
     },
     {
       "name": "Alden 2816 PTB (Burnished Dark Tan)",
@@ -268,7 +279,8 @@
         "brown",
         "plain-toe"
       ],
-      "id": "s_11"
+      "id": "s_11",
+      "swatch": "#888880"
     },
     {
       "name": "Alden 29364F PTB (Brown CXL)",
@@ -289,7 +301,8 @@
         "cxl",
         "plain-toe"
       ],
-      "id": "s_12"
+      "id": "s_12",
+      "swatch": "#5C3825"
     },
     {
       "name": "Alden 40510H Indy Boot (Brown CXL)",
@@ -314,7 +327,8 @@
         "cxl",
         "indy"
       ],
-      "id": "s_13"
+      "id": "s_13",
+      "swatch": "#3a1414"
     },
     {
       "name": "Alden 4060 Tanker Boot (Color 8 Shell)",
@@ -341,7 +355,8 @@
         "shell",
         "tanker"
       ],
-      "id": "s_14"
+      "id": "s_14",
+      "swatch": "#3a1414"
     },
     {
       "name": "Alden 4074 Tanker Boot (Cigar Shell)",
@@ -367,7 +382,8 @@
         "shell",
         "tanker"
       ],
-      "id": "s_15"
+      "id": "s_15",
+      "swatch": "#5C3A1F"
     },
     {
       "name": "Alden 5165 Semi-Brogue Balmoral (Black Shell)",
@@ -390,7 +406,8 @@
         "semi-brogue",
         "shell"
       ],
-      "id": "s_16"
+      "id": "s_16",
+      "swatch": "#1a1a1a"
     },
     {
       "name": "Alden 67540 LHS Penny Loafer (Ravello Shell)",
@@ -412,7 +429,8 @@
         "ravello",
         "shell"
       ],
-      "id": "s_17"
+      "id": "s_17",
+      "swatch": "#8B3A1F"
     },
     {
       "name": "Alden 704L Apron Toe Blucher (Dark Brown Suede)",
@@ -433,7 +451,8 @@
         "brown",
         "suede"
       ],
-      "id": "s_18"
+      "id": "s_18",
+      "swatch": "#4a3325"
     },
     {
       "name": "Alden 73921 Ranger Mocc (Color 2 Shell)",
@@ -454,7 +473,8 @@
         "ranger",
         "shell"
       ],
-      "id": "s_19"
+      "id": "s_19",
+      "swatch": "#A04020"
     },
     {
       "name": "Alden 913 Medallion Balmoral (Medium Brown)",
@@ -475,7 +495,8 @@
         "brown",
         "medallion"
       ],
-      "id": "s_20"
+      "id": "s_20",
+      "swatch": "#7B5235"
     },
     {
       "name": "Alden 9431S PTB (Tobacco Nubuck)",
@@ -496,7 +517,8 @@
         "plain-toe",
         "suede"
       ],
-      "id": "s_21"
+      "id": "s_21",
+      "swatch": "#9A6238"
     },
     {
       "name": "Alden 9662F Full Brogue Blucher (Snuff Suede)",
@@ -518,7 +540,8 @@
         "suede",
         "wingtip"
       ],
-      "id": "s_22"
+      "id": "s_22",
+      "swatch": "#B8826A"
     },
     {
       "name": "Alden 9750 Longwing Blucher (Ravello Shell)",
@@ -540,7 +563,8 @@
         "shell",
         "wingtip"
       ],
-      "id": "s_23"
+      "id": "s_23",
+      "swatch": "#8B3A1F"
     },
     {
       "name": "Alden 986 LHS (Color 8 Shell)",
@@ -563,7 +587,8 @@
         "penny",
         "shell"
       ],
-      "id": "s_24"
+      "id": "s_24",
+      "swatch": "#3a1414"
     },
     {
       "name": "Alden A0908H V-Tip Jumper Boot (Ravello Shell)",
@@ -589,7 +614,8 @@
         "shell",
         "v-tip"
       ],
-      "id": "s_25"
+      "id": "s_25",
+      "swatch": "#8B3A1F"
     },
     {
       "name": "Alden A2505C STB (Brown Chamois)",
@@ -609,7 +635,8 @@
         "brown",
         "suede"
       ],
-      "id": "s_26"
+      "id": "s_26",
+      "swatch": "#5C3825"
     },
     {
       "name": "Alden D1660C V-Tip Algonquin (Cigar Shell)",
@@ -632,7 +659,8 @@
         "shell",
         "v-tip"
       ],
-      "id": "s_27"
+      "id": "s_27",
+      "swatch": "#5C3A1F"
     },
     {
       "name": "Alden D2875HC Jumper Boot (Color 4 Shell)",
@@ -656,7 +684,8 @@
         "jumper",
         "shell"
       ],
-      "id": "s_28"
+      "id": "s_28",
+      "swatch": "#6B3525"
     },
     {
       "name": "Alden D2914C Algonquin Chukka (Color 8 Shell)",
@@ -682,7 +711,8 @@
         "dress-register",
         "shell"
       ],
-      "id": "s_29"
+      "id": "s_29",
+      "swatch": "#3a1414"
     },
     {
       "name": "Alden D32027 LHS Full Strap Loafer (Navy Suede)",
@@ -705,7 +735,8 @@
         "penny",
         "suede"
       ],
-      "id": "s_30"
+      "id": "s_30",
+      "swatch": "#1F2848"
     },
     {
       "name": "Allen Edmonds McAllister Longwing (Walnut)",
@@ -724,7 +755,8 @@
         "brown",
         "wingtip"
       ],
-      "id": "s_31"
+      "id": "s_31",
+      "swatch": "#7C5235"
     },
     {
       "name": "Baudoin & Lange Calvi Espadrille (Marina Navy)",
@@ -744,7 +776,8 @@
         "navy",
         "suede"
       ],
-      "id": "s_32"
+      "id": "s_32",
+      "swatch": "#1F2848"
     },
     {
       "name": "Bed|Stü Full Brogue Oxford (Mid-Brown)",
@@ -764,7 +797,8 @@
         "full-brogue",
         "wingtip"
       ],
-      "id": "s_33"
+      "id": "s_33",
+      "swatch": "#7B5235"
     },
     {
       "name": "Stefano Bemer 4202 Side-Lace Wholecut (Brown)",
@@ -784,7 +818,8 @@
         "dress-register",
         "wholecut"
       ],
-      "id": "s_34"
+      "id": "s_34",
+      "swatch": "#5C3825"
     },
     {
       "name": "Stefano Bemer 6711 Balmoral Wholecut (Black/Grey)",
@@ -805,7 +840,8 @@
         "dress-register",
         "wholecut"
       ],
-      "id": "s_35"
+      "id": "s_35",
+      "swatch": "#1f1f1f"
     },
     {
       "name": "Carpe Diem Mid-Rise Boot (Dark Brown)",
@@ -826,7 +862,8 @@
         "boot",
         "brown"
       ],
-      "id": "s_36"
+      "id": "s_36",
+      "swatch": "#3F2A1B"
     },
     {
       "name": "Carpe Diem Reverse Shell PTB Derby (Natural, 2001)",
@@ -858,7 +895,8 @@
         "carpe-diem-era",
         "triad-past-anchor"
       ],
-      "id": "s_37"
+      "id": "s_37",
+      "swatch": "#A87850"
     },
     {
       "name": "Chiappini Chukka Norvegese (Cognac)",
@@ -880,7 +918,8 @@
         "brown",
         "chukka"
       ],
-      "id": "s_38"
+      "id": "s_38",
+      "swatch": "#8B4520"
     },
     {
       "name": "Christian Louboutin Chambeliss Night Strass (Black Patent)",
@@ -900,7 +939,8 @@
         "dress-register",
         "statement"
       ],
-      "id": "s_39"
+      "id": "s_39",
+      "swatch": "#0a0a0a"
     },
     {
       "name": "Crockett & Jones Kensington Albert Loafer (Black)",
@@ -921,7 +961,8 @@
         "dress-register",
         "loafer"
       ],
-      "id": "s_40"
+      "id": "s_40",
+      "swatch": "#1f1f1f"
     },
     {
       "name": "Doek Court Tennis Shoe (Ecru)",
@@ -939,7 +980,8 @@
       "tags": [
         "canvas"
       ],
-      "id": "s_41"
+      "id": "s_41",
+      "swatch": "#E5DCC8"
     },
     {
       "name": "Edward Green Cranleigh Shearling Boot (Mink Suede)",
@@ -962,7 +1004,8 @@
         "shearling",
         "suede"
       ],
-      "id": "s_42"
+      "id": "s_42",
+      "swatch": "#4a3325"
     },
     {
       "name": "Edward Green Dover (Dark Oak Patina)",
@@ -982,7 +1025,8 @@
         "edward green",
         "edward-green"
       ],
-      "id": "s_43"
+      "id": "s_43",
+      "swatch": "#888880"
     },
     {
       "name": "Edward Green Halifax Chukka Boot (Black Grain)",
@@ -1007,7 +1051,8 @@
         "edward-green",
         "grain"
       ],
-      "id": "s_44"
+      "id": "s_44",
+      "swatch": "#1f1f1f"
     },
     {
       "name": "Edward Green Dover (Dark Brown Grain)",
@@ -1029,7 +1074,8 @@
         "edward-green",
         "grain"
       ],
-      "id": "s_45"
+      "id": "s_45",
+      "swatch": "#3F2A1B"
     },
     {
       "name": "Feiyue NYU Shanghai High-top (White/Blue)",
@@ -1048,7 +1094,8 @@
         "canvas",
         "white"
       ],
-      "id": "s_46"
+      "id": "s_46",
+      "swatch": "#F0EDE5"
     },
     {
       "name": "Gucci Jordaan Horsebit Loafer (Navy Blue)",
@@ -1068,7 +1115,8 @@
         "loafer",
         "navy"
       ],
-      "id": "s_47"
+      "id": "s_47",
+      "swatch": "#1F2848"
     },
     {
       "name": "Hackett (Carmina) Almond Toe Loafer (Mid-Brown Patinated)",
@@ -1089,7 +1137,8 @@
         "patinated",
         "warm-patinated"
       ],
-      "id": "s_48"
+      "id": "s_48",
+      "swatch": "#7B5235"
     },
     {
       "name": "Hanover Longwing Blucher (Color 8 Shell)",
@@ -1112,7 +1161,8 @@
         "shell",
         "wingtip"
       ],
-      "id": "s_49"
+      "id": "s_49",
+      "swatch": "#3a1414"
     },
     {
       "name": "Hender Scheme MIP-05 GAT (Natural Veg Tan)",
@@ -1132,7 +1182,8 @@
         "brown",
         "natural"
       ],
-      "id": "s_50"
+      "id": "s_50",
+      "swatch": "#888880"
     },
     {
       "name": "Hermès Espadrille Sandal (Light Brown)",
@@ -1151,7 +1202,8 @@
         "brown",
         "sandal"
       ],
-      "id": "s_51"
+      "id": "s_51",
+      "swatch": "#A07050"
     },
     {
       "name": "Heschung (CdG) Norwegian Buckle Boot (Charcoal)",
@@ -1171,7 +1223,8 @@
       "tags": [
         "boot"
       ],
-      "id": "s_52"
+      "id": "s_52",
+      "swatch": "#383838"
     },
     {
       "name": "John Lobb Tim Chukka (Dark Brown Suede)",
@@ -1198,7 +1251,8 @@
         "repair",
         "suede"
       ],
-      "id": "s_53"
+      "id": "s_53",
+      "swatch": "#4a3325"
     },
     {
       "name": "John Lobb Alliance Double Buckle Boot (Black)",
@@ -1223,7 +1277,8 @@
         "john lobb",
         "john-lobb"
       ],
-      "id": "s_54"
+      "id": "s_54",
+      "swatch": "#1f1f1f"
     },
     {
       "name": "John Lobb City II Captoe Oxford (Dark Brown Museum)",
@@ -1246,7 +1301,8 @@
         "john-lobb",
         "museum"
       ],
-      "id": "s_55"
+      "id": "s_55",
+      "swatch": "#3a2418"
     },
     {
       "name": "John Lobb Garnier II Wholecut (Black)",
@@ -1268,7 +1324,8 @@
         "john-lobb",
         "wholecut"
       ],
-      "id": "s_56"
+      "id": "s_56",
+      "swatch": "#1f1f1f"
     },
     {
       "name": "John Lobb Lopez Loafer (Black)",
@@ -1290,7 +1347,8 @@
         "john-lobb",
         "loafer"
       ],
-      "id": "s_57"
+      "id": "s_57",
+      "swatch": "#1f1f1f"
     },
     {
       "name": "John Lobb Pace Loafer (Dark Brown Grain)",
@@ -1311,7 +1369,8 @@
         "john-lobb",
         "loafer"
       ],
-      "id": "s_58"
+      "id": "s_58",
+      "swatch": "#3F2A1B"
     },
     {
       "name": "John Lobb Philip II Captoe Oxford (Black)",
@@ -1333,7 +1392,8 @@
         "john lobb",
         "john-lobb"
       ],
-      "id": "s_59"
+      "id": "s_59",
+      "swatch": "#1f1f1f"
     },
     {
       "name": "Jueshi Handmade Slip-On Mule (Dark Brown)",
@@ -1353,7 +1413,8 @@
         "sandal",
         "slip-on"
       ],
-      "id": "s_61"
+      "id": "s_61",
+      "swatch": "#3F2A1B"
     },
     {
       "name": "Loro Piana (Replica) Summer Walk Loafer (Deep Blue)",
@@ -1373,7 +1434,8 @@
         "suede",
         "summer-walk"
       ],
-      "id": "s_62"
+      "id": "s_62",
+      "swatch": "#2A3858"
     },
     {
       "name": "Lucchese Full-Quill Ostrich Cowboy Boots (Tan Cognac)",
@@ -1396,7 +1458,8 @@
         "cowboy",
         "exotic"
       ],
-      "id": "s_63"
+      "id": "s_63",
+      "swatch": "#A8602A"
     },
     {
       "name": "Maison Margiela GAT Replica (White/Grey)",
@@ -1415,7 +1478,8 @@
         "suede",
         "white"
       ],
-      "id": "s_64"
+      "id": "s_64",
+      "swatch": "#E5E0D8"
     },
     {
       "name": "Meccariello Argentum Chisel M Shortwing (Dark Brown)",
@@ -1436,7 +1500,8 @@
         "shortwing",
         "wingtip"
       ],
-      "id": "s_65"
+      "id": "s_65",
+      "swatch": "#3F2A1B"
     },
     {
       "name": "Mr. Zhao Bespoke Chelsea Boot (Dark Espresso Shell)",
@@ -1461,7 +1526,8 @@
         "en-route",
         "shell"
       ],
-      "id": "s_66"
+      "id": "s_66",
+      "swatch": "#5C3825"
     },
     {
       "name": "OnCloud CloudRunner (Black)",
@@ -1479,7 +1545,8 @@
       "tags": [
         "black"
       ],
-      "id": "s_67"
+      "id": "s_67",
+      "swatch": "#1f1f1f"
     },
     {
       "name": "Paraboot Sand (Bordeaux Shell)",
@@ -1506,7 +1573,8 @@
         "refined-rugged"
       ],
       "id": "s_68",
-      "model": "Sand"
+      "model": "Sand",
+      "swatch": "#5C2424"
     },
     {
       "name": "Paraboot Michael (Walnut Suede)",
@@ -1527,7 +1595,8 @@
         "paraboot",
         "suede"
       ],
-      "id": "s_69"
+      "id": "s_69",
+      "swatch": "#9A6840"
     },
     {
       "name": "Paraboot Thiers Sport Derby (Dark Brown)",
@@ -1546,7 +1615,8 @@
         "brown",
         "paraboot"
       ],
-      "id": "s_70"
+      "id": "s_70",
+      "swatch": "#3F2A1B"
     },
     {
       "name": "Peal & Co. Captoe Boot (Dark Brown Suede)",
@@ -1569,7 +1639,8 @@
         "captoe",
         "suede"
       ],
-      "id": "s_71"
+      "id": "s_71",
+      "swatch": "#4a3325"
     },
     {
       "name": "Peal & Co. Coniston Cap-Toe Boot (Burgundy Shell)",
@@ -1595,7 +1666,8 @@
         "shell",
         "warm-burgundy"
       ],
-      "id": "s_72"
+      "id": "s_72",
+      "swatch": "#5C1F1F"
     },
     {
       "name": "Quadratura Classica Orientale Sandal (Teak Deerskin)",
@@ -1614,7 +1686,8 @@
         "brown",
         "sandal"
       ],
-      "id": "s_73"
+      "id": "s_73",
+      "swatch": "#5A3520"
     },
     {
       "name": "Ralph Lauren (Allen Edmonds) Longwing Derby (Black Calf)",
@@ -1635,7 +1708,8 @@
         "wingtip",
         "allen-edmonds"
       ],
-      "id": "s_74"
+      "id": "s_74",
+      "swatch": "#1f1f1f"
     },
     {
       "name": "Ralph Lauren (C&J) Cap Toe Oxford (Light Tan)",
@@ -1655,7 +1729,8 @@
         "captoe",
         "ralph-lauren"
       ],
-      "id": "s_75"
+      "id": "s_75",
+      "swatch": "#C09060"
     },
     {
       "name": "Ralph Lauren (C&J) Livingstone II Service Boot (Dark Brown Grain)",
@@ -1679,7 +1754,8 @@
         "ralph-lauren",
         "service"
       ],
-      "id": "s_76"
+      "id": "s_76",
+      "swatch": "#3a2418"
     },
     {
       "name": "Ralph Lauren (Santoni) Cap Toe Oxford (Chestnut Suede)",
@@ -1700,7 +1776,8 @@
         "ralph-lauren",
         "suede"
       ],
-      "id": "s_77"
+      "id": "s_77",
+      "swatch": "#7C3A1F"
     },
     {
       "name": "Ralph Lauren Purple Label Driving Loafer (Dark Grey Suede)",
@@ -1721,7 +1798,8 @@
         "ralph-lauren",
         "suede"
       ],
-      "id": "s_79"
+      "id": "s_79",
+      "swatch": "#3a3a3c"
     },
     {
       "name": "Rancourt Baxter Ranger Moc (Rye)",
@@ -1741,7 +1819,8 @@
         "loafer",
         "ranger"
       ],
-      "id": "s_80"
+      "id": "s_80",
+      "swatch": "#7C5230"
     },
     {
       "name": "Rancourt Pinch Penny Loafer (Caramel Shell)",
@@ -1764,7 +1843,8 @@
         "penny",
         "shell"
       ],
-      "id": "s_81"
+      "id": "s_81",
+      "swatch": "#A56F35"
     },
     {
       "name": "Red Wing 9871 (Oro Russet, Vibram resole)",
@@ -1785,7 +1865,8 @@
         "boot",
         "brown"
       ],
-      "id": "s_82"
+      "id": "s_82",
+      "swatch": "#888880"
     },
     {
       "name": "Riccardo Bestetti Chukka Boot (Burgundy Burnished)",
@@ -1807,7 +1888,8 @@
         "burgundy",
         "chukka"
       ],
-      "id": "s_83"
+      "id": "s_83",
+      "swatch": "#5a2424"
     },
     {
       "name": "Santoni Double Monk Strap (Dark Chocolate Suede)",
@@ -1827,7 +1909,8 @@
         "double-monk",
         "suede"
       ],
-      "id": "s_85"
+      "id": "s_85",
+      "swatch": "#3a2818"
     },
     {
       "name": "Santoni Ugolino Double Monk (Charcoal Patinated)",
@@ -1850,7 +1933,8 @@
         "repair",
         "statement"
       ],
-      "id": "s_86"
+      "id": "s_86",
+      "swatch": "#1f1f1f"
     },
     {
       "name": "Santoni Split-Toe Derby (Red Clay Patinated)",
@@ -1870,7 +1954,8 @@
         "split-toe",
         "statement"
       ],
-      "id": "s_87"
+      "id": "s_87",
+      "swatch": "#888880"
     },
     {
       "name": "Paolo Scafora 508 Captoe Semi-Brogue (Dark Brown)",
@@ -1891,7 +1976,8 @@
         "dress-register",
         "semi-brogue"
       ],
-      "id": "s_88"
+      "id": "s_88",
+      "swatch": "#3F2A1B"
     },
     {
       "name": "Shanghai Custom Chelsea Boot (Black)",
@@ -1913,7 +1999,8 @@
         "boot",
         "chelsea"
       ],
-      "id": "s_89"
+      "id": "s_89",
+      "swatch": "#1f1f1f"
     },
     {
       "name": "Shoto 1122 Caos Chelsea Boot (Tobacco)",
@@ -1934,7 +2021,8 @@
         "brown",
         "chelsea"
       ],
-      "id": "s_90"
+      "id": "s_90",
+      "swatch": "#8B5235"
     },
     {
       "name": "Shoto Service Captoe Boot (Cognac)",
@@ -1956,7 +2044,8 @@
         "captoe",
         "service"
       ],
-      "id": "s_91"
+      "id": "s_91",
+      "swatch": "#8B4520"
     },
     {
       "name": "Timberland × DOE 3-Eye Vibram Boat Shoe (Black)",
@@ -1975,7 +2064,8 @@
         "black",
         "vibram"
       ],
-      "id": "s_92"
+      "id": "s_92",
+      "swatch": "#1f1f1f"
     },
     {
       "name": "TLB Mallorca 114 Artista Derby (Dark Brown Hatch Grain)",
@@ -1994,7 +2084,8 @@
         "brown",
         "grain"
       ],
-      "id": "s_93"
+      "id": "s_93",
+      "swatch": "#3F2A1B"
     },
     {
       "name": "TLB Mallorca 121 Artista Semi-Brogue (Black Shell Rocado)",
@@ -2015,7 +2106,8 @@
         "semi-brogue",
         "shell"
       ],
-      "id": "s_94"
+      "id": "s_94",
+      "swatch": "#1a1a1a"
     },
     {
       "name": "Vans Vault x Horween Old Skool (Dark Brown CXL)",
@@ -2034,7 +2126,8 @@
         "brown",
         "cxl"
       ],
-      "id": "s_95"
+      "id": "s_95",
+      "swatch": "#3a2418"
     },
     {
       "name": "Vass Alt English Captoe Balmoral (Antique Cognac)",
@@ -2055,7 +2148,8 @@
         "burgundy-straddle",
         "captoe"
       ],
-      "id": "s_96"
+      "id": "s_96",
+      "swatch": "#5C2424"
     },
     {
       "name": "Vass Budapest Longwing Blucher (Bordeaux Scotch Grain)",
@@ -2076,7 +2170,8 @@
         "museum",
         "wingtip"
       ],
-      "id": "s_97"
+      "id": "s_97",
+      "swatch": "#3F2A1B"
     },
     {
       "name": "Viberg 2030 Service Boot Captoe (Charcoal Chamois Roughout)",
@@ -2103,7 +2198,8 @@
         "suede",
         "viberg"
       ],
-      "id": "s_98"
+      "id": "s_98",
+      "swatch": "#1f1f1f"
     },
     {
       "name": "Viberg 2030 Service Boot Captoe (Chestnut Horsebutt)",
@@ -2127,7 +2223,8 @@
         "service",
         "viberg"
       ],
-      "id": "s_99"
+      "id": "s_99",
+      "swatch": "#7C3A1F"
     },
     {
       "name": "Viberg 2030 Service Boot Plain Toe (Black CXL)",
@@ -2152,7 +2249,8 @@
         "service",
         "viberg"
       ],
-      "id": "s_100"
+      "id": "s_100",
+      "swatch": "#2a1f1a"
     },
     {
       "name": "Yohei Fukuda Double Monk (Mahogany Museum Calf)",
@@ -2173,7 +2271,8 @@
         "dress-register",
         "museum"
       ],
-      "id": "s_101"
+      "id": "s_101",
+      "swatch": "#5A2D1F"
     },
     {
       "name": "Yohji Yamamoto Pour Homme Crepe Derby (Brown Calf)",
@@ -2191,7 +2290,8 @@
       "tags": [
         "brown"
       ],
-      "id": "s_102"
+      "id": "s_102",
+      "swatch": "#5C3825"
     },
     {
       "name": "Zhou Lv 拙履 West Lake Wholecut (Amber Brown)",
@@ -2212,7 +2312,8 @@
         "museum",
         "wholecut"
       ],
-      "id": "s_104"
+      "id": "s_104",
+      "swatch": "#7C4525"
     },
     {
       "name": "Mayton Boot — Raw Shell Cordovan PTB",
@@ -2238,7 +2339,8 @@
         "wishlist",
         "mayton"
       ],
-      "id": "s_105"
+      "id": "s_105",
+      "swatch": "#A87850"
     },
     {
       "name": "Zegna 15milmil15 Jacket",
@@ -3749,7 +3851,8 @@
         "unlined"
       ],
       "id": "s_new_6221f",
-      "model": "6221L"
+      "model": "6221L",
+      "swatch": "#B8826A"
     },
     {
       "name": "Suitsupply Double Monk (Black Calf)",
@@ -3771,7 +3874,8 @@
         "formal",
         "monk"
       ],
-      "id": "s_new_ssdm"
+      "id": "s_new_ssdm",
+      "swatch": "#1f1f1f"
     },
     {
       "name": "Alden D6627C V-Tip Blucher (Color 8 Shell)",
@@ -3794,7 +3898,8 @@
         "shell",
         "v-tip"
       ],
-      "id": "s_new_d6627c"
+      "id": "s_new_d6627c",
+      "swatch": "#3a1414"
     },
     {
       "name": "Lemargo Ebano Laced Dress Boot (Ebony)",
@@ -3820,7 +3925,8 @@
         "formal",
         "laced"
       ],
-      "id": "s_new_lemargo"
+      "id": "s_new_lemargo",
+      "swatch": "#3F2A1B"
     },
     {
       "name": "AllSaints Black Leather Shirt-Jacket",
@@ -3938,7 +4044,8 @@
         "v-tip"
       ],
       "id": "s_109",
-      "last": "168M"
+      "last": "168M",
+      "swatch": "#3a1414"
     },
     {
       "name": "Carpe Diem Mid-Height Lace Boot (Brown) — DETAILS TO FILL",
@@ -3966,7 +4073,88 @@
         "owned",
         "stub-needs-detail"
       ],
-      "id": "s_111"
+      "id": "s_111",
+      "swatch": "#5C3825"
+    },
+    {
+      "id": "s_108",
+      "name": "Dinkelacker Rio Full-Brogue C (Dark Cognac Shell)",
+      "category": "Footwear",
+      "subcategory": "Wingtip",
+      "brand": "Dinkelacker",
+      "color": "Dark Cognac",
+      "material": "Shell Cordovan (Horween)",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Formal",
+      "status": "Active",
+      "notes": "Rio Full-Brogue C · Double leather sole · Hungarian/German tradition · full-brogue blucher silhouette",
+      "tags": [
+        "wingtip",
+        "shell",
+        "cognac",
+        "blucher",
+        "dark-cognac",
+        "full-brogue",
+        "rio"
+      ],
+      "swatch": "#6B3520"
+    },
+    {
+      "name": "Viberg Savoy V-Tip Derby (Nero Kangaroo)",
+      "category": "Footwear",
+      "subcategory": "Derby",
+      "brand": "Viberg",
+      "color": "Nero (Black)",
+      "material": "Kangaroo (Bonaudo)",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Formal",
+      "status": "Active",
+      "notes": "Cantilever last · 9.5E · Canada · Bonaudo kangaroo · split-toe (V-tip) apron · Norwegian welt + leather sole · NYC May 2026.",
+      "tags": [
+        "viberg",
+        "kangaroo",
+        "black",
+        "derby",
+        "v-tip",
+        "split-toe",
+        "norwegian-welt"
+      ],
+      "id": "s_112",
+      "swatch": "#1f1f1f"
+    },
+    {
+      "name": "Alden D9622 Algonquin Split-Toe V-Tip (Brown Scotch Grain)",
+      "category": "Footwear",
+      "subcategory": "Derby",
+      "brand": "Alden",
+      "color": "Brown",
+      "material": "Scotch Grain Calf",
+      "season": [
+        "Fall",
+        "Winter",
+        "Spring"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "Modified last (first in collection) · USA · brown scotch grain · Algonquin split-toe (V-tip) blucher · The Moulded Shoe SMU, NYC May 2026 · size/sole TBC.",
+      "tags": [
+        "alden",
+        "brown",
+        "scotch-grain",
+        "v-tip",
+        "split-toe",
+        "blucher",
+        "derby",
+        "smu",
+        "moulded",
+        "modified-last"
+      ],
+      "id": "s_113",
+      "swatch": "#5C3825"
     }
   ],
   "retired": [
