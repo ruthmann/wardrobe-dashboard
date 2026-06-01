@@ -137,13 +137,14 @@ function WardrobeDashboard() {
         const seed = await res.json();
         const canonical = { active: seed.active || [], retired: seed.retired || [] };
         seedRef.current = canonical;
-        setDataVersion(seed.version || "");
+        const version = String(seed.version ?? "");
+        setDataVersion(version);
 
         let useState_ = canonical;
         try {
           const savedVersion = localStorage.getItem(STORAGE_VERSION_KEY);
           const raw = localStorage.getItem(STORAGE_KEY);
-          if (raw && savedVersion === (seed.version || "")) {
+          if (raw && savedVersion === version) {
             const parsed = JSON.parse(raw);
             if (parsed && Array.isArray(parsed.active) && Array.isArray(parsed.retired)) {
               useState_ = parsed;
@@ -152,7 +153,7 @@ function WardrobeDashboard() {
             }
           } else {
             // New canonical data published — adopt it and clear stale local edits.
-            localStorage.setItem(STORAGE_VERSION_KEY, seed.version || "");
+            localStorage.setItem(STORAGE_VERSION_KEY, version);
             localStorage.removeItem(STORAGE_KEY);
             localStorage.removeItem(STORAGE_META_KEY);
             setSavedAt(null);

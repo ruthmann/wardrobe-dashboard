@@ -1,6 +1,6 @@
 {
-  "version": "3.992",
-  "exportedAt": "2026-06-01T08:55:46.369275+00:00",
+  "version": 3.993,
+  "exportedAt": "2026-06-01T09:25:38.468359+00:00",
   "active": [
     {
       "name": "Academy of Love Espadrilles (White canvas)",
@@ -842,7 +842,7 @@
       ],
       "formality": "Smart Casual",
       "status": "Active",
-      "notes": "EU 45 · Italy · **Collectible** — Horween vamp stamp dated 2001 from Carpe Diem's peak period under Maurizio Altieri · Reverse-side-out shell aged into polished chromatic warm chestnut-brown patina over 20+ years · Low-shoe derby (corrected from prior boot tagging) · CARPE DIEM era (foundational, predates m_moriabc). Serves the m_moriabc triad's PAST role by interpretation only — it is a Carpe Diem piece, NOT a literal m_moriabc \"A\" object. Pairs with s_110 Moria B (present, incoming) and a future slow Altieri C commission. Subject of direct IG dialogue with Maurizio Altieri (Jan 2026).",
+      "notes": "EU 45 · Italy · **Collectible** — Horween vamp stamp dated 2001 from Carpe Diem's peak period under Maurizio Altieri · Reverse-side-out shell aged into polished chromatic warm chestnut-brown patina over 20+ years · Low-shoe derby (corrected from prior boot tagging) · CARPE DIEM era (foundational, predates m_moriabc). Serves the m_moriabc triad's PAST role by interpretation only — it is a Carpe Diem piece, NOT a literal m_moriabc \"A\" object. Pairs conceptually with the (unrealized) m_moriabc \"present\" chapter and a future slow Altieri C commission. Subject of direct IG dialogue with Maurizio Altieri (Jan 2026).",
       "tags": [
         "carpe-diem",
         "collectible",
@@ -2215,12 +2215,12 @@
       "id": "s_104"
     },
     {
-      "name": "Mayton Boot — Natural Shell Cordovan PTB",
+      "name": "Mayton Boot — Raw Shell Cordovan PTB",
       "category": "Footwear",
       "subcategory": "Boot",
       "brand": "Mayton Boot",
-      "color": "Natural",
-      "material": "Shell Cordovan (Horween)",
+      "color": "Raw Shell (natural/undyed)",
+      "material": "Shell Cordovan (Horween, raw/unfinished)",
       "season": [
         "Fall",
         "Winter",
@@ -2228,64 +2228,17 @@
       ],
       "formality": "Smart Casual",
       "status": "Wishlist",
-      "notes": "Last 379x · MTO · Natural shell PTB",
+      "notes": "Last 379x · MTO · Raw (natural, undyed) Horween shell, smooth-side-out · boot-height PTB, patinas with wear · sole remaining Mayton commission (Chestnut and Black CF Stead Repello cancelled May 2026)",
       "tags": [
         "boot",
+        "raw-shell",
         "natural",
         "plain-toe",
         "shell",
-        "wishlist"
+        "wishlist",
+        "mayton"
       ],
       "id": "s_105"
-    },
-    {
-      "name": "Mayton Boot — Black CF Stead Repello PTB",
-      "category": "Footwear",
-      "subcategory": "Boot",
-      "brand": "Mayton Boot",
-      "color": "Black",
-      "material": "CF Stead Repello",
-      "season": [
-        "Fall",
-        "Winter",
-        "Spring"
-      ],
-      "formality": "Smart Casual",
-      "status": "Wishlist",
-      "notes": "Last 379x · MTO · Lactae Hevea sole · Black storm welt",
-      "tags": [
-        "black",
-        "boot",
-        "plain-toe",
-        "wishlist"
-      ],
-      "id": "s_106"
-    },
-    {
-      "name": "Mayton Boot — Ravello/Chestnut/Whisky Shell PTB",
-      "category": "Footwear",
-      "subcategory": "Boot",
-      "brand": "Mayton Boot",
-      "color": "Ravello / Chestnut / Whisky",
-      "material": "Shell Cordovan (Horween)",
-      "season": [
-        "Fall",
-        "Winter",
-        "Spring"
-      ],
-      "formality": "Smart Casual",
-      "status": "Wishlist",
-      "notes": "Last 379x · MTO · Leather sole · Blind waist",
-      "tags": [
-        "boot",
-        "brown",
-        "plain-toe",
-        "ravello",
-        "shell",
-        "whisky",
-        "wishlist"
-      ],
-      "id": "s_107"
     },
     {
       "name": "Zegna 15milmil15 Jacket",
@@ -3988,35 +3941,6 @@
       "last": "168M"
     },
     {
-      "name": "Altieri m_moriabc B — Black Shell Cordovan Ankle Boot (Moria B)",
-      "category": "Footwear",
-      "subcategory": "Boot",
-      "brand": "Maurizio Altieri (m_moriabc)",
-      "color": "Black",
-      "material": "Shell Cordovan (Horween) — pending in-hand/maker confirmation",
-      "season": [
-        "Fall",
-        "Winter",
-        "Spring"
-      ],
-      "formality": "Artisan Avant-Garde",
-      "status": "En Route",
-      "notes": "EU 43 · B last · m_moriabc \"present\" chapter. Bought via Xianyu (secondhand, lightly worn), May 2026. Fills the previously-empty BLACK SHELL BOOT slot. Conceptual triad: A = s_37 Carpe Diem Reverse Shell Derby (past, owned); B = THIS (present, incoming); C = future, slow direct commission with Altieri (not yet specced — inconclusive by project definition). Diligence open: confirm Horween shell vs glazed calf, B-last, true 43, sole/heel/welt-pin condition — Altieri has offered to answer directly by audio.",
-      "tags": [
-        "boot",
-        "black",
-        "shell-cordovan",
-        "altieri",
-        "m_moriabc",
-        "moria-b",
-        "avant-garde",
-        "artisan",
-        "incoming",
-        "triad"
-      ],
-      "id": "s_110"
-    },
-    {
       "name": "Carpe Diem Mid-Height Lace Boot (Brown) — DETAILS TO FILL",
       "category": "Footwear",
       "subcategory": "Boot",
@@ -4030,7 +3954,7 @@
       ],
       "formality": "Artisan Avant-Garde",
       "status": "Active",
-      "notes": "OWNED. Carpe Diem-era piece (foundational Altieri era, predates m_moriabc) — distinct era from s_110 m_moriabc B. Second Carpe Diem holding alongside s_37. Smooth waxy brown, mid-height lace boot, leather laces, low stacked heel. STUB ENTRY — year, exact leather, last/size, condition still to be filled.",
+      "notes": "OWNED. Carpe Diem-era piece (foundational Altieri era, predates m_moriabc) — distinct era from the m_moriabc B piece (never acquired). Second Carpe Diem holding alongside s_37. Smooth waxy brown, mid-height lace boot, leather laces, low stacked heel. STUB ENTRY — year, exact leather, last/size, condition still to be filled.",
       "tags": [
         "boot",
         "brown",
