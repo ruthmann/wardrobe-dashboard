@@ -36,7 +36,7 @@
 <body>
 <div id="root"></div>
 <script type="text/babel" data-presets="react">
-const {useState,useMemo,useEffect}=React;
+const {useState,useMemo,useEffect,useRef}=React;
 
 const STORAGE_KEY = "shoe_browser_v1_state";
 
@@ -332,6 +332,62 @@ function DetailPanel({item,onClose}){
   );
 }
 
+// ===== Fullscreen carousel =====
+
+function Carousel({items,index,onIndex,onClose}){
+  const touchX=useRef(null);
+  useEffect(()=>{
+    function onKey(e){
+      if(e.key==="Escape") onClose();
+      else if(e.key==="ArrowRight") onIndex((index+1)%items.length);
+      else if(e.key==="ArrowLeft") onIndex((index-1+items.length)%items.length);
+    }
+    window.addEventListener("keydown",onKey);
+    return ()=>window.removeEventListener("keydown",onKey);
+  },[index,items.length,onIndex,onClose]);
+  const item=items[index];
+  if(!item) return null;
+  const photo=imgFor(item);
+  const go=d=>onIndex((index+d+items.length)%items.length);
+  const dim={color:"rgba(255,255,255,0.5)"};
+  const arrow={position:"absolute",top:"50%",transform:"translateY(-50%)",zIndex:2,
+    width:52,height:52,borderRadius:"50%",border:"none",cursor:"pointer",
+    background:"rgba(255,255,255,0.12)",color:"#fff",fontSize:30,
+    display:"flex",alignItems:"center",justifyContent:"center",fontFamily:"var(--font-sans)"};
+  return (
+    <div style={{position:"fixed",inset:0,background:"#0b0b0c",zIndex:1200,display:"flex",flexDirection:"column"}}>
+      <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",padding:"12px 18px",flexShrink:0}}>
+        <span style={{letterSpacing:"0.12em",textTransform:"uppercase",fontSize:11,color:"rgba(255,255,255,0.7)"}}>Browsing · {index+1} / {items.length}</span>
+        <button onClick={onClose} aria-label="Close"
+          style={{background:"rgba(255,255,255,0.12)",border:"none",color:"#fff",width:36,height:36,borderRadius:"50%",cursor:"pointer",fontSize:20,fontFamily:"var(--font-sans)"}}>×</button>
+      </div>
+      <div style={{flex:1,position:"relative",minHeight:0,display:"flex",alignItems:"center",justifyContent:"center",padding:"0 8px"}}
+        onTouchStart={e=>{touchX.current=e.touches[0].clientX;}}
+        onTouchEnd={e=>{if(touchX.current==null)return;const dx=e.changedTouches[0].clientX-touchX.current;if(Math.abs(dx)>40)go(dx<0?1:-1);touchX.current=null;}}>
+        <button onClick={()=>go(-1)} aria-label="Previous" style={{...arrow,left:12}}>‹</button>
+        {photo
+          ? <img key={item.id} src={photo} alt={item.name}
+              style={{maxWidth:"100%",maxHeight:"100%",objectFit:"contain",borderRadius:10,boxShadow:"0 8px 40px rgba(0,0,0,0.5)"}}/>
+          : <div style={{width:"min(70vw,420px)",aspectRatio:"4 / 3",borderRadius:10,background:swOf(item),
+              display:"flex",alignItems:"center",justifyContent:"center",color:"rgba(255,255,255,0.85)",fontSize:13}}>No photo</div>}
+        <button onClick={()=>go(1)} aria-label="Next" style={{...arrow,right:12}}>›</button>
+      </div>
+      <div style={{flexShrink:0,padding:"16px 20px 24px",color:"#fff",maxWidth:900,margin:"0 auto",width:"100%"}}>
+        <div style={{fontSize:11,letterSpacing:"0.14em",textTransform:"uppercase",color:"rgba(255,255,255,0.55)",marginBottom:3}}>{item.brand} · {item.id}</div>
+        <div style={{fontSize:20,fontWeight:600,marginBottom:10,lineHeight:1.25}}>{item.name}</div>
+        <div style={{display:"flex",flexWrap:"wrap",gap:"6px 18px",fontSize:13,color:"rgba(255,255,255,0.85)"}}>
+          {item.color && <span><span style={dim}>Color </span>{item.color}</span>}
+          {item.material && <span><span style={dim}>Material </span>{item.material}</span>}
+          {item.subcategory && <span><span style={dim}>Type </span>{item.subcategory}</span>}
+          {(item.season||[]).length>0 && <span><span style={dim}>Season </span>{item.season.join(", ")}</span>}
+          {item.purchasePrice!=null && <span><span style={dim}>Price </span>{item.purchasePrice.toLocaleString()}{item.currency?" "+item.currency:""}</span>}
+          {item.acquiredFrom && <span><span style={dim}>From </span>{item.acquiredFrom}</span>}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // ===== Color spectrum sorting =====
 
 function hexToHsl(hex){
@@ -426,6 +482,7 @@ function ShoeBrowser(){
   const [seasonFilter,setSeasonFilter]=useState([]);
   const [sortBy,setSortBy]=useState("spectrum");
   const [selected,setSelected]=useState(null);
+  const [carouselIndex,setCarouselIndex]=useState(null);
 
   // Load collection data
   useEffect(()=>{
@@ -553,6 +610,10 @@ function ShoeBrowser(){
           <option value="size">Sort: size (small → large)</option>
           <option value="id">Sort: id</option>
         </select>
+        <button onClick={()=>setCarouselIndex(0)} disabled={filtered.length===0}
+          style={{padding:"8px 14px",border:"0.5px solid var(--color-border-tertiary)",borderRadius:"var(--border-radius-md)",
+            fontSize:13,background:"var(--color-text-primary)",color:"var(--color-background-primary)",
+            cursor:filtered.length===0?"default":"pointer",opacity:filtered.length===0?0.4:1}}>⛶ Slideshow</button>
         <button onClick={clearFilters}
           style={{padding:"8px 12px",border:"0.5px solid var(--color-border-tertiary)",borderRadius:"var(--border-radius-md)",
             fontSize:13,background:"transparent",color:"var(--color-text-secondary)",cursor:"pointer"}}>Reset</button>
@@ -593,6 +654,9 @@ function ShoeBrowser(){
       </>}
 
       <DetailPanel item={selected} onClose={()=>setSelected(null)}/>
+      {carouselIndex!=null && filtered.length>0 &&
+        <Carousel items={filtered} index={Math.min(carouselIndex,filtered.length-1)}
+          onIndex={setCarouselIndex} onClose={()=>setCarouselIndex(null)}/>}
     </div>
   );
 }
