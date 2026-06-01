@@ -381,6 +381,20 @@ function compareSpectrum(a,b){
   return a.name.localeCompare(b.name);
 }
 
+// Best-effort size parse → normalized to a US-ish scale so US/UK/EU/JP sort together.
+function sizeValue(item){
+  const txt=((item.notes||"")+" "+(item.name||"")).replace(/·/g," ");
+  let m;
+  if(m=txt.match(/EU\s*(\d{2}(?:\.5)?)/i)) return parseFloat(m[1])-33;
+  if(m=txt.match(/UK\s*(\d{1,2}(?:\.5)?)/i)) return parseFloat(m[1])+1;
+  if(m=txt.match(/US\s*(\d{1,2}(?:\.5)?)/i)) return parseFloat(m[1]);
+  if(m=txt.match(/Size\s*(\d{1,2}(?:\.5)?)/i)){ const n=parseFloat(m[1]); return n>=24?n-18:n; }
+  if(m=txt.match(/\b(\d{1,2}(?:\.5)?)\s*(?:[A-E]{1,3}|[A-E]\/[A-E])\b/)) return parseFloat(m[1]); // "10 B/D", "11D", "9EE"
+  if(m=txt.match(/\b(4[0-7](?:\.5)?)\b/)) return parseFloat(m[1])-33;                   // bare EU range
+  for(const mm of txt.matchAll(/\b(\d{1,2}(?:\.5)?)\b/g)){ const n=parseFloat(mm[1]); if(n>=6&&n<=13.5) return n; } // bare US size
+  return null;
+}
+
 // ===== Main dashboard =====
 
 const CLOTHING_TYPE=/shirt|knit|trouser|jacket|coat|tee|sweat|cardigan/i;
@@ -492,6 +506,13 @@ function ShoeBrowser(){
       sorted.sort((a,b)=>order.indexOf(getFormalityGroup(a.formality))-order.indexOf(getFormalityGroup(b.formality))||a.name.localeCompare(b.name));
     }
     else if(sortBy==="subcategory") sorted.sort((a,b)=>a.subcategory.localeCompare(b.subcategory)||a.name.localeCompare(b.name));
+    else if(sortBy==="size") sorted.sort((a,b)=>{
+      const sa=sizeValue(a), sb=sizeValue(b);
+      if(sa==null&&sb==null) return a.name.localeCompare(b.name);
+      if(sa==null) return 1;
+      if(sb==null) return -1;
+      return sa-sb || a.name.localeCompare(b.name);
+    });
     else if(sortBy==="id") sorted.sort((a,b)=>a.id.localeCompare(b.id));
     return sorted;
   },[items,query,statusFilter,materialFilter,subcatFilter,formalityFilter,traditionFilter,laneFilter,seasonFilter,sortBy]);
@@ -529,6 +550,7 @@ function ShoeBrowser(){
           <option value="color">Sort: color lane</option>
           <option value="formality">Sort: formality</option>
           <option value="subcategory">Sort: subcategory</option>
+          <option value="size">Sort: size (small → large)</option>
           <option value="id">Sort: id</option>
         </select>
         <button onClick={clearFilters}
