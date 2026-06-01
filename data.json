@@ -1,6 +1,6 @@
 {
-  "version": "4.0-footwear-only",
-  "exportedAt": "2026-06-01T12:59:39.856209+00:00",
+  "version": "4.1-footwear-only",
+  "exportedAt": "2026-06-01T13:25:21.741718+00:00",
   "scope": "footwear-only canonical (Claude Code ground truth, ex Doc 'v3.999'); April-20 purchase prices merged (purchasePrice/currency/origPrice). acquisition channel NOT merged (source had errors); only the few verified acquiredFrom values retained.",
   "active": [
     {
@@ -328,7 +328,7 @@
       "purchasePrice": 2280,
       "currency": "RMB",
       "acquiredFrom": null,
-      "swatch": "#888880",
+      "swatch": "#6E4A2C",
       "origPrice": null
     },
     {
@@ -1208,7 +1208,7 @@
       "purchasePrice": 3508,
       "currency": "RMB",
       "acquiredFrom": null,
-      "swatch": "#888880",
+      "swatch": "#6B4423",
       "origPrice": null
     },
     {
@@ -1393,7 +1393,7 @@
       "purchasePrice": 2980,
       "currency": "RMB",
       "acquiredFrom": null,
-      "swatch": "#888880",
+      "swatch": "#C8A877",
       "origPrice": null
     },
     {
@@ -2196,7 +2196,7 @@
       "purchasePrice": 1199,
       "currency": "RMB",
       "acquiredFrom": null,
-      "swatch": "#888880",
+      "swatch": "#9C6A33",
       "origPrice": "2000"
     },
     {
@@ -2301,7 +2301,7 @@
       "purchasePrice": 2000,
       "currency": "RMB",
       "acquiredFrom": null,
-      "swatch": "#888880",
+      "swatch": "#A14B2C",
       "origPrice": null
     },
     {
