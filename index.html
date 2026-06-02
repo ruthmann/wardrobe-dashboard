@@ -113,10 +113,10 @@ const FORMALITY_GROUPS = {
 };
 
 const TRADITION_TAGS = {
-  "American": ["alden","ralph-lauren","viberg","red-wing","redwing","rancourt","hanover","timberland","allen-edmonds","bed|stu","bed|stü","vans","oncloud","margiela","americana","east rock"],
+  "American": ["alden","ralph-lauren","viberg","red-wing","redwing","rancourt","hanover","timberland","allen-edmonds","allen edmonds","mayton","rrl","bed|stu","bed|stü","vans","oncloud","margiela","americana","east rock"],
   "British": ["john-lobb","john lobb","edward-green","edward green","peal","crockett","hackett","grenson","kensington","cheaney","tricker","löf","loef","trickers"],
-  "Continental": ["paraboot","santoni","carmina","carpe-diem","carpe diem","meccariello","scafora","fukuda","tlb","vass","bemer","heschung","loro-piana","loro piana","baudoin","quadratura","christian-louboutin","louboutin","gucci","leeward","zegna","hermès","hermes","lemargo","bestetti","stefano-bemer","yohei-fukuda","chiappini","shoto","lucchese","luchesse","suitsupply","chambeliss","massimo dutti","massimo","dinkelacker"],
-  "Asian": ["zhou-lv","zhou lv","拙履","mr-zhao","mr. zhao","shanghai","feiyue","doek","hender-scheme","hender","jueshi","yohji","yohji-yamamoto","yamamoto","scheme","ruttshoes","rutt"],
+  "Continental": ["paraboot","santoni","carmina","carpe-diem","carpe diem","meccariello","scafora","fukuda","tlb","vass","bemer","heschung","loro-piana","loro piana","baudoin","quadratura","christian-louboutin","louboutin","gucci","leeward","zegna","hermès","hermes","lemargo","bestetti","stefano-bemer","yohei-fukuda","chiappini","shoto","lucchese","luchesse","suitsupply","chambeliss","massimo dutti","massimo","dinkelacker","academy of love"],
+  "Asian": ["zhou-lv","zhou lv","拙履","mr-zhao","mr. zhao","shanghai","feiyue","doek","hender-scheme","hender","jueshi","yohji","yohji-yamamoto","yamamoto","scheme","ruttshoes","rutt","clot"],
 };
 
 function getMaterialGroup(m,n){
@@ -147,17 +147,25 @@ function getColorLane(item){
   if(c.includes("natural")&&c.includes("reverse")) return "Natural reverse";
   if(c.includes("burgundy")||c.includes("bordeaux")||tags.includes("burgundy")) return "Burgundy";
   if(c.includes("snuff")) return "Snuff";
-  if(c.includes("dark chocolate")||c.includes("dark brown")) return "Dark brown";
-  if(c.includes("medium brown")||c.includes("mid-brown")) return "Medium brown";
-  if(c.includes("walnut")) return "Walnut";
-  if(c.includes("cognac")||c.includes("chestnut")) return "Cognac/Chestnut";
-  if(c.includes("mahogany")) return "Mahogany";
-  if(c.includes("tobacco")||c.includes("noix")) return "Tobacco/Noix";
+  // hard color families first (so e.g. "White - natural" stays white)
   if(c.includes("black")||c.includes("ebon")||c.includes("nero")) return "Black";
   if(c.includes("navy")||c.includes("blue")||c.includes("cobalt")) return "Blue/Navy";
   if(c.includes("grey")||c.includes("gray")||c.includes("charcoal")) return "Grey/Charcoal";
   if(c.includes("white")||c.includes("ecru")||c.includes("ivory")||c.includes("cream")) return "White/Ecru";
+  // brown / tan family
+  if(c.includes("espresso")||c.includes("dark chocolate")||c.includes("dark brown")) return "Dark brown";
+  if(c.includes("medium brown")||c.includes("mid-brown")) return "Medium brown";
+  if(c.includes("walnut")) return "Walnut";
+  if(c.includes("mahogany")) return "Mahogany";
+  if(c.includes("tobacco")||c.includes("noix")) return "Tobacco/Noix";
+  if(c.includes("oak")) return "Oak";
+  if(c.includes("clay")||c.includes("brick")||c.includes("rust")||c.includes("reddish")||c.includes("russet")) return "Russet/Red";
+  if(c.includes("cognac")||c.includes("chestnut")) return "Cognac/Chestnut";
   if(c.includes("teak")||c.includes("rye")||c.includes("oro")||c.includes("amber")) return "Warm patinated";
+  if(c.includes("natural")||c.includes("raw")||c.includes("undyed")||c.includes("veg tan")) return "Natural";
+  if(c.includes("tan")||c.includes("gold")||c.includes("caramel")||c.includes("camel")||c.includes("wheat")||c.includes("sand")||c.includes("beige")) return "Tan";
+  if(c.includes("greige")||c.includes("taupe")||c.includes("stone")||c.includes("mushroom")) return "Greige/Taupe";
+  if(c.includes("brown")) return "Brown";
   return "Other";
 }
 

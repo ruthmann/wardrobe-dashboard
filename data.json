@@ -1,6 +1,6 @@
 {
-  "version": "4.1-footwear-only",
-  "exportedAt": "2026-06-01T13:25:21.741718+00:00",
+  "version": "4.2-footwear-only",
+  "exportedAt": "2026-06-02T00:15:37Z",
   "scope": "footwear-only canonical (Claude Code ground truth, ex Doc 'v3.999'); April-20 purchase prices merged (purchasePrice/currency/origPrice). acquisition channel NOT merged (source had errors); only the few verified acquiredFrom values retained.",
   "active": [
     {
@@ -354,7 +354,7 @@
       "purchasePrice": 4580,
       "currency": "RMB",
       "acquiredFrom": null,
-      "swatch": "#5C3825",
+      "swatch": "#80614F",
       "origPrice": null
     },
     {
@@ -965,7 +965,7 @@
       "purchasePrice": 4888,
       "currency": "RMB",
       "acquiredFrom": null,
-      "swatch": "#5C3825",
+      "swatch": "#794D42",
       "origPrice": null
     },
     {
@@ -1208,7 +1208,7 @@
       "purchasePrice": 3508,
       "currency": "RMB",
       "acquiredFrom": null,
-      "swatch": "#6B4423",
+      "swatch": "#7A5441",
       "origPrice": null
     },
     {
@@ -1417,7 +1417,7 @@
       "purchasePrice": null,
       "currency": null,
       "acquiredFrom": null,
-      "swatch": "#A07050",
+      "swatch": "#C9AD91",
       "origPrice": null
     },
     {
@@ -1797,7 +1797,7 @@
       "purchasePrice": null,
       "currency": null,
       "acquiredFrom": "Mr. Zhao (bespoke), Shanghai",
-      "swatch": "#5C3825",
+      "swatch": "#46291C",
       "origPrice": null
     },
     {
@@ -2036,7 +2036,7 @@
       "purchasePrice": 580,
       "currency": "RMB",
       "acquiredFrom": null,
-      "swatch": "#C09060",
+      "swatch": "#C19164",
       "origPrice": null
     },
     {
@@ -2301,7 +2301,7 @@
       "purchasePrice": 2000,
       "currency": "RMB",
       "acquiredFrom": null,
-      "swatch": "#A14B2C",
+      "swatch": "#AA5633",
       "origPrice": null
     },
     {
@@ -3002,7 +3002,7 @@
       "purchasePrice": null,
       "currency": null,
       "acquiredFrom": "The Moulded Shoe, NYC — SMU",
-      "swatch": "#5C3825",
+      "swatch": "#7E5E4A",
       "origPrice": null
     },
     {
@@ -3111,7 +3111,8 @@
       "id": "r_1",
       "purchasePrice": 336,
       "acquiredFrom": null,
-      "origPrice": null
+      "origPrice": null,
+      "swatch": "#6E4334"
     },
     {
       "name": "Cheaney Chelsea Boot (Reddish Brown)",
@@ -3132,7 +3133,8 @@
       "id": "r_2",
       "purchasePrice": 200,
       "acquiredFrom": null,
-      "origPrice": null
+      "origPrice": null,
+      "swatch": "#6E4334"
     },
     {
       "name": "Crockett & Jones Full-Brogue George Boot (Chestnut) — John Winter SMU",
@@ -3405,7 +3407,8 @@
       "id": "r_retired_s_84",
       "purchasePrice": 320,
       "acquiredFrom": null,
-      "origPrice": null
+      "origPrice": null,
+      "swatch": "#9B9285"
     },
     {
       "name": "John Lobb Shore Loafer (Black Deerskin)",
