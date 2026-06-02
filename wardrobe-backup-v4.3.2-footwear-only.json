@@ -1,6 +1,6 @@
 {
-  "version": "4.3.1-footwear-only",
-  "exportedAt": "2026-06-02T01:39:29+00:00",
+  "version": "4.3.2-footwear-only",
+  "exportedAt": "2026-06-02T01:49:12+00:00",
   "scope": "footwear-only canonical master, OWNED by the Wardrobe project (authoritative source of truth). Claude Code pulls from this file; data flows one way from the project. April-20 purchase prices merged (purchasePrice/currency/origPrice). acquisition channel NOT merged (source had errors); only the few verified acquiredFrom values retained.",
   "active": [
     {
@@ -150,7 +150,7 @@
       "color_lane": "Whisky"
     },
     {
-      "name": "Alden T7831 LHS Penny Loafer (Dark Brown CXL)",
+      "name": "Alden 17831 LHS Penny Loafer",
       "category": "Footwear",
       "subcategory": "Loafer",
       "brand": "Alden",
@@ -513,7 +513,7 @@
       "color_lane": "Color 2"
     },
     {
-      "name": "Alden 9431S PTB (Tobacco Nubuck)",
+      "name": "9431S PTB (Oiled Nubuck)",
       "category": "Footwear",
       "subcategory": "Plain Toe Blucher",
       "brand": "Alden",
@@ -689,7 +689,7 @@
       "color_lane": "Brown"
     },
     {
-      "name": "Alden D1660C V-Tip Algonquin (Cigar Shell)",
+      "name": "D1660C V-Tip Algonquin Derby",
       "category": "Footwear",
       "subcategory": "Derby",
       "brand": "Alden",
@@ -1055,7 +1055,7 @@
       "color_lane": "Dark brown"
     },
     {
-      "name": "Edward Green Dover (Dark Oak Patina)",
+      "name": "Dover (Dark Oak Calf)",
       "category": "Footwear",
       "subcategory": "Derby",
       "brand": "Edward Green",
@@ -1112,7 +1112,7 @@
       "color_lane": "Black"
     },
     {
-      "name": "Edward Green Dover (Dark Brown Grain)",
+      "name": "Dover (London Grain)",
       "category": "Footwear",
       "subcategory": "Derby",
       "brand": "Edward Green",
@@ -1191,7 +1191,7 @@
       "color_lane": "Blue/Navy"
     },
     {
-      "name": "Hackett (Carmina) Almond Toe Loafer (Mid-Brown Patinated)",
+      "name": "Apron Toe Loafer (Mid-Brown Calf)",
       "category": "Footwear",
       "subcategory": "Loafer",
       "brand": "Hackett London (by Carmina)",
@@ -1690,11 +1690,11 @@
       "color_lane": "Black"
     },
     {
-      "name": "Paraboot Sand (Bordeaux Shell)",
+      "name": "Paraboot Sand (Burgundy Shell)",
       "category": "Footwear",
       "subcategory": "Split-Toe Derby",
       "brand": "Paraboot",
-      "color": "Bordeaux (Cordo Bordeaux shell)",
+      "color": "Burgundy (Cordo Bordeaux shell)",
       "material": "Shell Cordovan (Horween)",
       "season": [
         "Year-round"
@@ -1805,7 +1805,7 @@
       "color_lane": "Warm patinated"
     },
     {
-      "name": "Ralph Lauren (C&J) Cap Toe Oxford (Light Tan)",
+      "name": "Quarter Brogue Cap Toe Oxford",
       "category": "Footwear",
       "subcategory": "Oxford",
       "brand": "Ralph Lauren (by Crockett & Jones)",
@@ -1995,7 +1995,7 @@
       "color_lane": "Black"
     },
     {
-      "name": "Santoni Split-Toe Derby (Red Clay Patinated)",
+      "name": "Santoni Handmade Split-Toe Derby",
       "category": "Footwear",
       "subcategory": "Derby",
       "brand": "Santoni",
@@ -2649,7 +2649,7 @@
       "color_lane": "Black"
     },
     {
-      "name": "Alden D9622 Algonquin Split-Toe V-Tip (Brown Scotch Grain)",
+      "name": "D9622 Algonquin Split-Toe V-Tip Blucher",
       "category": "Footwear",
       "subcategory": "Derby",
       "brand": "Alden",
