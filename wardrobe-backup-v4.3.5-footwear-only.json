@@ -1,6 +1,6 @@
 {
-  "version": "4.3.4-footwear-only",
-  "exportedAt": "2026-06-02T06:27:00+00:00",
+  "version": "4.3.5-footwear-only",
+  "exportedAt": "2026-06-02T06:44:13+00:00",
   "scope": "footwear-only canonical master, OWNED by the Wardrobe project (authoritative source of truth). Claude Code pulls from this file; data flows one way from the project. April-20 purchase prices merged (purchasePrice/currency/origPrice). acquisition channel NOT merged (source had errors); only the few verified acquiredFrom values retained.",
   "active": [
     {
@@ -3421,7 +3421,7 @@
       "color_lane": "Burgundy"
     },
     {
-      "name": "Vass Budapest Longwing Blucher (Bordeaux Scotch Grain)",
+      "name": "Vass Budapest Shortwing Blucher (Bordeaux Scotch Grain)",
       "brand": "Vass",
       "type": "Wingtip",
       "color": "Dark Brown (Bordeaux-tagged, reads dark brown)",
