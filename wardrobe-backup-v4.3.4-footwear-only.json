@@ -1,6 +1,6 @@
 {
-  "version": "4.3.3-footwear-only",
-  "exportedAt": "2026-06-02T04:00:40+00:00",
+  "version": "4.3.4-footwear-only",
+  "exportedAt": "2026-06-02T06:27:00+00:00",
   "scope": "footwear-only canonical master, OWNED by the Wardrobe project (authoritative source of truth). Claude Code pulls from this file; data flows one way from the project. April-20 purchase prices merged (purchasePrice/currency/origPrice). acquisition channel NOT merged (source had errors); only the few verified acquiredFrom values retained.",
   "active": [
     {
@@ -2720,6 +2720,36 @@
       "swatch": "#2b3550",
       "origPrice": null,
       "color_lane": "Blue/Navy"
+    },
+    {
+      "name": "Crockett & Jones Cardigan 4 Shortwing (Dark Brown Shell)",
+      "category": "Footwear",
+      "subcategory": "Derby",
+      "brand": "Crockett & Jones",
+      "color": "Dark Brown",
+      "material": "Shell Cordovan (Horween)",
+      "season": [
+        "Year-round"
+      ],
+      "formality": "Smart Casual",
+      "status": "Active",
+      "notes": "Cardigan 4 · shortwing derby · dark brown shell cordovan · Made in England",
+      "tags": [
+        "crockett",
+        "brown",
+        "shell",
+        "shortwing",
+        "wingtip",
+        "derby",
+        "cardigan"
+      ],
+      "id": "s_115",
+      "purchasePrice": null,
+      "currency": null,
+      "acquiredFrom": null,
+      "origPrice": null,
+      "swatch": "#3F2A1B",
+      "color_lane": "Dark brown"
     }
   ],
   "retired": [
