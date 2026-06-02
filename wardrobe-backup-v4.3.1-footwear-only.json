@@ -1,6 +1,6 @@
 {
-  "version": "4.3-footwear-only",
-  "exportedAt": "2026-06-02T00:26:21+00:00",
+  "version": "4.3.1-footwear-only",
+  "exportedAt": "2026-06-02T01:39:29+00:00",
   "scope": "footwear-only canonical master, OWNED by the Wardrobe project (authoritative source of truth). Claude Code pulls from this file; data flows one way from the project. April-20 purchase prices merged (purchasePrice/currency/origPrice). acquisition channel NOT merged (source had errors); only the few verified acquiredFrom values retained.",
   "active": [
     {
@@ -27,7 +27,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#F0EDE5",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "White/Ecru"
     },
     {
       "name": "Adidas x CLOT Qi Flow Espadrille (Black)",
@@ -51,7 +52,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#1f1f1f",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Black"
     },
     {
       "name": "Alden 1031 NST Loafer (Cigar Shell)",
@@ -81,7 +83,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#5C3A1F",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Cigar"
     },
     {
       "name": "Alden 1340 Chukka PTB (Black Shell)",
@@ -112,7 +115,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#1a1a1a",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Black"
     },
     {
       "name": "Alden 1473 Chukka PTB (Whisky Shell)",
@@ -142,7 +146,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#A05020",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Whisky"
     },
     {
       "name": "Alden T7831 LHS Penny Loafer (Dark Brown CXL)",
@@ -170,7 +175,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#3a2418",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Dark brown"
     },
     {
       "name": "Alden 2160 STB (Color 8 Shell)",
@@ -197,7 +203,8 @@
       "currency": null,
       "acquiredFrom": null,
       "swatch": "#3a1414",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Color 8"
     },
     {
       "name": "Alden 2161 STB (Black Shell)",
@@ -223,7 +230,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#1a1a1a",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Black"
     },
     {
       "name": "Alden 2210 NST Derby (Color 8 Shell)",
@@ -252,7 +260,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#3a1414",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Color 8"
     },
     {
       "name": "Alden 2259 STB (Ravello Shell)",
@@ -278,7 +287,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#8B3A1F",
-      "origPrice": "449"
+      "origPrice": "449",
+      "color_lane": "Ravello"
     },
     {
       "name": "Alden 2451 Norwegian Blucher (Black Shell)",
@@ -304,7 +314,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#1a1a1a",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Black"
     },
     {
       "name": "Alden 2816 PTB (Burnished Dark Tan)",
@@ -317,7 +328,7 @@
         "Year-round"
       ],
       "formality": "Business Casual",
-      "status": "Active",
+      "status": "Maybe",
       "notes": "Plaza · 9.5 B/D",
       "tags": [
         "alden",
@@ -329,7 +340,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#6E4A2C",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Tan"
     },
     {
       "name": "Alden 29364F PTB (Brown CXL)",
@@ -355,7 +367,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#80614F",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Brown"
     },
     {
       "name": "Alden 40510H Indy Boot (Brown CXL)",
@@ -385,7 +398,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#3a1414",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Color 8"
     },
     {
       "name": "Alden 5165 Semi-Brogue Balmoral (Black Shell)",
@@ -413,7 +427,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#1a1a1a",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Black"
     },
     {
       "name": "Alden 67540 LHS Penny Loafer (Ravello Shell)",
@@ -440,7 +455,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#8B3A1F",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Ravello"
     },
     {
       "name": "Alden 704L Apron Toe Blucher (Dark Brown Suede)",
@@ -466,7 +482,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#4a3325",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Dark brown"
     },
     {
       "name": "Alden 73921 Ranger Mocc (Color 2 Shell)",
@@ -492,7 +509,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#A04020",
-      "origPrice": "1250"
+      "origPrice": "1250",
+      "color_lane": "Color 2"
     },
     {
       "name": "Alden 9431S PTB (Tobacco Nubuck)",
@@ -518,7 +536,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#9A6238",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Tobacco/Noix"
     },
     {
       "name": "Alden 9662F Full Brogue Blucher (Snuff Suede)",
@@ -545,7 +564,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#B8826A",
-      "origPrice": "$157.67"
+      "origPrice": "$157.67",
+      "color_lane": "Snuff"
     },
     {
       "name": "Alden 9750 Longwing Blucher (Ravello Shell)",
@@ -572,7 +592,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#8B3A1F",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Ravello"
     },
     {
       "name": "Alden for Brooks Brothers 06603 Unlined LHS Loafer (Color 8 Shell)",
@@ -606,7 +627,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#3a1414",
-      "origPrice": "$424.99"
+      "origPrice": "$424.99",
+      "color_lane": "Color 8"
     },
     {
       "name": "Alden A0908H V-Tip Jumper Boot (Ravello Shell)",
@@ -637,7 +659,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#8B3A1F",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Ravello"
     },
     {
       "name": "Alden A2505C STB (Brown Chamois)",
@@ -662,7 +685,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#5C3825",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Brown"
     },
     {
       "name": "Alden D1660C V-Tip Algonquin (Cigar Shell)",
@@ -690,7 +714,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#5C3A1F",
-      "origPrice": "750"
+      "origPrice": "750",
+      "color_lane": "Cigar"
     },
     {
       "name": "Alden D2875HC Jumper Boot (Color 4 Shell)",
@@ -719,7 +744,8 @@
       "currency": null,
       "acquiredFrom": null,
       "swatch": "#6B3525",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Color 4"
     },
     {
       "name": "Alden D2914C Algonquin Chukka (Color 8 Shell)",
@@ -750,7 +776,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#3a1414",
-      "origPrice": "$715.76"
+      "origPrice": "$715.76",
+      "color_lane": "Color 8"
     },
     {
       "name": "Allen Edmonds McAllister Longwing (Walnut)",
@@ -774,7 +801,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#7C5235",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Walnut"
     },
     {
       "name": "Bed|Stü Full Brogue Oxford (Mid-Brown)",
@@ -799,7 +827,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#7B5235",
-      "origPrice": "$250"
+      "origPrice": "$250",
+      "color_lane": "Medium brown"
     },
     {
       "name": "Stefano Bemer 4202 Side-Lace Wholecut (Brown)",
@@ -824,7 +853,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#794D42",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Brown"
     },
     {
       "name": "Stefano Bemer 6711 Balmoral Wholecut (Black/Grey)",
@@ -837,7 +867,7 @@
         "Year-round"
       ],
       "formality": "Smart Formal",
-      "status": "Active",
+      "status": "Maybe",
       "notes": "Form J · EU 43.5 · Florence",
       "tags": [
         "balmoral-brogue",
@@ -850,7 +880,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#1f1f1f",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Black"
     },
     {
       "name": "Carpe Diem Mid-Rise Boot (Dark Brown)",
@@ -876,7 +907,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#3F2A1B",
-      "origPrice": "600 euros"
+      "origPrice": "600 euros",
+      "color_lane": "Dark brown"
     },
     {
       "name": "Carpe Diem Reverse Shell PTB Derby (Natural, 2001)",
@@ -913,7 +945,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#A87850",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Natural reverse"
     },
     {
       "name": "Christian Louboutin Chambeliss Night Strass (Black Patent)",
@@ -938,7 +971,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#0a0a0a",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Black"
     },
     {
       "name": "Crockett & Jones Kensington Albert Loafer (Black)",
@@ -964,7 +998,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#1f1f1f",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Black"
     },
     {
       "name": "Doek Court Tennis Shoe (Ecru)",
@@ -987,7 +1022,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#E5DCC8",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "White/Ecru"
     },
     {
       "name": "Edward Green Cranleigh Shearling Boot (Mink Suede)",
@@ -1015,7 +1051,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#4a3325",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Dark brown"
     },
     {
       "name": "Edward Green Dover (Dark Oak Patina)",
@@ -1040,7 +1077,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#7A5441",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Oak"
     },
     {
       "name": "Edward Green Halifax Chukka Boot (Black Grain)",
@@ -1070,7 +1108,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#1f1f1f",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Black"
     },
     {
       "name": "Edward Green Dover (Dark Brown Grain)",
@@ -1097,7 +1136,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#3F2A1B",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Dark brown"
     },
     {
       "name": "Feiyue NYU Shanghai High-top (White/Blue)",
@@ -1121,7 +1161,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#F0EDE5",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Blue/Navy"
     },
     {
       "name": "Gucci Jordaan Horsebit Loafer (Navy Blue)",
@@ -1146,7 +1187,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#1F2848",
-      "origPrice": "$411.74"
+      "origPrice": "$411.74",
+      "color_lane": "Blue/Navy"
     },
     {
       "name": "Hackett (Carmina) Almond Toe Loafer (Mid-Brown Patinated)",
@@ -1172,7 +1214,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#7B5235",
-      "origPrice": "GBP 212.76"
+      "origPrice": "GBP 212.76",
+      "color_lane": "Medium brown"
     },
     {
       "name": "Hanover Longwing Blucher (Color 8 Shell)",
@@ -1200,7 +1243,8 @@
       "currency": null,
       "acquiredFrom": null,
       "swatch": "#3a1414",
-      "origPrice": "$149"
+      "origPrice": "$149",
+      "color_lane": "Color 8"
     },
     {
       "name": "Hender Scheme MIP-05 GAT (Natural Veg Tan)",
@@ -1225,7 +1269,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#C8A877",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Natural"
     },
     {
       "name": "Hermès Espadrille Sandal (Light Brown)",
@@ -1249,7 +1294,8 @@
       "currency": null,
       "acquiredFrom": null,
       "swatch": "#C9AD91",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Brown"
     },
     {
       "name": "John Lobb Tim Chukka (Dark Brown Suede)",
@@ -1281,7 +1327,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#4a3325",
-      "origPrice": "12500"
+      "origPrice": "12500",
+      "color_lane": "Dark brown"
     },
     {
       "name": "John Lobb Alliance Double Buckle Boot (Black)",
@@ -1311,7 +1358,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#1f1f1f",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Black"
     },
     {
       "name": "John Lobb City II Captoe Oxford (Dark Brown Museum)",
@@ -1339,7 +1387,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#3a2418",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Dark brown"
     },
     {
       "name": "John Lobb Garnier II Wholecut (Black)",
@@ -1366,7 +1415,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#1f1f1f",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Black"
     },
     {
       "name": "John Lobb Lopez Loafer (Black)",
@@ -1393,7 +1443,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#1f1f1f",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Black"
     },
     {
       "name": "John Lobb Pace Loafer (Dark Brown Grain)",
@@ -1419,7 +1470,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#3F2A1B",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Dark brown"
     },
     {
       "name": "John Lobb Philip II Captoe Oxford (Black)",
@@ -1446,7 +1498,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#1f1f1f",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Black"
     },
     {
       "name": "Jueshi Handmade Slip-On Mule (Dark Brown)",
@@ -1471,7 +1524,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#3F2A1B",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Dark brown"
     },
     {
       "name": "Loro Piana (Replica) Summer Walk Loafer (Deep Blue)",
@@ -1496,7 +1550,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#2A3858",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Blue/Navy"
     },
     {
       "name": "Lucchese Full-Quill Ostrich Cowboy Boots (Tan Cognac)",
@@ -1524,7 +1579,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#A8602A",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Cognac/Chestnut"
     },
     {
       "name": "Maison Margiela GAT Replica (White/Grey)",
@@ -1548,7 +1604,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#E5E0D8",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Grey/Charcoal"
     },
     {
       "name": "Meccariello Argentum Chisel M Shortwing (Dark Brown)",
@@ -1574,7 +1631,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#3F2A1B",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Dark brown"
     },
     {
       "name": "Mr. Zhao Bespoke Chelsea Boot (Dark Espresso Shell)",
@@ -1604,7 +1662,8 @@
       "currency": null,
       "acquiredFrom": "Mr. Zhao (bespoke), Shanghai",
       "swatch": "#46291C",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Dark brown"
     },
     {
       "name": "OnCloud CloudRunner (Black)",
@@ -1627,7 +1686,8 @@
       "currency": null,
       "acquiredFrom": null,
       "swatch": "#1f1f1f",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Black"
     },
     {
       "name": "Paraboot Sand (Bordeaux Shell)",
@@ -1659,7 +1719,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#5C2424",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Color 8"
     },
     {
       "name": "Paraboot Thiers Sport Derby (Dark Brown)",
@@ -1683,7 +1744,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#3F2A1B",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Dark brown"
     },
     {
       "name": "Peal & Co. Coniston Cap-Toe Boot (Burgundy Shell)",
@@ -1714,7 +1776,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#5C1F1F",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Burgundy"
     },
     {
       "name": "Quadratura Classica Orientale Sandal (Teak Deerskin)",
@@ -1738,7 +1801,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#5A3520",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Warm patinated"
     },
     {
       "name": "Ralph Lauren (C&J) Cap Toe Oxford (Light Tan)",
@@ -1763,7 +1827,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#C19164",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Tan"
     },
     {
       "name": "Ralph Lauren (Santoni) Cap Toe Oxford (Chestnut Suede)",
@@ -1789,7 +1854,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#7C3A1F",
-      "origPrice": "$191.27"
+      "origPrice": "$191.27",
+      "color_lane": "Cognac/Chestnut"
     },
     {
       "name": "Rancourt Baxter Ranger Moc (Rye)",
@@ -1814,7 +1880,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#7C5230",
-      "origPrice": "$338"
+      "origPrice": "$338",
+      "color_lane": "Warm patinated"
     },
     {
       "name": "Rancourt Pinch Penny Loafer (Caramel Shell)",
@@ -1842,7 +1909,8 @@
       "currency": "RMB",
       "acquiredFrom": "Rancourt (direct MTO)",
       "swatch": "#A56F35",
-      "origPrice": "$657.89"
+      "origPrice": "$657.89",
+      "color_lane": "Tan"
     },
     {
       "name": "Red Wing 9871 (Oro Russet, Vibram resole)",
@@ -1868,7 +1936,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#9C6A33",
-      "origPrice": "2000"
+      "origPrice": "2000",
+      "color_lane": "Tan"
     },
     {
       "name": "Santoni Double Monk Strap (Dark Chocolate Suede)",
@@ -1893,7 +1962,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#3a2818",
-      "origPrice": "1600"
+      "origPrice": "1600",
+      "color_lane": "Dark brown"
     },
     {
       "name": "Santoni Ugolino Double Monk (Charcoal Patinated)",
@@ -1921,7 +1991,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#1f1f1f",
-      "origPrice": "4200"
+      "origPrice": "4200",
+      "color_lane": "Black"
     },
     {
       "name": "Santoni Split-Toe Derby (Red Clay Patinated)",
@@ -1946,7 +2017,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#AA5633",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Russet/Red"
     },
     {
       "name": "Paolo Scafora 508 Captoe Semi-Brogue (Dark Brown)",
@@ -1972,7 +2044,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#3F2A1B",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Dark brown"
     },
     {
       "name": "Shanghai Custom Chelsea Boot (Black)",
@@ -1999,7 +2072,8 @@
       "currency": null,
       "acquiredFrom": null,
       "swatch": "#1f1f1f",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Black"
     },
     {
       "name": "Shoto 1122 Caos Chelsea Boot (Tobacco)",
@@ -2013,7 +2087,7 @@
         "Winter"
       ],
       "formality": "Artisan Casual",
-      "status": "Active",
+      "status": "Maybe",
       "notes": "9.5 · Italy",
       "tags": [
         "boot",
@@ -2025,7 +2099,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#8B5235",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Tobacco/Noix"
     },
     {
       "name": "Shoto Service Captoe Boot (Cognac)",
@@ -2039,7 +2114,7 @@
         "Winter"
       ],
       "formality": "Artisan Casual",
-      "status": "Active",
+      "status": "Maybe",
       "notes": "EU 44 · Italy",
       "tags": [
         "boot",
@@ -2052,7 +2127,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#8B4520",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Cognac/Chestnut"
     },
     {
       "name": "Timberland × DOE 3-Eye Vibram Boat Shoe (Black)",
@@ -2076,7 +2152,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#1f1f1f",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Black"
     },
     {
       "name": "TLB Mallorca 114 Artista Derby (Dark Brown Hatch Grain)",
@@ -2100,7 +2177,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#3F2A1B",
-      "origPrice": "694.21 EUR"
+      "origPrice": "694.21 EUR",
+      "color_lane": "Dark brown"
     },
     {
       "name": "TLB Mallorca 121 Artista Semi-Brogue (Black Shell Rocado)",
@@ -2126,7 +2204,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#1a1a1a",
-      "origPrice": "551.65 EUR"
+      "origPrice": "551.65 EUR",
+      "color_lane": "Black"
     },
     {
       "name": "Vans Vault x Horween Old Skool (Dark Brown CXL)",
@@ -2150,7 +2229,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#3a2418",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Dark brown"
     },
     {
       "name": "Vass Alt English Captoe Balmoral (Antique Cognac)",
@@ -2176,7 +2256,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#5C2424",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Cognac/Chestnut"
     },
     {
       "name": "Viberg 2030 Service Boot Captoe (Charcoal Chamois Roughout)",
@@ -2208,7 +2289,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#1f1f1f",
-      "origPrice": "$555.58"
+      "origPrice": "$555.58",
+      "color_lane": "Black"
     },
     {
       "name": "Viberg 2030 Service Boot Captoe (Chestnut Horsebutt)",
@@ -2237,7 +2319,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#7C3A1F",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Cognac/Chestnut"
     },
     {
       "name": "Viberg 2030 Service Boot Plain Toe (Black CXL)",
@@ -2267,7 +2350,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#2a1f1a",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Black"
     },
     {
       "name": "Yohei Fukuda Double Monk (Mahogany Museum Calf)",
@@ -2293,7 +2377,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#5A2D1F",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Mahogany"
     },
     {
       "name": "Yohji Yamamoto Pour Homme Crepe Derby (Brown Calf)",
@@ -2316,7 +2401,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#5C3825",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Brown"
     },
     {
       "name": "Zhou Lv 拙履 West Lake Wholecut (Amber Brown)",
@@ -2342,7 +2428,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#7C4525",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Warm patinated"
     },
     {
       "name": "Mayton Boot — Raw Shell Cordovan PTB",
@@ -2373,7 +2460,8 @@
       "currency": null,
       "acquiredFrom": "Mayton (direct MTO commission)",
       "swatch": "#A87850",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Natural"
     },
     {
       "name": "Alden 6221L Unlined Penny Loafer (Snuff Suede)",
@@ -2401,7 +2489,8 @@
       "currency": null,
       "acquiredFrom": null,
       "swatch": "#B8826A",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Snuff"
     },
     {
       "name": "Suitsupply Double Monk (Black Calf)",
@@ -2428,7 +2517,8 @@
       "currency": null,
       "acquiredFrom": null,
       "swatch": "#1f1f1f",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Black"
     },
     {
       "name": "Alden D6627C V-Tip Blucher (Color 8 Shell)",
@@ -2456,7 +2546,8 @@
       "currency": "RMB",
       "acquiredFrom": null,
       "swatch": "#3a1414",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Color 8"
     },
     {
       "name": "Lemargo Ebano Laced Dress Boot (Ebony)",
@@ -2487,7 +2578,8 @@
       "currency": null,
       "acquiredFrom": null,
       "swatch": "#3F2A1B",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Black"
     },
     {
       "name": "Ruttshoes Ridley Split V-Tip Blucher (Color 8 Shell)",
@@ -2521,7 +2613,8 @@
       "currency": "RMB",
       "acquiredFrom": "Classic Works Shanghai (Calvin) — SMU",
       "swatch": "#3a1414",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Color 8"
     },
     {
       "name": "Viberg Savoy V-Tip Derby (Nero Kangaroo)",
@@ -2552,7 +2645,8 @@
       "currency": "USD",
       "acquiredFrom": "Leffot, NYC",
       "swatch": "#1f1f1f",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Black"
     },
     {
       "name": "Alden D9622 Algonquin Split-Toe V-Tip (Brown Scotch Grain)",
@@ -2588,7 +2682,8 @@
       "currency": null,
       "acquiredFrom": "The Moulded Shoe, NYC — SMU",
       "swatch": "#7E5E4A",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Brown"
     },
     {
       "name": "Alden 96817 Leffot SMU PTB (Navy Buck)",
@@ -2623,7 +2718,8 @@
       "currency": "USD",
       "acquiredFrom": "Leffot, NYC — SMU",
       "swatch": "#2b3550",
-      "origPrice": null
+      "origPrice": null,
+      "color_lane": "Blue/Navy"
     }
   ],
   "retired": [
@@ -2646,7 +2742,9 @@
       "id": "r_0",
       "purchasePrice": 380,
       "acquiredFrom": null,
-      "origPrice": null
+      "origPrice": null,
+      "swatch": "#5C2424",
+      "color_lane": "Burgundy"
     },
     {
       "name": "Bed|Stü Sneaker Leather Top (Reddish Brown)",
@@ -2668,7 +2766,8 @@
       "purchasePrice": 336,
       "acquiredFrom": null,
       "origPrice": null,
-      "swatch": "#6E4334"
+      "swatch": "#6E4334",
+      "color_lane": "Russet/Red"
     },
     {
       "name": "Cheaney Chelsea Boot (Reddish Brown)",
@@ -2690,7 +2789,8 @@
       "purchasePrice": 200,
       "acquiredFrom": null,
       "origPrice": null,
-      "swatch": "#6E4334"
+      "swatch": "#6E4334",
+      "color_lane": "Russet/Red"
     },
     {
       "name": "Crockett & Jones Full-Brogue George Boot (Chestnut) — John Winter SMU",
@@ -2711,7 +2811,9 @@
       "id": "r_3",
       "purchasePrice": 490,
       "acquiredFrom": null,
-      "origPrice": null
+      "origPrice": null,
+      "swatch": "#7C3A1F",
+      "color_lane": "Cognac/Chestnut"
     },
     {
       "name": "East Rock Wingtip Chelsea Boot (Black)",
@@ -2732,7 +2834,9 @@
       "id": "r_4",
       "purchasePrice": 100,
       "acquiredFrom": null,
-      "origPrice": null
+      "origPrice": null,
+      "swatch": "#1f1f1f",
+      "color_lane": "Black"
     },
     {
       "name": "Grenson Cambridge Semi-Brogue Oxford (Black)",
@@ -2753,7 +2857,9 @@
       "id": "r_5",
       "purchasePrice": 780,
       "acquiredFrom": null,
-      "origPrice": null
+      "origPrice": null,
+      "swatch": "#1f1f1f",
+      "color_lane": "Black"
     },
     {
       "name": "Joseph Cheaney Warwick Cap-Toe Oxford (Dark Brown)",
@@ -2774,7 +2880,9 @@
       "id": "r_6",
       "purchasePrice": 765,
       "acquiredFrom": null,
-      "origPrice": null
+      "origPrice": null,
+      "swatch": "#3F2A1B",
+      "color_lane": "Dark brown"
     },
     {
       "name": "Löf & Tung Aldrin Shortwing Oxford (Color 8 Shell)",
@@ -2795,7 +2903,9 @@
       "id": "r_7",
       "purchasePrice": 3000,
       "acquiredFrom": null,
-      "origPrice": null
+      "origPrice": null,
+      "swatch": "#3a1414",
+      "color_lane": "Color 8"
     },
     {
       "name": "Massimo Dutti Wholecut Limited Edition (Dark Blue Suede)",
@@ -2816,7 +2926,9 @@
       "id": "r_8",
       "purchasePrice": 101,
       "acquiredFrom": null,
-      "origPrice": null
+      "origPrice": null,
+      "swatch": "#2A3858",
+      "color_lane": "Blue/Navy"
     },
     {
       "name": "Santoni Double Monk Strap (Dark Navy Suede)",
@@ -2837,7 +2949,9 @@
       "id": "r_9",
       "purchasePrice": 900,
       "acquiredFrom": null,
-      "origPrice": null
+      "origPrice": null,
+      "swatch": "#1F2848",
+      "color_lane": "Blue/Navy"
     },
     {
       "name": "Shanghai Custom Wholecut Semi-Brogue (Dark Brown)",
@@ -2858,7 +2972,9 @@
       "id": "r_10",
       "purchasePrice": 800,
       "acquiredFrom": null,
-      "origPrice": null
+      "origPrice": null,
+      "swatch": "#3F2818",
+      "color_lane": "Dark brown"
     },
     {
       "name": "Tricker's Semi-Brogue Oxford (Mahogany Brown)",
@@ -2879,7 +2995,9 @@
       "id": "r_11",
       "purchasePrice": 399,
       "acquiredFrom": null,
-      "origPrice": null
+      "origPrice": null,
+      "swatch": "#5A2D1F",
+      "color_lane": "Mahogany"
     },
     {
       "name": "Zegna Triple Stitch Sneaker (Black)",
@@ -2900,7 +3018,9 @@
       "id": "r_12",
       "purchasePrice": 115,
       "acquiredFrom": null,
-      "origPrice": null
+      "origPrice": null,
+      "swatch": "#1f1f1f",
+      "color_lane": "Black"
     },
     {
       "name": "Zegna Tiziano Sneaker (White/Brown)",
@@ -2921,7 +3041,9 @@
       "id": "r_13",
       "purchasePrice": null,
       "acquiredFrom": "Gift (from Carrie)",
-      "origPrice": null
+      "origPrice": null,
+      "swatch": "#F0EDE5",
+      "color_lane": "White/Ecru"
     },
     {
       "name": "Ralph Lauren RRL Travel Slipper (Dark Brown)",
@@ -2942,7 +3064,9 @@
       "id": "r_retired_s_78",
       "purchasePrice": null,
       "acquiredFrom": null,
-      "origPrice": null
+      "origPrice": null,
+      "swatch": "#3F2A1B",
+      "color_lane": "Dark brown"
     },
     {
       "name": "John Lobb Shore Loafer (Black Deerskin)",
@@ -2963,7 +3087,9 @@
       "id": "r_16",
       "purchasePrice": 3500,
       "acquiredFrom": null,
-      "origPrice": null
+      "origPrice": null,
+      "swatch": "#1f1f1f",
+      "color_lane": "Black"
     },
     {
       "name": "Alden 4060 Tanker Boot (Color 8 Shell)",
@@ -2984,7 +3110,9 @@
       "id": "r_18",
       "purchasePrice": 4558,
       "acquiredFrom": null,
-      "origPrice": null
+      "origPrice": null,
+      "swatch": "#3a1414",
+      "color_lane": "Color 8"
     },
     {
       "name": "Alden 4074 Tanker Boot (Cigar Shell)",
@@ -3005,7 +3133,9 @@
       "id": "r_19",
       "purchasePrice": 8987,
       "acquiredFrom": null,
-      "origPrice": null
+      "origPrice": null,
+      "swatch": "#5C3A1F",
+      "color_lane": "Cigar"
     },
     {
       "name": "Alden 913 Medallion Balmoral (Medium Brown)",
@@ -3026,7 +3156,9 @@
       "id": "r_20",
       "purchasePrice": 1000,
       "acquiredFrom": null,
-      "origPrice": null
+      "origPrice": null,
+      "swatch": "#7B5235",
+      "color_lane": "Medium brown"
     },
     {
       "name": "Alden D32027 LHS Full Strap Loafer (Navy Suede)",
@@ -3047,7 +3179,9 @@
       "id": "r_21",
       "purchasePrice": 2390,
       "acquiredFrom": null,
-      "origPrice": null
+      "origPrice": null,
+      "swatch": "#1F2848",
+      "color_lane": "Blue/Navy"
     },
     {
       "name": "Baudoin & Lange Calvi Espadrille (Marina Navy)",
@@ -3068,7 +3202,9 @@
       "id": "r_22",
       "purchasePrice": 1399,
       "acquiredFrom": null,
-      "origPrice": null
+      "origPrice": null,
+      "swatch": "#1F2848",
+      "color_lane": "Blue/Navy"
     },
     {
       "name": "Chiappini Chukka Norvegese (Cognac)",
@@ -3089,7 +3225,9 @@
       "id": "r_23",
       "purchasePrice": 2580,
       "acquiredFrom": null,
-      "origPrice": null
+      "origPrice": null,
+      "swatch": "#8B4520",
+      "color_lane": "Cognac/Chestnut"
     },
     {
       "name": "Heschung (CdG) Norwegian Buckle Boot (Charcoal)",
@@ -3110,7 +3248,9 @@
       "id": "r_24",
       "purchasePrice": 2610,
       "acquiredFrom": null,
-      "origPrice": null
+      "origPrice": null,
+      "swatch": "#383838",
+      "color_lane": "Grey/Charcoal"
     },
     {
       "name": "Paraboot Michael (Walnut Suede)",
@@ -3131,7 +3271,9 @@
       "id": "r_25",
       "purchasePrice": 1700,
       "acquiredFrom": null,
-      "origPrice": "2600"
+      "origPrice": "2600",
+      "swatch": "#7C5235",
+      "color_lane": "Tobacco/Noix"
     },
     {
       "name": "Peal & Co. Captoe Boot (Dark Brown Suede)",
@@ -3152,7 +3294,9 @@
       "id": "r_26",
       "purchasePrice": 1180,
       "acquiredFrom": null,
-      "origPrice": "2000"
+      "origPrice": "2000",
+      "swatch": "#3F2A1B",
+      "color_lane": "Dark brown"
     },
     {
       "name": "Ralph Lauren (Allen Edmonds) Longwing Derby (Black Calf)",
@@ -3173,7 +3317,9 @@
       "id": "r_27",
       "purchasePrice": 400,
       "acquiredFrom": null,
-      "origPrice": null
+      "origPrice": null,
+      "swatch": "#1f1f1f",
+      "color_lane": "Black"
     },
     {
       "name": "Ralph Lauren (C&J) Livingstone II Service Boot (Dark Brown Grain)",
@@ -3194,7 +3340,9 @@
       "id": "r_28",
       "purchasePrice": 4000,
       "acquiredFrom": null,
-      "origPrice": "5500"
+      "origPrice": "5500",
+      "swatch": "#3F2A1B",
+      "color_lane": "Dark brown"
     },
     {
       "name": "Ralph Lauren Purple Label Driving Loafer (Dark Grey Suede)",
@@ -3215,7 +3363,9 @@
       "id": "r_29",
       "purchasePrice": 804,
       "acquiredFrom": null,
-      "origPrice": "$111.61"
+      "origPrice": "$111.61",
+      "swatch": "#3a3a3c",
+      "color_lane": "Grey/Charcoal"
     },
     {
       "name": "Riccardo Bestetti Chukka Boot (Burgundy Burnished)",
@@ -3236,7 +3386,9 @@
       "id": "r_30",
       "purchasePrice": 5500,
       "acquiredFrom": null,
-      "origPrice": null
+      "origPrice": null,
+      "swatch": "#5C2424",
+      "color_lane": "Burgundy"
     },
     {
       "name": "Vass Budapest Longwing Blucher (Bordeaux Scotch Grain)",
@@ -3257,7 +3409,9 @@
       "id": "r_31",
       "purchasePrice": 3188,
       "acquiredFrom": null,
-      "origPrice": null
+      "origPrice": null,
+      "swatch": "#5C2424",
+      "color_lane": "Burgundy"
     },
     {
       "name": "Dinkelacker Rio Full-Brogue C (Dark Cognac Shell)",
@@ -3278,7 +3432,9 @@
       "id": "r_32",
       "purchasePrice": null,
       "acquiredFrom": null,
-      "origPrice": null
+      "origPrice": null,
+      "swatch": "#8B4520",
+      "color_lane": "Cognac/Chestnut"
     }
   ]
 }

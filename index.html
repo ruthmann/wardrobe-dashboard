@@ -199,7 +199,7 @@ function StatusTag({status}){
   const styles={
     "Active":{bg:"#EAF3DE",color:"#3B6D11"}, "Repair":{bg:"#FCEBEB",color:"#A32D2D"},
     "En Route":{bg:"#FAEEDA",color:"#BA7517"}, "Wishlist":{bg:"#EEEDFE",color:"#534AB7"},
-    "Retired":{bg:"#F1EFE8",color:"#5F5E5A"},
+    "Maybe":{bg:"#FCF4D9",color:"#866A00"}, "Retired":{bg:"#F1EFE8",color:"#5F5E5A"},
   };
   const s=styles[status]||styles.Active;
   return <span className="tag" style={{background:s.bg,color:s.color}}>{(status||"").toLowerCase()}</span>;
@@ -546,7 +546,7 @@ function ShoeBrowser(){
   const laneOptions=useMemo(()=>[...new Set(items.map(getColorLane))].sort(),[items]);
 
   const seasonOptions=["Year-round","Spring","Summer","Fall","Winter"];
-  const statusOptions=["Active","Repair","En Route","Wishlist","Retired"];
+  const statusOptions=["Active","Maybe","Repair","En Route","Wishlist","Retired"];
   const materialOptions=["Shell","Suede","CXL/Pull-up","Calf","Grain","Patent","Horse leather","Vachetta","Exotic","Canvas","Synthetic","Other leather"];
   const formalityOptions=["Formal","Smart Formal","Smart Casual","Business Casual","Casual"];
   const traditionOptions=["American","British","Continental","Asian"];
