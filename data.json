@@ -1,6 +1,6 @@
 {
-  "version": "4.3.2-footwear-only",
-  "exportedAt": "2026-06-02T01:49:12+00:00",
+  "version": "4.3.3-footwear-only",
+  "exportedAt": "2026-06-02T04:00:40+00:00",
   "scope": "footwear-only canonical master, OWNED by the Wardrobe project (authoritative source of truth). Claude Code pulls from this file; data flows one way from the project. April-20 purchase prices merged (purchasePrice/currency/origPrice). acquisition channel NOT merged (source had errors); only the few verified acquiredFrom values retained.",
   "active": [
     {
@@ -513,7 +513,7 @@
       "color_lane": "Color 2"
     },
     {
-      "name": "9431S PTB (Oiled Nubuck)",
+      "name": "Alden 9431S PTB (Oiled Nubuck)",
       "category": "Footwear",
       "subcategory": "Plain Toe Blucher",
       "brand": "Alden",
@@ -689,7 +689,7 @@
       "color_lane": "Brown"
     },
     {
-      "name": "D1660C V-Tip Algonquin Derby",
+      "name": "Alden D1660C V-Tip Algonquin Derby",
       "category": "Footwear",
       "subcategory": "Derby",
       "brand": "Alden",
@@ -1055,7 +1055,7 @@
       "color_lane": "Dark brown"
     },
     {
-      "name": "Dover (Dark Oak Calf)",
+      "name": "Edward Green Dover (Dark Oak Calf)",
       "category": "Footwear",
       "subcategory": "Derby",
       "brand": "Edward Green",
@@ -1112,7 +1112,7 @@
       "color_lane": "Black"
     },
     {
-      "name": "Dover (London Grain)",
+      "name": "Edward Green Dover (London Grain)",
       "category": "Footwear",
       "subcategory": "Derby",
       "brand": "Edward Green",
@@ -1191,7 +1191,7 @@
       "color_lane": "Blue/Navy"
     },
     {
-      "name": "Apron Toe Loafer (Mid-Brown Calf)",
+      "name": "Hackett (Carmina) Apron Toe Loafer (Mid-Brown Calf)",
       "category": "Footwear",
       "subcategory": "Loafer",
       "brand": "Hackett London (by Carmina)",
@@ -1805,7 +1805,7 @@
       "color_lane": "Warm patinated"
     },
     {
-      "name": "Quarter Brogue Cap Toe Oxford",
+      "name": "Ralph Lauren (C&J) Quarter Brogue Cap Toe Oxford",
       "category": "Footwear",
       "subcategory": "Oxford",
       "brand": "Ralph Lauren (by Crockett & Jones)",
@@ -2649,7 +2649,7 @@
       "color_lane": "Black"
     },
     {
-      "name": "D9622 Algonquin Split-Toe V-Tip Blucher",
+      "name": "Alden D9622 Algonquin Split-Toe V-Tip Blucher",
       "category": "Footwear",
       "subcategory": "Derby",
       "brand": "Alden",
