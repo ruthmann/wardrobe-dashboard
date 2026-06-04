@@ -1,7 +1,7 @@
 {
-  "version": "4.3.5-footwear-only",
-  "exportedAt": "2026-06-02T06:44:13+00:00",
-  "scope": "footwear-only canonical master, OWNED by the Wardrobe project (authoritative source of truth). Claude Code pulls from this file; data flows one way from the project. April-20 purchase prices merged (purchasePrice/currency/origPrice). acquisition channel NOT merged (source had errors); only the few verified acquiredFrom values retained.",
+  "version": "4.5.1-footwear-only",
+  "exportedAt": "2026-06-04T07:16:11+00:00",
+  "scope": "footwear-only canonical master, OWNED by the Wardrobe project (authoritative source of truth). Claude Code pulls from this file; data flows one way from the project. April-20 purchase prices merged (purchasePrice/currency/origPrice). acquisition channel NOT merged (source had errors); only the few verified acquiredFrom values retained. v4.5: backfilled category field on all retired records (was null) so retired data is category-queryable in lockstep with active.",
   "active": [
     {
       "name": "Academy of Love Espadrilles (White canvas)",
@@ -2630,7 +2630,7 @@
       "status": "Active",
       "model": "Savoy",
       "last": "Cantilever",
-      "notes": "Cantilever last · 9.5E · Canada · Bonaudo kangaroo upper · split-toe (V-tip) apron front · Norwegian welt + leather sole, stacked heel · acquired NYC, May 2026. Cantilever sizes down ~1 from the 2030 last.",
+      "notes": "Cantilever last · 9.5E · Canada · Bonaudo kangaroo upper · split-toe (V-tip) apron front · 270 flat welt + leather sole, stacked heel · acquired NYC, May 2026. Cantilever sizes down ~1 from the 2030 last.",
       "tags": [
         "viberg",
         "kangaroo",
@@ -2638,7 +2638,7 @@
         "derby",
         "v-tip",
         "split-toe",
-        "norwegian-welt"
+        "270-flat-welt"
       ],
       "id": "s_112",
       "purchasePrice": 1100,
@@ -2774,7 +2774,8 @@
       "acquiredFrom": null,
       "origPrice": null,
       "swatch": "#5C2424",
-      "color_lane": "Burgundy"
+      "color_lane": "Burgundy",
+      "category": "Footwear"
     },
     {
       "name": "Bed|Stü Sneaker Leather Top (Reddish Brown)",
@@ -2797,7 +2798,8 @@
       "acquiredFrom": null,
       "origPrice": null,
       "swatch": "#6E4334",
-      "color_lane": "Russet/Red"
+      "color_lane": "Russet/Red",
+      "category": "Footwear"
     },
     {
       "name": "Cheaney Chelsea Boot (Reddish Brown)",
@@ -2820,7 +2822,8 @@
       "acquiredFrom": null,
       "origPrice": null,
       "swatch": "#6E4334",
-      "color_lane": "Russet/Red"
+      "color_lane": "Russet/Red",
+      "category": "Footwear"
     },
     {
       "name": "Crockett & Jones Full-Brogue George Boot (Chestnut) — John Winter SMU",
@@ -2843,7 +2846,8 @@
       "acquiredFrom": null,
       "origPrice": null,
       "swatch": "#7C3A1F",
-      "color_lane": "Cognac/Chestnut"
+      "color_lane": "Cognac/Chestnut",
+      "category": "Footwear"
     },
     {
       "name": "East Rock Wingtip Chelsea Boot (Black)",
@@ -2866,7 +2870,8 @@
       "acquiredFrom": null,
       "origPrice": null,
       "swatch": "#1f1f1f",
-      "color_lane": "Black"
+      "color_lane": "Black",
+      "category": "Footwear"
     },
     {
       "name": "Grenson Cambridge Semi-Brogue Oxford (Black)",
@@ -2889,7 +2894,8 @@
       "acquiredFrom": null,
       "origPrice": null,
       "swatch": "#1f1f1f",
-      "color_lane": "Black"
+      "color_lane": "Black",
+      "category": "Footwear"
     },
     {
       "name": "Joseph Cheaney Warwick Cap-Toe Oxford (Dark Brown)",
@@ -2912,7 +2918,8 @@
       "acquiredFrom": null,
       "origPrice": null,
       "swatch": "#3F2A1B",
-      "color_lane": "Dark brown"
+      "color_lane": "Dark brown",
+      "category": "Footwear"
     },
     {
       "name": "Löf & Tung Aldrin Shortwing Oxford (Color 8 Shell)",
@@ -2935,7 +2942,8 @@
       "acquiredFrom": null,
       "origPrice": null,
       "swatch": "#3a1414",
-      "color_lane": "Color 8"
+      "color_lane": "Color 8",
+      "category": "Footwear"
     },
     {
       "name": "Massimo Dutti Wholecut Limited Edition (Dark Blue Suede)",
@@ -2958,7 +2966,8 @@
       "acquiredFrom": null,
       "origPrice": null,
       "swatch": "#2A3858",
-      "color_lane": "Blue/Navy"
+      "color_lane": "Blue/Navy",
+      "category": "Footwear"
     },
     {
       "name": "Santoni Double Monk Strap (Dark Navy Suede)",
@@ -2981,7 +2990,8 @@
       "acquiredFrom": null,
       "origPrice": null,
       "swatch": "#1F2848",
-      "color_lane": "Blue/Navy"
+      "color_lane": "Blue/Navy",
+      "category": "Footwear"
     },
     {
       "name": "Shanghai Custom Wholecut Semi-Brogue (Dark Brown)",
@@ -3004,7 +3014,8 @@
       "acquiredFrom": null,
       "origPrice": null,
       "swatch": "#3F2818",
-      "color_lane": "Dark brown"
+      "color_lane": "Dark brown",
+      "category": "Footwear"
     },
     {
       "name": "Tricker's Semi-Brogue Oxford (Mahogany Brown)",
@@ -3027,7 +3038,8 @@
       "acquiredFrom": null,
       "origPrice": null,
       "swatch": "#5A2D1F",
-      "color_lane": "Mahogany"
+      "color_lane": "Mahogany",
+      "category": "Footwear"
     },
     {
       "name": "Zegna Triple Stitch Sneaker (Black)",
@@ -3050,7 +3062,8 @@
       "acquiredFrom": null,
       "origPrice": null,
       "swatch": "#1f1f1f",
-      "color_lane": "Black"
+      "color_lane": "Black",
+      "category": "Footwear"
     },
     {
       "name": "Zegna Tiziano Sneaker (White/Brown)",
@@ -3073,7 +3086,8 @@
       "acquiredFrom": "Gift (from Carrie)",
       "origPrice": null,
       "swatch": "#F0EDE5",
-      "color_lane": "White/Ecru"
+      "color_lane": "White/Ecru",
+      "category": "Footwear"
     },
     {
       "name": "Ralph Lauren RRL Travel Slipper (Dark Brown)",
@@ -3096,7 +3110,8 @@
       "acquiredFrom": null,
       "origPrice": null,
       "swatch": "#3F2A1B",
-      "color_lane": "Dark brown"
+      "color_lane": "Dark brown",
+      "category": "Footwear"
     },
     {
       "name": "John Lobb Shore Loafer (Black Deerskin)",
@@ -3119,7 +3134,8 @@
       "acquiredFrom": null,
       "origPrice": null,
       "swatch": "#1f1f1f",
-      "color_lane": "Black"
+      "color_lane": "Black",
+      "category": "Footwear"
     },
     {
       "name": "Alden 4060 Tanker Boot (Color 8 Shell)",
@@ -3142,7 +3158,8 @@
       "acquiredFrom": null,
       "origPrice": null,
       "swatch": "#3a1414",
-      "color_lane": "Color 8"
+      "color_lane": "Color 8",
+      "category": "Footwear"
     },
     {
       "name": "Alden 4074 Tanker Boot (Cigar Shell)",
@@ -3165,7 +3182,8 @@
       "acquiredFrom": null,
       "origPrice": null,
       "swatch": "#5C3A1F",
-      "color_lane": "Cigar"
+      "color_lane": "Cigar",
+      "category": "Footwear"
     },
     {
       "name": "Alden 913 Medallion Balmoral (Medium Brown)",
@@ -3188,7 +3206,8 @@
       "acquiredFrom": null,
       "origPrice": null,
       "swatch": "#7B5235",
-      "color_lane": "Medium brown"
+      "color_lane": "Medium brown",
+      "category": "Footwear"
     },
     {
       "name": "Alden D32027 LHS Full Strap Loafer (Navy Suede)",
@@ -3211,7 +3230,8 @@
       "acquiredFrom": null,
       "origPrice": null,
       "swatch": "#1F2848",
-      "color_lane": "Blue/Navy"
+      "color_lane": "Blue/Navy",
+      "category": "Footwear"
     },
     {
       "name": "Baudoin & Lange Calvi Espadrille (Marina Navy)",
@@ -3234,7 +3254,8 @@
       "acquiredFrom": null,
       "origPrice": null,
       "swatch": "#1F2848",
-      "color_lane": "Blue/Navy"
+      "color_lane": "Blue/Navy",
+      "category": "Footwear"
     },
     {
       "name": "Chiappini Chukka Norvegese (Cognac)",
@@ -3257,7 +3278,8 @@
       "acquiredFrom": null,
       "origPrice": null,
       "swatch": "#8B4520",
-      "color_lane": "Cognac/Chestnut"
+      "color_lane": "Cognac/Chestnut",
+      "category": "Footwear"
     },
     {
       "name": "Heschung (CdG) Norwegian Buckle Boot (Charcoal)",
@@ -3280,7 +3302,8 @@
       "acquiredFrom": null,
       "origPrice": null,
       "swatch": "#383838",
-      "color_lane": "Grey/Charcoal"
+      "color_lane": "Grey/Charcoal",
+      "category": "Footwear"
     },
     {
       "name": "Paraboot Michael (Walnut Suede)",
@@ -3303,7 +3326,8 @@
       "acquiredFrom": null,
       "origPrice": "2600",
       "swatch": "#7C5235",
-      "color_lane": "Tobacco/Noix"
+      "color_lane": "Tobacco/Noix",
+      "category": "Footwear"
     },
     {
       "name": "Peal & Co. Captoe Boot (Dark Brown Suede)",
@@ -3326,7 +3350,8 @@
       "acquiredFrom": null,
       "origPrice": "2000",
       "swatch": "#3F2A1B",
-      "color_lane": "Dark brown"
+      "color_lane": "Dark brown",
+      "category": "Footwear"
     },
     {
       "name": "Ralph Lauren (Allen Edmonds) Longwing Derby (Black Calf)",
@@ -3349,7 +3374,8 @@
       "acquiredFrom": null,
       "origPrice": null,
       "swatch": "#1f1f1f",
-      "color_lane": "Black"
+      "color_lane": "Black",
+      "category": "Footwear"
     },
     {
       "name": "Ralph Lauren (C&J) Livingstone II Service Boot (Dark Brown Grain)",
@@ -3372,7 +3398,8 @@
       "acquiredFrom": null,
       "origPrice": "5500",
       "swatch": "#3F2A1B",
-      "color_lane": "Dark brown"
+      "color_lane": "Dark brown",
+      "category": "Footwear"
     },
     {
       "name": "Ralph Lauren Purple Label Driving Loafer (Dark Grey Suede)",
@@ -3395,7 +3422,8 @@
       "acquiredFrom": null,
       "origPrice": "$111.61",
       "swatch": "#3a3a3c",
-      "color_lane": "Grey/Charcoal"
+      "color_lane": "Grey/Charcoal",
+      "category": "Footwear"
     },
     {
       "name": "Riccardo Bestetti Chukka Boot (Burgundy Burnished)",
@@ -3418,7 +3446,8 @@
       "acquiredFrom": null,
       "origPrice": null,
       "swatch": "#5C2424",
-      "color_lane": "Burgundy"
+      "color_lane": "Burgundy",
+      "category": "Footwear"
     },
     {
       "name": "Vass Budapest Shortwing Blucher (Bordeaux Scotch Grain)",
@@ -3441,7 +3470,8 @@
       "acquiredFrom": null,
       "origPrice": null,
       "swatch": "#5C2424",
-      "color_lane": "Burgundy"
+      "color_lane": "Burgundy",
+      "category": "Footwear"
     },
     {
       "name": "Dinkelacker Rio Full-Brogue C (Dark Cognac Shell)",
@@ -3464,7 +3494,8 @@
       "acquiredFrom": null,
       "origPrice": null,
       "swatch": "#8B4520",
-      "color_lane": "Cognac/Chestnut"
+      "color_lane": "Cognac/Chestnut",
+      "category": "Footwear"
     }
   ]
 }
